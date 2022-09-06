@@ -1,0 +1,68 @@
+.userInfo__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-image: url('{{URL::to('public/bizzwelcome/bg.png')}}');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.userInfo__container > img {
+    width: 10rem;
+    align-self: flex-end;
+    margin: 0 4rem;
+}
+
+.userInfo__detailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex:0.9
+}
+
+.userInfo__detailContainer>div {
+    flex: 0.4;
+}
+
+.userInfo__avatarContainer > img {
+    width: 15rem;
+    margin: 1.5rem;
+    border-radius: 50%;
+}
+
+.hding{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+color: #FF960A;
+}
+
+.parahng{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.nte{
+    font-family: Rouge Script;
+font-style: italic;
+font-weight: normal;
+font-size: 56px;
+line-height: 86px;
+text-decoration: underline;
+color: black;
+}

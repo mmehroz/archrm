@@ -1,0 +1,61 @@
+.mainlogindiv {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
+  .loginsigninheading {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif,Nunito;
+    padding-right: 50px;
+  }
+  .formdiv {
+    background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);
+  }
+  .logimgdiv {
+    background-color: #0006;
+  }
+  .inputlabel {
+    color: #fff;
+    /* input placeholder color */
+    font-family: sans-serif,Nunito;
+    margin-bottom: 0 !important;
+  }
+  .inputfield {
+    border: 1px solid #dee2e6;
+    color: #fff;
+    font-size: 18px;
+    height: 50px;
+    font-weight: 300;
+    background-color: transparent;
+    font-family: system-ui;
+    border-radius: 3px;
+  }
+  .inputfield:focus {
+    background-color: transparent !important;
+    border: 1px solid #dee2e6;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.25rem rgb(89 49 150 / 25%); */
+  }
+  input.inputfield::placeholder{
+    color: #fff !important;
+    font-size: 18px;
+  }
+  .field-icon {
+    float: right;
+    color: #6f8c51;
+    font-size: 23px;
+    margin-left: -25px;
+    margin-top: -36px;
+    position: relative;
+    z-index: 2;
+}
+  .loginbtn {
+    width: 100%;
+    background: white !important;
+    color: #6416ec!important;
+text-align: center;
+   border: 1px solid #fff;
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }

@@ -1,0 +1,37 @@
+.mainlogindiv {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
+  .loginsigninheading {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif,Nunito;
+    padding-right: 50px;
+  }
+
+.welcomeheading{
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 45px;
+   justify-content: center !important;
+}
+.spanheading{
+    font-weight: 300;
+}
+.title,.designation,.company{
+    color: #fff;
+    padding-bottom: 10px;
+    font-family: 'sans-serif' 'Nunito';
+    font-size: 24px;
+    font-weight: 500;
+}
+.empidheading{
+    color:#fff;
+    font-weight: 300;
+}
+.empid{
+    color:#fff;
+    font-weight: bold;
+    padding-left: 10px;
+}

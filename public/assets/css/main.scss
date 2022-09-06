@@ -1,0 +1,755 @@
+.dark-mode {
+    background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+    .banner {
+        border: 2px solid #232428;
+        background: #232428;
+    }
+    .left-side {
+        background-color: #232428;
+        color: white !important;
+        & h6 {
+            color: white !important;
+        }
+        & .profile {
+            border: 12px solid #232428;
+            background: #232428;
+        }
+    }
+    /* leftSide End */
+    .main .id {
+        background-color: #232428;
+        color: white !important;
+    }
+    /* id Section End */
+    .main .mess {
+        background-color: #232428;
+        color: white !important;
+        border: #232428;
+        & p {
+            color: white !important;
+        }
+        & .time15 {
+            background-color: transparent !important;
+            color: white;
+            border: 1px solid #FFFFFf;
+            &:hover {
+                background-color: transparent !important;
+                color: white !important;
+            }
+            & .glare15{
+                background-color: transparent !important;
+                opacity: 0 !important;
+            }
+        }
+        & .readmore{
+            background-color: #323334 !important;
+            color: white !important;
+            border: #232428 !important;
+        }
+        & .time16 {
+            background-color: #323334;
+            color: white !important;
+            border: #323334;
+        }
+        & .abc {
+            background-color: #323334;
+            color: white !important;
+            &:hover .abc {
+                background-color: #323334;
+                color: white;
+            }
+        }
+        & .time32{
+            background-color: transparent !important;
+            border: 1px solid #FFFFFf !important;
+            color: white !important;
+            & .glare31{
+                background-color: transparent !important;
+                opacity: 0 !important;
+            }
+        }
+    }
+    /* mess end */
+    .ann .time11 {
+        background-color: #323334;
+        border: #323334;
+        color: white;
+    }
+    .glare11{
+        opacity: 0.6 !important;
+    } 
+    .pt2{
+        background-color: #232428 !important;
+    }
+    /* ann ection end */
+    .scroll3{
+       
+    }
+    .scroll {
+        background-color: #232428;
+        color: white;
+        .cp{
+            display: flex !important;
+            & .emojiPickerIcon{
+                position: absolute;
+                top: 0px;
+                right: -60px;
+            }
+            .rounded-circle{
+                position: absolute;
+                left: 31px;
+            }
+        }
+        & .date p {
+            color: white !important;
+        }
+        & .comment1 {
+            background-color: #323334;
+            color: white !important;
+        }
+        & .sec {
+            border: 0px solid #232428;
+            margin: 0px;
+            & img {
+                border: 2px solid #232428;
+            }
+        }
+        & .hor {
+            border-bottom: 2px solid white !important;
+        }
+        & .ann-logo{
+            width: 250px !important;
+            padding-left: 0px !important;
+        }
+        & .date p{
+            padding-right: 2px !important;
+        }
+        & .emojiPickerIconWrap input{
+            width: 100% !important;
+            background-color: #323334 !important;
+            color: white !important;
+            border: #232428 !important;
+            outline: #232428 !important;
+            margin-left: -31px;
+            
+            
+        }
+        & .emojiPickerIconWrap input::placeholder{
+            color: white !important;
+        }
+        & .emojiPickerIcon{
+            height: 37 !important ;
+            width: 39 !important;
+            background-color: #323334 !important;
+        }
+        & .cp button{
+            background-color: #323334 !important;
+            color: white !important;
+            width: 65%;
+            position: absolute;
+            left: -19px;
+            top: 0px;
+        }
+        & .vc{
+            color: white !important;
+            position: absolute;
+            top: -36px;
+            left: 40px;
+        }
+        & .contr2{
+            display: block;
+    width: 96.5%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white !important;
+    background-color: #323334 !important;
+    background-clip: padding-box;
+    border: 1px solid #232428 !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 16px;
+
+        }
+        .contr2::placeholder{
+            color: white !important;
+        }
+        .vc2{
+            color: white !important;
+            position: absolute;
+            top: -8px;
+            left: 51px;
+        }
+    }
+    .main .row1 {
+        background-color: #232428;
+        & .time {
+            background-color: transparent !important;
+            color: white !important;
+            
+            border: 1px solid #FFFFFf;
+            &:hover {
+                background-color: #323334 !important;
+                color: white !important;
+                border: #232428 !important;
+            }
+            &:hover .abc {
+                background-color: #323334 !important;
+                color: white !important;
+            }
+        }
+        & .abc {
+            color: white !important;
+        }
+        
+    }
+    /* nav */
+    .nav1 {
+        background-color: #232428 !important;
+        color: white !important;
+    }
+    /* remind */
+    .remind {
+        background-color: #232428;
+    }
+    & .time2 {
+        background-color: transparent !important;
+        color: white !important;
+        border:1px solid #FFFFFf !important;
+        & .abc {
+            color: white !important;
+        }
+        &:hover{
+            background-color: #323334 !important;
+            color: white !important;
+            border: #232428 !important;
+        }
+    }
+    /* info */
+    .info {
+        background-color: #232428 !important;
+        border: #232428 !important;
+        & .time13 {
+            background-color: transparent !important;
+            border:1px solid #FFFFFf !important;
+            & .abc {
+                color: white !important;
+                background-color: transparent !important;
+            }
+            &:hover{
+                background-color: #323334 !important;
+                border: #232428 !important;
+            }
+        }
+        & .time3 {
+            background-color: #323334 !important;
+            border: #232428 !important;
+            & .abc {
+                background-color: #323334 !important;
+                color: white !important;
+            }
+        }
+        .glare3{
+            opacity: 0.6 !important;
+        }
+    }
+    /* act */
+    .act {
+        background-color: #232428 !important;
+        border: #232428 !important;
+        & .time4 {
+            background-color: #323334 !important;
+            color: white !important;
+        }
+        .glare4{
+            opacity: 0.6 !important;
+        }
+        & .time5 {
+            background-color: transparent !important;
+            color: white !important;
+            border:1px solid #FFFFFf !important;
+            & .abc {
+                color: white !important;
+                background-color: transparent !important;
+            }
+        }
+        .time6 {
+            border: #232428 !important;
+            background-color: #232428 !important;
+            & .abc {
+                background-color: #323334 !important;
+                color: white !important;
+            }
+        }
+        .aqua5 {
+            background-color: transparent !important;
+            &:hover{
+                background-color: #323334 !important;
+                border: #232428 !important;
+            }
+        }
+        
+        .dropdown1 {
+            background-color: #323334 !important;
+            border: #232428 !important;
+            & .dropdown-content {
+                background-color: #323334 !important;
+            }
+            & .dropdown-content a {
+                background-color: #323334 !important;
+                color: white !important;
+            }
+        }
+    }
+    .sal{
+        background-color: #232428 !important;
+        & .table{
+            color: white !important;
+            & thead tr{
+                background-color: transparent !important;
+                color: white !important;
+                font-weight: 700 !important;
+            }
+            & tr .attt{
+                background-color: #232428 !important;
+                color: white !important;
+            }
+        }
+        .time7{
+            background-color: #323334 !important;
+            color: white !important;
+        }
+        .glare7{
+            opacity: 0.6 !important;
+        }
+        .time18{
+            background-color: transparent !important;
+            color: white !important;
+            border:1px solid #FFFFFf !important;
+            & .abc{
+                background-color: transparent !important;
+                color: white !important;
+            }
+            &:hover{
+                background-color: #323334 !important;
+                border: #232428 !important;
+            }
+        }
+    }
+    // work
+    .work{
+        background-color: #232428 !important;
+        color: white !important;
+        .time8{
+            color: white;
+            background-color: #323334 !important;
+            
+        }
+        .glare8{
+            opacity: 0.6 !important;
+        }
+        .time9{
+            background-color: transparent !important;
+            border:1px solid #FFFFFf !important;
+            & .abc{
+                color: white !important;
+                background-color: transparent !important;
+            }
+            &:hover{
+                background-color: #323334 !important;
+                border: #232428 !important;
+            }
+        }
+    }
+    // train
+    .train .time6{
+        background-color: #232428 !important;
+        color: white;
+        border:1px solid #232428 !important;
+        & .dropdown-content{
+            background-color: #232428 !important;
+            color: white !important;
+        }
+        
+    }
+    .glare5{
+        opacity: 0.6 !important;
+    }
+    .time31{
+        background-color: #232428 !important;
+        color: white !important;
+        border:1px solid #232428 !important;
+        & .abc{
+            text-decoration: none !important;
+        }
+    }
+    .glare31{
+        opacity: 0.6 !important;
+    }
+    // slider
+    .slider{
+        background-color: #232428 !important;
+        color: white !important;
+        & .time17{
+            background-color: #323334 !important;
+            color: white !important;
+        }
+        .glare17{
+            opacity: 0.6 !important;
+        }
+        & .time18{
+            background-color: transparent !important;
+            color: white !important;
+            border:1px solid #FFFFFf !important;
+            & .abc{
+                color: white !important;
+                background-color: transparent !important;
+            }
+            &:hover{
+                background-color: #323334 !important;
+                border: #232428 !important;
+            }
+        }
+    }
+    // bio
+    .bio{
+        background-color: #232428 !important;
+        color: white !important;
+        &table{
+            background-color: #232428 !important;
+        }
+        & table tr td{
+            color: white !important;
+        }
+        & table h6{
+            font-size: 11px !important;
+        }
+        & table img{
+            width: 65px !important;
+            height: 65px !important;
+            border-radius: 50% !important;
+        }
+        & .table td, .table th{
+            border-top: 1px solid #232428 !important;
+        }
+        & tbody tr{
+            border-bottom: 1px solid #323334 !important;
+        }
+    }
+    // footer
+    footer{
+        background-color: #232428 !important;
+        color: white !important;
+    }
+    // scroll2
+    .scroll2{
+        & .ann-logo{
+            width: 200px !important;
+            padding-left: 0px !important;
+            margin-top: 8px;
+        }
+        & .date p{
+            font-size: 11px;
+            padding-right: 0px;
+        }
+        & h4{
+           padding-left: 0px !important;
+           font-size: 20px;
+        }
+        & p{
+            padding-left: 0px !important;
+        }
+        & .sec img{
+        width: 100% !important;
+        border: 0px solid #232428 !important;
+        border: 0px solid #232428;
+        margin: 0px !important;
+        }
+        & .emojiPickerIconWrap input{
+            width: 91% !important;
+            &::placeholder{
+                font-size: 12px !important;
+            }
+        }
+        & .emojiPickerIcon{
+            position: relative;
+            right: -176px !important;
+            top: -38px !important;
+
+        }
+        
+        & .BA{
+            display: flex;
+            & button {
+                position: absolute;
+                height: 38px !important;
+                width: 40px;
+                left: 12px;
+                background-color: #323334 !important;
+                border: #232428 !important;
+                border-radius: 4px;
+                color: white !important;
+                outline: none;
+                
+               
+            }
+            .rounded-circle{
+                width: 35px;
+                height: 35px;
+                position: relative;
+                left: 32px;
+
+            }
+        }
+    }
+    // modal
+    .modal-content{
+        background-color: #232428 !important;
+        color: white !important;
+    }
+    .modal-body .scroll1 .comment1{
+        background-color: #323334 !important;
+        color: white !important
+    }
+    .modal-header button{
+        color: white !important;
+    }
+}
+.dark-mode .mod-inp{
+    background: #323334;
+    color: #FFFFFf;
+    outline: none;
+    &:focus{
+    background: #323334;
+    color: white;
+    outline: none;
+}
+}
+.dark-mode #announcement{
+    text-align: center;
+}
+.dark-mode #announcement tbody{
+    color: white;
+}
+.dark-mode #announcement thead{
+    color: white;
+}
+.dark-mode #announcement .dropdown-item{
+    color: white;
+&:hover{
+    background: transparent;
+}
+& i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+}
+.dark-mode .fa-eye:before {
+    content: "\f06e";
+    margin-right: 10px;
+}
+.dark-mode .submit-section{
+    text-align: center;
+    & button{
+        background: #323334;
+        color: white;
+        border: 1px solid #FFFFFf;
+        outline: none;
+        width: 10%;
+    }
+}
+.dark-mode #complain .modal-content{
+    text-align: center;
+}
+
+
+// Rsponsive Media Querry
+// max
+@media only screen and (max-width: 1200px) {
+    .bio1{
+        height: 540px !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 106% !important;
+        position: relative !important;
+        left: 70px !important;
+        top: 0px !important;
+    }
+    .dark-mode .scroll2 .BA button{
+        left: 73px !important;
+        top: 0px !important;
+
+    }
+    .dark-mode .scroll .vc {
+        color: white !important;
+        position: absolute;
+        top: -36px;
+        left: 34px;
+        white-space: nowrap;
+    }
+    .dark-mode .scroll .vc2 {
+        color: white !important;
+        position: absolute;
+        top: -8px;
+        left: 46px;
+        
+       
+    }
+    .dark-mode .scroll2 .ann-logo {
+        width: 150px !important;
+        padding-left: 0px !important;
+        margin-top: 3px;
+    }
+    .dark-mode .scroll2 .date p {
+        font-size: 9px;
+        padding-right: 0px;
+    }
+}
+// min
+@media only screen and (min-width: 1201px) {
+    .bio1{
+        height: 582px !important;
+    }
+    .scroll .emojiPickerIconWrap input {
+            width: 110% !important;
+    }
+    .dark-mode .scroll2 .BA .rounded-circle {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        left: 28px;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 91% !important;
+        position: relative !important;
+        left: 65px !important;
+        top: 0px !important;
+    }
+    .dark-mode .scroll2 .BA button{
+        left: 23px !important;
+        top: 0px !important;
+    }
+    .dark-mode .scroll .vc{
+        left: 30px;
+        white-space: nowrap !important;
+    }
+    .dark-mode .scroll2 .ann-logo {
+        width: 152px !important;
+        padding-left: 0px !important;
+        margin-top: 4px;
+    }
+    .dark-mode .BA .emojiPickerIcon{
+        right: -146px !important;
+    }
+    
+}
+@media only screen and (min-width: 1300px){
+    .dark-mode .scroll2 .emojiPickerIcon {
+        position: relative;
+        right: -188px !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 114% !important;
+        position: relative;
+        left: 23px;
+    }
+    .dark-mode .scroll2 .BA button {
+        left: 64px !important;
+    }
+    .dark-mode .scroll2 .ann-logo {
+        width: 171px !important;
+        padding-left: 0px !important;
+        margin-top: 2px;
+    }
+    .dark-mode .scroll2 .date p {
+        font-size: 9px;
+        padding-right: 0px;
+        /* text-align: right; */
+        
+    }
+}
+
+@media only screen and (min-width: 1333px) {
+    .bio1{
+        height: 600px !important;
+    }
+    .dark-mode .scroll2 .BA button {
+        left: 57px;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 122% !important;
+        position: relative;
+        left: 23px;
+    }
+}
+@media only screen and (min-width: 1340px) {
+    .bio1{
+        height: 636px !important;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .bio1{
+        height: 657px !important;
+    }
+    .dark-mode .scroll2 .BA button {
+        left: 89px !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 130% !important;
+        position: relative;
+        left: 23px;
+    }
+    .dark-mode .scroll2 .emojiPickerIcon {
+        position: relative;
+        right: -213px !important;
+    }
+    .dark-mode .scroll2 .date p {
+        font-size: 9px;
+        padding-right: 0px;
+        /* text-align: right; */
+        padding-top: 2px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .bio1{
+        height: 678px !important;
+    }
+    .dark-mode .scroll .vc2{
+    color: white !important;
+    position: absolute;
+    top: -8px;
+    left: 68px;
+    }
+    .dark-mode .scroll .emojiPickerIconWrap input {
+        width: 108% !important;
+    }
+    .dark-mode .scroll .cp .emojiPickerIcon {
+        position: absolute;
+        top: 0px;
+        right: -81px;
+    }
+    .dark-mode .scroll2 .BA button {
+        left: 111px !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 142% !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIcon {
+        position: relative;
+        right: -234px !important;
+    }
+}
+@media only screen and (min-width: 1600px){
+    .dark-mode .scroll2 .BA button {
+        left: 138px !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIconWrap input {
+        width: 160% !important;
+    }
+    .dark-mode .scroll2 .emojiPickerIcon {
+        position: relative;
+        right: -261px !important;
+    }
+}

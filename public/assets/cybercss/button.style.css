@@ -1,0 +1,73 @@
+.btn {
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn > .btn__loader {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-width: 0.15rem;
+    margin-right: 0.4rem;
+}
+
+.btn:disabled,
+.btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: var(--email-grey);
+}
+
+.btn:hover {
+    background-color: rgba(32, 33, 36, 0.059);
+}
+
+.btn.primary {
+    background-color: var(--email-secondary);
+    color: #fff;
+    /* border: 1px solid var(--email-secondary); */
+    border-radius: 2px;
+    /* padding: 0.5rem 1rem;
+    margin: 0.2rem; */
+    box-shadow: none;
+}
+
+.btn.link {
+    box-shadow: none;
+    border:none;
+}
+
+.btn > .app_icon {
+    color: var(--email-grey);
+    margin-right: 0.2rem;
+}
+
+.btn>span:not(.app_icon) {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--email-grey);
+}
+
+.btn.primary>.app_icon {
+    color: #fff;
+}
+
+.btn.primary>span:not(.app_icon) {
+    color: #fff;
+}
+
+.icon {
+    padding:0.1rem;
+    box-shadow: none;
+    border-radius: 50%;
+}

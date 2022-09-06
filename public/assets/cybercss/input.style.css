@@ -1,0 +1,53 @@
+
+.input__input:focus-visible {
+    outline:none;
+}
+
+.floatInput__label * {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.floatInput__label {
+    margin-bottom:15px;
+    position:relative;
+    display: flex;
+    border-bottom:1px solid #ddd;
+}
+
+.floatInput__label > span{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateY(30px);
+    font-size:0.875em;
+    transition-duration:300ms;
+    padding-left: 0.5rem;
+}
+
+.floatInput__input{
+    width:100%;
+    padding:10px 0px;
+    padding-left: 0.5rem;
+    margin-top:20px;
+    border:none;
+    outline:none;
+}
+
+.floatInput__iconBtn {
+    margin-top:20px;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+}
+
+.floatInput__input::placeholder{
+    opacity:0;
+}
+
+.floatInput__label:focus-within > span,
+.floatInput__input:not(:placeholder-shown) + span{
+    color:var(--email-primary);
+    transform:translateY(0px);
+    padding-left: 0;
+}

@@ -16,7 +16,7 @@ class ExpenseController extends Controller
 		if(session()->get("email")){
 			return view('expense.selectmonth');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitselectexpense($year, $month){
@@ -30,7 +30,7 @@ class ExpenseController extends Controller
 			->get();
 			return view('expense.report',['data' => $task, 'yearandmonth' => $yearandmonth]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addexpense($id){
@@ -44,7 +44,7 @@ class ExpenseController extends Controller
 			->get();
 			return view('expense.modals.add',['data' => $task, 'yearandmonth' => $id, 'depart' => $depart]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitexpense(Request $request){
@@ -70,7 +70,7 @@ class ExpenseController extends Controller
 				return redirect('/restaurantlist')->with('message','Oops! Something went wrong');;
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 	public function editexpense($id){
@@ -88,7 +88,7 @@ class ExpenseController extends Controller
 			->first();
 			return view('expense.modals.edit',['data' => $task, 'type' => $type, 'depart' => $depart]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submiteditexpense(Request $request){
@@ -112,7 +112,7 @@ class ExpenseController extends Controller
 				return redirect('/restaurantlist')->with('message','Oops! Something went wrong');;
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 }

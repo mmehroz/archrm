@@ -790,7 +790,7 @@ class UserController extends Controller
             // dd($checkreview);
 				return view('main.maindashboard', ['data' => $empinfo,'attendancedata' => $taskdata, 'checkreview' => $checkreview]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 	public function empreminder(){
@@ -801,7 +801,7 @@ class UserController extends Controller
 					->get();
 			return view('modal.empreminder', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addreminder(Request $request){
@@ -823,56 +823,56 @@ class UserController extends Controller
               return redirect('/maindashboard')->with('message','Oops! Something Went Wrong');
         }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function trainingmanualvideo(){
 		if(session()->get("email")){
 			return view('trainingmanuals.video');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function trainingmanualaudio(){
 		if(session()->get("email")){
 			return view('trainingmanuals.audio');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function trainingmanualpdf(){
 		if(session()->get("email")){
 			return view('trainingmanuals.pdf');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function bizzlibrary(){
 		if(session()->get("email")){
 			return view('library.booklist');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function hrpolicy(){
 		if(session()->get("email")){
 			return view('policy.hrpolicy');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function myforms(){
 		if(session()->get("email")){
 			return view('myforms');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function games(){
 		if(session()->get("email")){
 			return view('games');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function websites(){
@@ -884,7 +884,7 @@ class UserController extends Controller
 				->first();
 			return view('websites',['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitcomment($id, $value){
@@ -898,7 +898,7 @@ class UserController extends Controller
 		    'created_at'			=> date('Y-m-d h:i:s'),
 		   ]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 	public function selectannouncementforcomment(){
@@ -910,7 +910,7 @@ class UserController extends Controller
 		// dd($task);
 		return view('postcomment.selectannouncementforcomment', ['data' => $task]);
 	}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitselectannouncement(Request $request){
@@ -922,7 +922,7 @@ class UserController extends Controller
 		->get();
 		return view('postcomment.commentlist', ['data' => $task]);
 	}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function approvedcomment($id){
@@ -937,7 +937,7 @@ class UserController extends Controller
 			->update($dataa);
 			return redirect('/attendancecorrectionlist')->with('message','Comment Approved Successfully!');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 	public function declinedcomment($id){
@@ -952,7 +952,7 @@ class UserController extends Controller
 			->update($dataa);
 			return redirect('/attendancecorrectionlist')->with('message','Comment Declined Successfully!');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 	public function viewdetails($id){
@@ -972,7 +972,7 @@ class UserController extends Controller
 					->get();
 			return view('modal.complain', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addcomplain(Request $request){
@@ -994,7 +994,7 @@ class UserController extends Controller
               return redirect('/maindashboard')->with('message','Oops! Something Went Wrong');
         }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function viewcomment($id){
@@ -1007,7 +1007,7 @@ class UserController extends Controller
 					->get();
 			return view('modal.viewcomments', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitpostreply($id, $value){
@@ -1028,7 +1028,7 @@ class UserController extends Controller
 	        ->get();
 			return view('main.modal.postreply', ['getreply' => $getreply]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 }

@@ -30,7 +30,7 @@ class MyController extends Controller
     public function forget_submit(Request $get)
     {
     	if($get->email == ""){
-            return redirect('/arclogin')->with('message','Please Enter Email');
+            return redirect('/')->with('message','Please Enter Email');
         }
       $verify_token =  $this->generateRandomString(100);
       $data = array();
@@ -65,7 +65,7 @@ class MyController extends Controller
         $data['verify_token'] = $verify_token;
        return view('resetpassword',$data);
       } else{
-         return redirect('/arclogin')->with('message','Link Expired.');
+         return redirect('/')->with('message','Link Expired.');
       }
     }
     public function reset_submit(Request $get)
@@ -75,9 +75,9 @@ class MyController extends Controller
                  ->where('verify_token', $get->verify_token)
                  ->update(['elsemployees_password' => $get->password,'verify_token' => '']);
       if($cmd){
-        return redirect('/arclogin')->with('message','Password Has been Reset Successfully.'); 
+        return redirect('/')->with('message','Password Has been Reset Successfully.'); 
       } else{
-        return redirect('/arclogin')->with('message','Something Went Wrong'); 
+        return redirect('/')->with('message','Something Went Wrong'); 
       }
     }
 

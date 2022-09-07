@@ -37,7 +37,7 @@ class foodcontroller extends Controller
 			->get();
 			return view('food.foodapp',['datares'=>$taskres,'data'=>$task,'id'=>$restaurantid]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function restaurantlist(){
@@ -49,7 +49,7 @@ class foodcontroller extends Controller
 			// dd($task);
 			return view('food.restaurantlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addrestaurantmodal(){
@@ -60,7 +60,7 @@ class foodcontroller extends Controller
 				return redirect('/restaurantlist')->with('message','You Are Not Allowed To Add Restaurant');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 
@@ -102,10 +102,10 @@ class foodcontroller extends Controller
 			}
 			}
 			else{
-				return redirect('/arclogin')->with('message','Reach HR For Access');
+				return redirect('/')->with('message','Reach HR For Access');
 				}
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 
@@ -121,7 +121,7 @@ class foodcontroller extends Controller
 				return redirect('/restaurantlist')->with('message','You Are Not Allowed To Edit Restaurant');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submiteditretaurant(Request $request){
@@ -165,10 +165,10 @@ class foodcontroller extends Controller
 						return redirect('/restaurantlist')->with('message','Oops! Something went wrong');;
 					}
 					}else{
-						return redirect('/arclogin')->with('message','Reach HR For Access');
+						return redirect('/')->with('message','Reach HR For Access');
 						}
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function deleterestaurant($id){
@@ -178,7 +178,7 @@ class foodcontroller extends Controller
 				->update(['status_id' => 1]);
 					return redirect('/restaurantlist')->with('message','Restaurant Successfully Deleted!');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function productlist($restaurantid){
@@ -196,7 +196,7 @@ class foodcontroller extends Controller
 			->get();
 			return view('food.productlist',['datares'=>$taskres,'data'=>$task,'id'=>$restaurantid]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addproductmodal($id){
@@ -212,7 +212,7 @@ class foodcontroller extends Controller
 				return redirect('/productlist')->with('message','You Are Not Allowed To Add Product');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitaddproduct(Request $request){
@@ -259,10 +259,10 @@ class foodcontroller extends Controller
 			}
 			}
 			else{
-				return redirect('/arclogin')->with('message','Reach HR For Access');
+				return redirect('/')->with('message','Reach HR For Access');
 				}
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function editproductmodal($id){
@@ -277,7 +277,7 @@ class foodcontroller extends Controller
 				return redirect('/productlist')->with('message','You Are Not Allowed To Edit Product');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submiteditproduct(Request $request){
@@ -330,10 +330,10 @@ class foodcontroller extends Controller
 						return redirect('/productlist/'.$request->hdnrestaurantid)->with('message','Oops! Something went wrong');
 					}
 					}else{
-						return redirect('/arclogin')->with('message','Reach HR For Access');
+						return redirect('/')->with('message','Reach HR For Access');
 						}
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function deleteproduct($id){
@@ -347,7 +347,7 @@ class foodcontroller extends Controller
 					->first();
 					return redirect('/productlist/'.$getrestaurantid->restaurant_id)->with('message','Product Successfully Deleted!');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function addtocart($id){
@@ -369,7 +369,7 @@ class foodcontroller extends Controller
 				);
 			DB::connection('mysql')->table('order')->insert($addproduct);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function userorderlist(){
@@ -404,7 +404,7 @@ class foodcontroller extends Controller
 			// dd($ordercount);
 			return view('food.modal.orderlist',['data'=>$task, 'ordercount' => $ordercount, 'proceedordercount' => $proceedordercount]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function proceedorder(){
@@ -417,7 +417,7 @@ class foodcontroller extends Controller
 				'updated_at' => date('Y-m-d h:i:s')]);
 			return redirect('/restaurantlist')->with('message','Order Proceed Successfully');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function usercartlist($id){
@@ -443,7 +443,7 @@ class foodcontroller extends Controller
 			// dd($task);
 			return view('food.modal.cartlist',['data'=>$task, 'ordercount' => $ordercount]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addmoretocart($id){
@@ -462,7 +462,7 @@ class foodcontroller extends Controller
 				'updated_at' => date('Y-m-d h:i:s')]);
 			// return redirect('/productlist')->with('message','Order Proceed Successfully');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function deletefromcart($id){
@@ -489,7 +489,7 @@ class foodcontroller extends Controller
 			}
 			// return redirect('/productlist')->with('message','Order Proceed Successfully');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function deliveryordertlist(){
@@ -530,7 +530,7 @@ class foodcontroller extends Controller
 			}
 			return view('food.deliveryordertlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function cancelorcompleteorderlist(){
@@ -548,7 +548,7 @@ class foodcontroller extends Controller
 			// dd($task);
 			return view('food.cancelorcompleteorderlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function deliverd($id){
@@ -560,7 +560,7 @@ class foodcontroller extends Controller
 			'updated_at' => date('Y-m-d h:i:s')]);
 		return redirect('/restaurantlist')->with('message','Order Delivered Successfully');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 	public function canceled($id){
@@ -572,7 +572,7 @@ class foodcontroller extends Controller
 			'updated_at' => date('Y-m-d h:i:s')]);
 		return redirect('/restaurantlist')->with('message','Order Delivered Successfully');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
 }

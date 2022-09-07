@@ -314,7 +314,7 @@ class SuperAdminController extends Controller
 
 		return view('coo.coocandidate_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}

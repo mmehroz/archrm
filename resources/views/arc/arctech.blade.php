@@ -30,7 +30,7 @@
       <div class="col-1" id="probox"> 
           <p style="opacity: 0;">HRM</p>
       </div>
-      <a href="{{URL('/arclogin')}}" target="_blank">
+      <a href="{{URL('/')}}" target="_blank">
       <div class="col-2" id="probox">
         <img src="{!! asset('assets/arcassets/1.png') !!}" >
           <p>HRM</p>

@@ -32,7 +32,7 @@ class ReservationController extends Controller
 			}
 			return view('reservation.report', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function reservemeetingroom(){
@@ -43,7 +43,7 @@ class ReservationController extends Controller
 			->get();
 			return view('reservation.modal.reservemeetingroom', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		} 
 	}
 	public function submitreservtion(Request $request){
@@ -116,7 +116,7 @@ class ReservationController extends Controller
               return redirect('/reservationreport')->with('message','Oops! Something Went Wrong');
         }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}	
 }

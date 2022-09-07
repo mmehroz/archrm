@@ -34,7 +34,7 @@ class ItController extends Controller
 			->count();
 			return view('it.modal.itticket', ['data' => $task, 'checkreview' => $checkreview, 'checkpendingticket' => $checkpendingticket]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submititticket(Request $request){
@@ -56,7 +56,7 @@ class ItController extends Controller
 				return redirect('/maindashboard')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function itticketrequest(){
@@ -72,7 +72,7 @@ class ItController extends Controller
 			->get();
 			return view('it.itticketrequest', ['data' => $task, 'status' => "Pending It Ticket Request" , 'ticketstatus_id' => "2"]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function itticketresolverequest(){
@@ -88,7 +88,7 @@ class ItController extends Controller
 			->get();
 			return view('it.itticketrequest', ['data' => $task, 'status' => "Resolve It Ticket Request" , 'ticketstatus_id' => "4"]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function itticketrejectrequest(){
@@ -104,7 +104,7 @@ class ItController extends Controller
 			->get();
 			return view('it.itticketrequest', ['data' => $task, 'status' => "Reject It Ticket Request" , 'ticketstatus_id' => "3"]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function updateitticket($id,$comment,$status){
@@ -141,7 +141,7 @@ class ItController extends Controller
 				return redirect('/maindashboard')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitresolveitticket(Request $request){
@@ -185,7 +185,7 @@ class ItController extends Controller
 				return redirect('/itticketrequest')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function itinventorylist(){
@@ -197,14 +197,14 @@ class ItController extends Controller
 			->get();
 			return view('it.itinventorylist', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addtoinventory(){
 		if(session()->get("email")){
 			return view('it.modal.addtoinventory');
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitaddtoinventory(Request $request){
@@ -229,7 +229,7 @@ class ItController extends Controller
 				return redirect('/itinventorylist')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function editinventory($id){
@@ -241,7 +241,7 @@ class ItController extends Controller
 			->first();
 			return view('it.modal.editinventory', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submiteditinventory(Request $request){
@@ -266,7 +266,7 @@ class ItController extends Controller
 				return redirect('/itinventorylist')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function removefrominventory($id){
@@ -285,7 +285,7 @@ class ItController extends Controller
 				return redirect('/itinventorylist')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submititreview(Request $request){
@@ -316,7 +316,7 @@ class ItController extends Controller
 				return redirect('/maindashboard')->with('message','Oops! Something Went Wrong');
             }
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function itreviewreport(){
@@ -328,7 +328,7 @@ class ItController extends Controller
 			->get();
 			return view('it.itreviewreport', ['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 }

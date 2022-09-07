@@ -335,7 +335,7 @@ class payrollController extends Controller
 
             }else{
                 session()->flush();
-               return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+               return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
 
     }
@@ -405,7 +405,7 @@ class payrollController extends Controller
             return view('payroll.uploadsheet',compact('allData'));
 
             }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
 
 
@@ -2044,7 +2044,7 @@ class payrollController extends Controller
             $data['result'] = $result;
             return view('modal.adjustmentAdd', $data);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function saveAdjustment(Request $request){
@@ -2227,7 +2227,7 @@ class payrollController extends Controller
         if(session()->get('role') <= 2){
             return view('payroll.employeesalaries');
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -2286,7 +2286,7 @@ class payrollController extends Controller
 
             return view('modal.addSalaries', $data);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -2365,7 +2365,7 @@ class payrollController extends Controller
             return view('payrolldashboard');
             
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     
@@ -2403,7 +2403,7 @@ class payrollController extends Controller
             
             
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     
@@ -2768,7 +2768,7 @@ class payrollController extends Controller
             return view('attendancewithsearch');
             
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
         
@@ -3076,7 +3076,7 @@ class payrollController extends Controller
             }
         
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
         
     }
@@ -3085,7 +3085,7 @@ class payrollController extends Controller
         // dd($year);
         if(session()->get('name')){
             if(session()->get('role') == 4 && $name != session()->get('batchid')){
-                 return redirect('/arclogin')->with('message','We report your id on HR');
+                 return redirect('/')->with('message','We report your id on HR');
             }
             $empinfo = DB::connection('mysql')->table('elsemployees')
             ->where('elsemployees.elsemployees_batchid','=',$name)
@@ -3382,12 +3382,12 @@ class payrollController extends Controller
                      
                      return view('dynamicemployeedata.dynamicattendancetable', ['data' => $taskdata,'presentday' => $preday,'absentday' => $absday, 'empleavedays'=> $empleaves, 'month' => $month]);
                      }else{
-                         return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                         return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                      }
 
          
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -3413,7 +3413,7 @@ class payrollController extends Controller
             return view('payrollwithsearch',['datacount'=>$totalcountemp]);
             
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
         
@@ -3860,7 +3860,7 @@ class payrollController extends Controller
             // return view('dynamicemployeedata.dynamicpaytable', ['data' => $all]);
             return $alldata;
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
         
     }
@@ -3869,7 +3869,7 @@ class payrollController extends Controller
         
         if(session()->get('name')){
             if(session()->get('role') == 4 && $name != session()->get('batchid')){
-                 return redirect('/arclogin')->with('message','We report your id on HR');
+                 return redirect('/')->with('message','We report your id on HR');
             }
             $empinfo = DB::connection('mysql')->table('elsemployees')
             ->where('elsemployees.elsemployees_batchid','=',$name)
@@ -4212,12 +4212,12 @@ class payrollController extends Controller
 
                      
                      }else{
-                         return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                         return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                      }
 
          
          }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
          
          // }else{
@@ -4242,7 +4242,7 @@ class payrollController extends Controller
         // dd($request);
         if(session()->get('name')){
             if(session()->get('role') == 4){
-                 return redirect('/arclogin')->with('message','We report your id on HR');
+                 return redirect('/')->with('message','We report your id on HR');
             }
             $departemp = DB::connection('mysql')->table('elsemployees')
             ->where('elsemployees.elsemployees_departid','=',$request->attendancedepart)
@@ -4406,7 +4406,7 @@ class payrollController extends Controller
                      return redirect('/monthlydepartbiomatric')->with('message','No Employee Found');
                 }
                 }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                 }
        }
         public function selectbioattendancemonth(){
@@ -4470,7 +4470,7 @@ class payrollController extends Controller
                     $allData = array("maindata" => $task, "sendmonth" => $setmonth, "sendyear" => $sendyear);
                         return view('payroll.masterpayroll.bioattendancereport',['data'=>$allData]);
             }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
     
         }
@@ -4483,7 +4483,7 @@ class payrollController extends Controller
             $data['result'] = $result;
             return view('modal.deductionAdd', $data);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function saveDeduction(Request $request){
@@ -4703,7 +4703,7 @@ class payrollController extends Controller
                 echo json_encode(false);
             }
           }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
           }
     }
     public function loanlist(){
@@ -4716,7 +4716,7 @@ class payrollController extends Controller
         return view('loanlist',['data'=>$task]);
     }
     else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }   
     }
     public function addloan(){
@@ -4728,7 +4728,7 @@ class payrollController extends Controller
             $data['result'] = $result;
             return view('modal.addloan', $data);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function submitloan(Request $request) {
@@ -4754,7 +4754,7 @@ class payrollController extends Controller
                 return redirect('/loanlist')->with('message','Oops! something went wrog');  
             }
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function editloan($id){
@@ -4765,11 +4765,11 @@ class payrollController extends Controller
                     ->select('*')
                     ->first();
             }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
                 return view('modal.editloan',['data' => $task]);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function submiteditloan(Request $request){
@@ -4789,10 +4789,10 @@ class payrollController extends Controller
                     return redirect('/loanlist')->with('message','Oops! Something went wrong');;
                 }
             }else{
-                    return redirect('/arclogin')->with('message','Reach HR For Access');
+                    return redirect('/')->with('message','Reach HR For Access');
             }
         }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             } 
     }
     public function ondaylist() {
@@ -4805,7 +4805,7 @@ class payrollController extends Controller
             ->get();
             return view('ondaylist',['data'=>$task]);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function addonday(){
@@ -4816,7 +4816,7 @@ class payrollController extends Controller
             ->first();
             return view('modal.addonday', ['data'=>$result]);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function submitonday(Request $request) {
@@ -4838,7 +4838,7 @@ class payrollController extends Controller
                 return redirect('/ondaylist')->with('message','Oops! something went wrog'); 
             }
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function incrementlist(){
@@ -4851,7 +4851,7 @@ class payrollController extends Controller
             // dd($task);
             return view('payroll.incrementlist',['data'=>$task]);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function addincrementmodal(){
@@ -4867,7 +4867,7 @@ class payrollController extends Controller
                 return redirect('/incrementlist')->with('message','You Are Not Allowed To Add Increment');
             }
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -4897,10 +4897,10 @@ class payrollController extends Controller
             }
             }
             else{
-                return redirect('/arclogin')->with('message','Reach HR For Access');
+                return redirect('/')->with('message','Reach HR For Access');
                 }
             }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
             } 
     }
 
@@ -4916,7 +4916,7 @@ class payrollController extends Controller
                 return redirect('/incrementlist')->with('message','You Are Not Allowed To Edit Increment');
             }
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function editsubmitincrement(Request $request){
@@ -4941,10 +4941,10 @@ class payrollController extends Controller
                         return redirect('/incrementlist')->with('message','Oops! Something went wrong');;
                     }
                     }else{
-                        return redirect('/arclogin')->with('message','Reach HR For Access');
+                        return redirect('/')->with('message','Reach HR For Access');
                         }
             }else{
-                        return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                        return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                 } 
         }
         public function deleteincrement($id){
@@ -4954,7 +4954,7 @@ class payrollController extends Controller
                 ->update(['status_id' => 1]);
                     return redirect('/incrementlist')->with('message','Increment Successfully Deleted!');
             }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                 } 
         }
         // complete month attendance start
@@ -5005,7 +5005,7 @@ class payrollController extends Controller
                     $allData = array("maindata" => $task, "sendyear" => $sendyear, "sendmonth" => $setmonth);
                         return view('monthlyattendancereport',['data'=>$allData]);
             }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
     
         }
@@ -5133,12 +5133,12 @@ class payrollController extends Controller
                     }   
                     }
                 }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To View Report');
+                    return redirect('/')->with('message','You Are Not Allowed To View Report');
                 }
                 $allData = array("maindata" => $task, "sendyear" => $sendyear, "sendmonth" => $setmonth);
                     return view('payroll.masterpayroll.misreport',['data'=>$allData]);
             }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
     
         }
@@ -5156,7 +5156,7 @@ class payrollController extends Controller
             // dd($taskin);
             return view('biomatricattendancereport', ['data' => $taskin]); 
              }else{
-                    return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                    return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
         }
         public function acknowledgedpay($id){
@@ -5171,7 +5171,7 @@ class payrollController extends Controller
                 );
                 $created = DB::connection('mysql')->table('acknowledgedpay')->insert($insert);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function deliveredpay($id,$amount){
@@ -5197,7 +5197,7 @@ class payrollController extends Controller
                 );
                 $created = DB::connection('mysql')->table('deliveredpaylog')->insert($insertlog);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function deliverreamining($id,$amount){
@@ -5220,7 +5220,7 @@ class payrollController extends Controller
             );
             $created = DB::connection('mysql')->table('deliveredpaylog')->insert($insertlog);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function viewdeliversalarylog($id){
@@ -5232,7 +5232,7 @@ class payrollController extends Controller
             ->get();
             return view('payroll.modal.deliversalarylog',['data' => $task]);
         }else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function holdsalary($id){
@@ -5247,7 +5247,7 @@ class payrollController extends Controller
                 );
                 $created = DB::connection('mysql')->table('holdsalary')->insert($insert);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function activeholdsalary($id){
@@ -5256,7 +5256,7 @@ class payrollController extends Controller
             ->where('holdsalary_id', '=', $id)
             ->update(['status_id' => 1]);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     // Decrement
@@ -5270,7 +5270,7 @@ class payrollController extends Controller
             // dd($task);
             return view('decrement.decrementlist',['data'=>$task]);
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function adddecrementmodal(){
@@ -5286,7 +5286,7 @@ class payrollController extends Controller
                 return redirect('/decrementlist')->with('message','You Are Not Allowed To Add Decrement');
             }
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -5316,10 +5316,10 @@ class payrollController extends Controller
             }
             }
             else{
-                return redirect('/arclogin')->with('message','Reach HR For Access');
+                return redirect('/')->with('message','Reach HR For Access');
                 }
             }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
             } 
     }
     public function editdecrementmodal($id){
@@ -5334,7 +5334,7 @@ class payrollController extends Controller
                 return redirect('/decrementlist')->with('message','You Are Not Allowed To Edit Decrement');
             }
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function editsubmitdecrement(Request $request){
@@ -5359,10 +5359,10 @@ class payrollController extends Controller
                         return redirect('/decrementlist')->with('message','Oops! Something went wrong');;
                     }
                     }else{
-                        return redirect('/arclogin')->with('message','Reach HR For Access');
+                        return redirect('/')->with('message','Reach HR For Access');
                         }
         }else{
-              return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+              return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         } 
     }
     public function deletedecrement($id){
@@ -5372,7 +5372,7 @@ class payrollController extends Controller
             ->update(['status_id' => 1]);
                 return redirect('/decrementlist')->with('message','Decrement Successfully Deleted!');
         }else{
-                return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             } 
     }
 }

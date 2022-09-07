@@ -156,7 +156,7 @@ class ManagerController extends Controller
 
 		return view('manager.mcandidate_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -239,7 +239,7 @@ class ManagerController extends Controller
 
 		return view('manager.callforinterview_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -322,7 +322,7 @@ class ManagerController extends Controller
 
 		return view('manager.rejectedcan_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -405,7 +405,7 @@ class ManagerController extends Controller
 
 		return view('manager.mirrelevent_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -814,7 +814,7 @@ class ManagerController extends Controller
 			// dd($task);
 			return view('target.employeetargetlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal');
 		}
 	}
 	public function addtargetmodal(){
@@ -834,7 +834,7 @@ class ManagerController extends Controller
 			$data['result'] = $result;
 			return view('target.modal.addtarget', $data);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 
@@ -865,10 +865,10 @@ class ManagerController extends Controller
 			}
 			}
 			else{
-				return redirect('/arclogin')->with('message','Reach HR For Access');
+				return redirect('/')->with('message','Reach HR For Access');
 				}
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 
@@ -881,10 +881,10 @@ class ManagerController extends Controller
 					->first();
 				return view('target.modal.edittarget',['data' => $task ]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Edit Employee Target');
+				return redirect('/')->with('message','You Are Not Allowed To Edit Employee Target');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitedittarget(Request $request){
@@ -909,10 +909,10 @@ class ManagerController extends Controller
 						return redirect('/employeetarget_id ')->with('message','Oops! Something went wrong');;
 					}
 					}else{
-						return redirect('/arclogin')->with('message','Reach HR For Access');
+						return redirect('/')->with('message','Reach HR For Access');
 						}
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function deletetarget($id){
@@ -922,7 +922,7 @@ class ManagerController extends Controller
 				->update(['status_id' => 1]);
 					return redirect('/employeetargetlist')->with('message','Employee Target Successfully Deleted!');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function addachievedmodal($id){
@@ -932,10 +932,10 @@ class ManagerController extends Controller
 				$arraydata = array('batchid' => $getdata[0], 'month' => $getdata[1]);
 				return view('target.modal.addachieved',['data' => $arraydata]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Add Employee Target');
+				return redirect('/')->with('message','You Are Not Allowed To Add Employee Target');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitaddachieved(Request $request){
@@ -964,10 +964,10 @@ class ManagerController extends Controller
 			}
 			}
 			else{
-				return redirect('/arclogin')->with('message','Reach HR For Access');
+				return redirect('/')->with('message','Reach HR For Access');
 				}
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 	}
 	public function employeeachievedlist($id){
@@ -982,7 +982,7 @@ class ManagerController extends Controller
 			->get();
 			return view('target.employeeachievedlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal');
 		}
 	}
 	public function editachievedmodal($id){
@@ -995,10 +995,10 @@ class ManagerController extends Controller
 					// dd($task);
 				return view('target.modal.editachieved',['data' => $task ]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Edit Employee Target Achieved');
+				return redirect('/')->with('message','You Are Not Allowed To Edit Employee Target Achieved');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submiteditachieved(Request $request){
@@ -1021,10 +1021,10 @@ class ManagerController extends Controller
 						return redirect('/employeetargetlist')->with('message','Oops! Something went wrong');;
 					}
 					}else{
-						return redirect('/arclogin')->with('message','Reach HR For Access');
+						return redirect('/')->with('message','Reach HR For Access');
 						}
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function deleteachived($id){
@@ -1034,7 +1034,7 @@ class ManagerController extends Controller
 				->update(['status_id' => 1]);
 					return redirect('/employeetargetlist')->with('message','Employee Target Successfully Deleted!');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				} 
 		}
 		public function selecttargetmonth(){
@@ -1042,10 +1042,10 @@ class ManagerController extends Controller
 			if(session()->get("role") <= 3){
 				return view('target.selecttargetmonth');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Edit Employee Target Achieved');
+				return redirect('/')->with('message','You Are Not Allowed To Edit Employee Target Achieved');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	// Employee Target End

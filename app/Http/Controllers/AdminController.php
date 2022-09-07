@@ -304,7 +304,7 @@ class AdminController extends Controller
 		return Excel::download(new EmployeesExport, 'Candidatereport.xlsx');
   
 		} else {
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
     }
 
@@ -318,7 +318,7 @@ class AdminController extends Controller
 
 		return view('admin.candidate_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -410,7 +410,7 @@ class AdminController extends Controller
 
 		return view('admin.screening_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -486,7 +486,7 @@ class AdminController extends Controller
 
 		return view('admin.irexperience_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -561,7 +561,7 @@ class AdminController extends Controller
 
 		return view('admin.irrelevent_list',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -1657,7 +1657,7 @@ class AdminController extends Controller
 		if (session()->get('role') == 1) {
 		
 			if(session()->get('role') == 4 && $name != session()->get('batchid')){
-	             return redirect('/arclogin')->with('message','We report your id on HR');
+	             return redirect('/')->with('message','We report your id on HR');
 	        }
 	        
 	        $empinfo = DB::connection('mysql')->table('elsemployees')
@@ -1711,7 +1711,7 @@ class AdminController extends Controller
 
 			return view('dynamicemployeedata.testserverdata',['data'=>$task,'userdetail'=>$userdetails]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal this page with this role');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal this page with this role');
 		}
     }
     // Bizz Album Start
@@ -1719,7 +1719,7 @@ class AdminController extends Controller
 		if(session()->get("email")){
 				return view('gallery.albumlist');
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function albumlistdata(){
@@ -1731,7 +1731,7 @@ class AdminController extends Controller
 			->paginate(20);
 			return view('gallery.albumlistdata',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function createalbummodal(){
@@ -1739,10 +1739,10 @@ class AdminController extends Controller
 			if(session()->get("role") <= 2){
 		        return view('gallery.modal.createalbum');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Create Album');
+				return redirect('/')->with('message','You Are Not Allowed To Create Album');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submitcreatealbum(Request $request){
@@ -1779,13 +1779,13 @@ class AdminController extends Controller
 		if($createalbum){
 				return redirect('/albumlist')->with('message','Album Created Successfully'); 
 		}else{
-              return redirect('/arclogin')->with('message','Oops! Something Went Wrong');
+              return redirect('/')->with('message','Oops! Something Went Wrong');
         }
         }else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Create Album');
+				return redirect('/')->with('message','You Are Not Allowed To Create Album');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function editalbummodal($id){
@@ -1796,11 +1796,11 @@ class AdminController extends Controller
 					->select('album.*')
 					->first();
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');	
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');	
 			}
 					return view('gallery.modal.editalbum',['data' => $task ]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	
 	}
@@ -1848,10 +1848,10 @@ class AdminController extends Controller
 						return redirect('/albumlist')->with('message','Oops! Something went wrong');;
 					}
 					}else{
-						return redirect('/arclogin')->with('message','Reach HR For Access');
+						return redirect('/')->with('message','Reach HR For Access');
 					}
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			} 
 	}
 	public function deletealbum($id){
@@ -1861,14 +1861,14 @@ class AdminController extends Controller
 			->update(['status_id' => 1]);
 				return redirect('/albumlist')->with('message','Album Successfully Deleted!');
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			} 
 	}
 	public function gallerylist($id){
 		if(session()->get("email")){
 				return view('gallery.gallerylist',['data'=>$id]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function gallerylistdata($id){
@@ -1882,7 +1882,7 @@ class AdminController extends Controller
 			$task->albumid = $id;
 			return view('gallery.gallerylistdata',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function uploadgallerymodal($id){
@@ -1890,10 +1890,10 @@ class AdminController extends Controller
 			if(session()->get("role") <= 2){
 		        return view('gallery.modal.uploadgallery',['albumid'=>$id]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Upload');
+				return redirect('/')->with('message','You Are Not Allowed To Upload');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function submituploadgallery(Request $request){
@@ -1937,7 +1937,7 @@ class AdminController extends Controller
             return redirect('/gallerylist')->with('message','Oops! Something Went Wrong');
         }
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}	
 	}
 	public function deletegallery($id,$aid){
@@ -1948,7 +1948,7 @@ class AdminController extends Controller
 			$redirectgallery = "gallerylist/".$aid;
 				return redirect($redirectgallery)->with('message','Successfully Deleted!');
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			} 
 	}
 	public function complainreport(){
@@ -1962,7 +1962,7 @@ class AdminController extends Controller
 			// dd($task);
 			return view('complainreport',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		} 
 	}
 	public function processcomplain($id){
@@ -1997,7 +1997,7 @@ class AdminController extends Controller
 		    'created_at'				=> date('Y-m-d h:i:s'),
 		   ]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 	// Bizz Album End

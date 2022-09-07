@@ -23,12 +23,12 @@ class CheckEmailandUser
 				
 			}else{
 				
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit This Page');
+				return redirect('/')->with('message','You Are Not Allowed To Visit This Page');
 			}
 			
         }else{
 			
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			
         }
     }

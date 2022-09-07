@@ -86,23 +86,23 @@ class elscontroller extends Controller
 							  
 								}
 							}else{
-								return redirect('/arclogin')->with('message', 'Kindly Reach Web Depart For Credential');
+								return redirect('/')->with('message', 'Kindly Reach Web Depart For Credential');
 								}
 						}else{
-							return redirect('/arclogin')->with('message','Kindly reach IT Department Or Creat Gmail Account.');
+							return redirect('/')->with('message','Kindly reach IT Department Or Creat Gmail Account.');
 							}
 					}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 						}
 				}else{
-							return redirect('/arclogin')->with('message','Kindly Reachout HR Department for Credential');
+							return redirect('/')->with('message','Kindly Reachout HR Department for Credential');
 					}
 						
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}	
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}	
 	}
 	
@@ -118,7 +118,7 @@ class elscontroller extends Controller
 		return view('dashboard',['data'=>$task]);
 	}
 	else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}	
 	}
 	
@@ -130,7 +130,7 @@ class elscontroller extends Controller
 			return view('modal.getimage');
 		
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -191,7 +191,7 @@ class elscontroller extends Controller
 			}
 			
           }else{
-              return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+              return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
           } 
 	}
 	
@@ -203,7 +203,7 @@ class elscontroller extends Controller
 			return view('modal.getcover');
 		
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -264,7 +264,7 @@ class elscontroller extends Controller
 			}
 			
           }else{
-              return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+              return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
           } 
 	}
 	// cover image 09/April/2021 end
@@ -303,7 +303,7 @@ class elscontroller extends Controller
 		
 				}
 			else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}	
 			
 	}
@@ -496,7 +496,7 @@ class elscontroller extends Controller
 				->get();
 						return view('employeelist',['data'=>$task, 'department'=>$depart]);
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -549,7 +549,7 @@ class elscontroller extends Controller
 				->get();
 						return view('notactiveemployeelist',['data'=>$task, 'department'=>$depart]);
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -605,7 +605,7 @@ class elscontroller extends Controller
 				->get();
 						return view('employeelist',['data'=>$task, 'department'=>$depart]);
 			}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -622,7 +622,7 @@ class elscontroller extends Controller
 				
 						return view('employee_list',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -724,7 +724,7 @@ class elscontroller extends Controller
 					
 						return view('dynamicemployeedata.dynamicsearch',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -761,7 +761,7 @@ class elscontroller extends Controller
 				// dd($task);
 						return view('dynamicemployeedata.dynamictable',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		
@@ -796,7 +796,7 @@ class elscontroller extends Controller
 				}
 						return view('attendance.attendance',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -828,7 +828,7 @@ class elscontroller extends Controller
 				}
 						return view('viewattendnce',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -864,7 +864,7 @@ class elscontroller extends Controller
 					$allData = array("maindata" => $task, "sendyear" => $sendyear, "sendmonth" => $setmonth);
 						return view('attendancereport',['data'=>$allData]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -894,7 +894,7 @@ class elscontroller extends Controller
 				}
 		return view('viewattendnce',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -924,7 +924,7 @@ class elscontroller extends Controller
 				}
 		return view('viewempattendnce',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -967,7 +967,7 @@ class elscontroller extends Controller
      }
          else
             {
-                        return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                        return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
     }
 	//End attendace update
@@ -995,7 +995,7 @@ class elscontroller extends Controller
 			return view('viewempattendance',['data' => $task]);
 			}
 			else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 }
 }
 	//View Attendance
@@ -1070,11 +1070,11 @@ class elscontroller extends Controller
 				
 				   // dd($task);
 				}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal this page with this role');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal this page with this role');
 				}
 			
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -1102,7 +1102,7 @@ class elscontroller extends Controller
 				   // dd($task);
 						return view('els.modal.requestview',['data' => $task ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		
@@ -1245,7 +1245,7 @@ class elscontroller extends Controller
 			   // dd($task);
 					
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 }
@@ -1274,7 +1274,7 @@ class elscontroller extends Controller
 				//    dd($task);
 						return view('els.selfrequest',['data' => $alldata ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -1292,7 +1292,7 @@ class elscontroller extends Controller
 			// dd($task);
 		return view('els.modal.addrequest' , ['req' => $task, 'date' => $date]);
 		}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 
@@ -1348,7 +1348,7 @@ class elscontroller extends Controller
 			// dd($task);
 		return view('els.modal.addrequestemp' , $data);
 		}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 
@@ -1687,7 +1687,7 @@ class elscontroller extends Controller
 				//    dd($task);
 						return view('els.emprequest',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -1730,7 +1730,7 @@ class elscontroller extends Controller
 				//    dd($task);
 						return view('els.viewemprequest',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -1750,13 +1750,13 @@ class elscontroller extends Controller
 
 			}else{
 				
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			
 			}
 			//    dd($task);
 					return view('els.approvedmulti_request',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	
 	}
@@ -1988,7 +1988,7 @@ class elscontroller extends Controller
         	}
         	return redirect('/approvedmulti_request')->with('message','Requests Approved Successfully');
     	}else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
 
@@ -2009,7 +2009,7 @@ class elscontroller extends Controller
 				   // dd($task);
 						return view('els.modal.showemprequest',['data' => $task ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		
@@ -2032,7 +2032,7 @@ class elscontroller extends Controller
 				   // dd($task);
 						return view('els.modal.emprequestedit',['data' => $task ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		
@@ -2203,7 +2203,7 @@ class elscontroller extends Controller
 		return redirect('/emprequest')->with('message','Oops! Something Went Wrong');
 	}
 	}else{
-		return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+		return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 	}
 }
     public function decline($id){
@@ -2500,7 +2500,7 @@ class elscontroller extends Controller
 		
 	}
 	else{
-		return redirect('/arclogin')->with('message','Something Went Wrong');
+		return redirect('/')->with('message','Something Went Wrong');
 	}
 	
 }
@@ -2568,7 +2568,7 @@ class elscontroller extends Controller
 				//    dd($task);
 						return view('els.emprequest',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 }
@@ -2586,7 +2586,7 @@ class elscontroller extends Controller
 				   // dd($task);
 						return view('modal.editattendance',['data' => $task ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		
@@ -2609,7 +2609,7 @@ class elscontroller extends Controller
           }     
             else
             {
-                        return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                        return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
 
 	}
@@ -2658,7 +2658,7 @@ class elscontroller extends Controller
      }
          else
             {
-                        return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+                        return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             }
     }
     public function selectattendancemonth(){
@@ -2673,7 +2673,7 @@ class elscontroller extends Controller
 	
     public function forget_submit(Request $get){
     	if($get->email == ""){
-            return redirect('/arclogin')->with('message','Please Enter Email');
+            return redirect('/')->with('message','Please Enter Email');
         }
       $verify_token =  $this->generateRandomString(100);
       $data = array();
@@ -2690,9 +2690,9 @@ class elscontroller extends Controller
                 //->subject('Employee Leave Request Submited By: Noman');
                 ->subject('Forget Password');
                 });
-        return redirect('/arclogin')->with('message','Check Your Email'); 
+        return redirect('/')->with('message','Check Your Email'); 
       } else{
-        return redirect('/arclogin')->with('message','Something went wrong'); 
+        return redirect('/')->with('message','Something went wrong'); 
       }
                 
       //dd($get);
@@ -2708,7 +2708,7 @@ class elscontroller extends Controller
         $data['verify_token'] = $verify_token;
        return view('resetpassword',$data);
       } else{
-         return redirect('/arclogin')->with('message','Link Expired.');
+         return redirect('/')->with('message','Link Expired.');
       }
     }
 	
@@ -2719,13 +2719,13 @@ class elscontroller extends Controller
 		                 ->where('verify_token', $get->verify_token)
 		                 ->update(['elsemployees_password' => $get->password,'verify_token' => '']);
 		      if($cmd){
-		        return redirect('/arclogin')->with('message','Password Has been Reset Successfully.'); 
+		        return redirect('/')->with('message','Password Has been Reset Successfully.'); 
 		      } else{
-		        return redirect('/arclogin')->with('message','Something Went Wrong'); 
+		        return redirect('/')->with('message','Something Went Wrong'); 
 		      }	
 		}else{
 
-			return redirect('/arclogin')->with('message','verify token required');
+			return redirect('/')->with('message','verify token required');
 		}
     }
 
@@ -2760,7 +2760,7 @@ class elscontroller extends Controller
 			}
 					return view('departmentlist',['data'=>$task]);
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -2775,7 +2775,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.adddepartment');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 
 		}
@@ -2801,7 +2801,7 @@ class elscontroller extends Controller
 						
 					}
 					else{
-						return redirect('/arclogin');
+						return redirect('/');
 
 						}
 			} 
@@ -2822,7 +2822,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.editdepartment',['data' => $task ]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		
 		}
@@ -2849,7 +2849,7 @@ class elscontroller extends Controller
 							
 						}
 						else{
-							return redirect('/arclogin');
+							return redirect('/');
 	
 							}
 				} 
@@ -2896,7 +2896,7 @@ class elscontroller extends Controller
 					}
 							return view('designationlist',['data'=>$task]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 
 			}
@@ -2911,7 +2911,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.adddesignation');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 
 		}
@@ -2937,7 +2937,7 @@ class elscontroller extends Controller
 							
 						}
 						else{
-							return redirect('/arclogin');
+							return redirect('/');
 
 							}
 				} 
@@ -2958,7 +2958,7 @@ class elscontroller extends Controller
 					}
 							return view('modal.editdesignation',['data' => $task ]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			}
@@ -2984,7 +2984,7 @@ class elscontroller extends Controller
 								
 							}
 							else{
-								return redirect('/arclogin');
+								return redirect('/');
 		
 								}
 					} 
@@ -3007,7 +3007,7 @@ class elscontroller extends Controller
 					}
 							return view('holidayslist',['data'=>$task]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 
 			}
@@ -3022,7 +3022,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.addholidays');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 
 		}
@@ -3049,7 +3049,7 @@ class elscontroller extends Controller
 							
 						}
 						else{
-							return redirect('/arclogin');
+							return redirect('/');
 
 							}
 				} 
@@ -3070,7 +3070,7 @@ class elscontroller extends Controller
 					}
 							return view('modal.editholidays',['data' => $task ]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			}
@@ -3096,7 +3096,7 @@ class elscontroller extends Controller
 								
 							}
 							else{
-								return redirect('/arclogin');
+								return redirect('/');
 		
 								}
 					} 
@@ -3117,7 +3117,7 @@ class elscontroller extends Controller
 						}
 								return view('modal.deleteholidays',['data' => $task ]);
 					}else{
-							return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+							return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 				
 				}
@@ -3172,7 +3172,7 @@ class elscontroller extends Controller
 					}
 							return view('resignationlist',['data'=>$task]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 
 			}
@@ -3187,7 +3187,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.addresignation');
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 
 		}
@@ -3215,7 +3215,7 @@ class elscontroller extends Controller
 								}
 								
 					}else{
-						return redirect('/arclogin');
+						return redirect('/');
 
 					}
 				} 
@@ -3236,7 +3236,7 @@ class elscontroller extends Controller
 					}
 							return view('modal.editresignation',['data' => $task ]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			}
@@ -3264,7 +3264,7 @@ class elscontroller extends Controller
 								
 							}
 							else{
-								return redirect('/arclogin');
+								return redirect('/');
 		
 								}
 					} 
@@ -3287,7 +3287,7 @@ class elscontroller extends Controller
 					}
 							return view('modal.viewresignation',['data' => $task ]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			}
@@ -3313,7 +3313,7 @@ class elscontroller extends Controller
 								
 							}
 							else{
-								return redirect('/arclogin');
+								return redirect('/');
 		
 								}
 					} 
@@ -3337,7 +3337,7 @@ class elscontroller extends Controller
 					}
 							return view('announcementlist',['data'=>$task]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 
 			}
@@ -3354,7 +3354,7 @@ class elscontroller extends Controller
 				}
 						return view('modal.addannouncement',['depart' => $depart]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 
 		}
@@ -3417,11 +3417,11 @@ class elscontroller extends Controller
 							
 						}
 						else{
-							return redirect('/arclogin')->with('message','Reach HR For Access');
+							return redirect('/')->with('message','Reach HR For Access');
 
 							}
 						}else{
-							return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+							return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 
 							} 
 			}
@@ -3441,7 +3441,7 @@ class elscontroller extends Controller
 					}
 							return view('modal.editannouncement',['data' => $task ]);
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			}
@@ -3506,10 +3506,10 @@ class elscontroller extends Controller
 							}
 								
 							}else{
-								return redirect('/arclogin')->with('message','Reach HR For Access');
+								return redirect('/')->with('message','Reach HR For Access');
 								}
 					}else{
-								return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+								return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 								} 
 				}
 
@@ -3536,7 +3536,7 @@ class elscontroller extends Controller
 					  	->first();
 					return view('hrmform',['data'=> $task,]);
 			        } else {
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 				}
 
@@ -3639,11 +3639,11 @@ class elscontroller extends Controller
 						// return redirect()->back()->withSuccess('Successfull');
 							return redirect('/hrmform')->with('message','Successfull Uploaded');
 					} else {
-						return redirect('/arclogin')->with('message','Please login');
+						return redirect('/')->with('message','Please login');
 				
 					}	
 					} else {
-						return redirect('/arclogin')->with('message','Please login');
+						return redirect('/')->with('message','Please login');
 				
 					}
 				}
@@ -3660,7 +3660,7 @@ class elscontroller extends Controller
 						return view('hrmreport',['data' => $task]);
 					
 					}else{
-								return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+								return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 						}
 				}
 
@@ -3674,7 +3674,7 @@ class elscontroller extends Controller
 			        return view('modal.viewpicture',['data' => $task]);
 					
 					}else{
-								return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+								return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 						}
 				}
 
@@ -3691,7 +3691,7 @@ class elscontroller extends Controller
 					return Excel::download(new EmployeesExport, 'ELS.xlsx');
 			
 					} else {
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 				}
 
@@ -3742,7 +3742,7 @@ class elscontroller extends Controller
 						return view('employeechart',['data'=>$all]);
 						
 					}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 				}
 
@@ -3785,7 +3785,7 @@ class elscontroller extends Controller
 					return view('depleavesearchchart',['data'=>$all]);
 				
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			
@@ -3828,7 +3828,7 @@ class elscontroller extends Controller
 					return view('depleavesearchchart',['data'=>$all]);
 				
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			
@@ -3875,7 +3875,7 @@ class elscontroller extends Controller
 					return view('depleavesearchchart',['data'=>$all]);
 				
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 				}
 			
 			
@@ -3892,7 +3892,7 @@ class elscontroller extends Controller
 			    'attendance_submitby' => session()->get('name')
 			]);
 		}else{
-           		return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+           		return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function usertimeout() {
@@ -3906,7 +3906,7 @@ class elscontroller extends Controller
 			]);
         		return redirect('/maindashboard')->with('message','Timeout Successfully');	
 		}else{
-           		return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+           		return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function viewattendnceout(){
@@ -3937,7 +3937,7 @@ class elscontroller extends Controller
 				}
 						return view('viewattendnceout',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -3952,7 +3952,7 @@ class elscontroller extends Controller
 			->get();
 			return view('viewempattendanceout',['data' => $task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function selectattendanceoutmonth(){
@@ -3989,7 +3989,7 @@ class elscontroller extends Controller
 					$allData = array("maindata" => $task,"sendyear" => $sendyear, "sendmonth" => $setmonth);
 						return view('attendanceoutreport',['data'=>$allData]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -4024,7 +4024,7 @@ class elscontroller extends Controller
 			}
 			return view('attendancecorrection',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function attendancecorrectionforadmin(){
@@ -4040,14 +4040,14 @@ class elscontroller extends Controller
 					// dd($task);
 			return view('attendancecorrection',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addcorrectionmodal($date){
 			if(session()->get("email")){
 				return view('modal.addcorrection',['data'=>$date]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 
@@ -4132,7 +4132,7 @@ class elscontroller extends Controller
 						return redirect('/dailyattendance')->with('message','Oops! Something went wrong');;
 					}
 					}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 
 					} 
 		}
@@ -4146,7 +4146,7 @@ class elscontroller extends Controller
 				->update($dataa);
 				return redirect('/attendancecorrectionlist')->with('message','Attendance Correctioin Successfully Deleted!');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 		}
 		public function approvecorrection($id,$comment){
@@ -4162,7 +4162,7 @@ class elscontroller extends Controller
 				->update($dataa);
 				return redirect('/attendancecorrectionlist')->with('message','Attendance Correctioin Approved Successfully!');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 		}
 		public function declinecorrection($id,$comment){
@@ -4178,7 +4178,7 @@ class elscontroller extends Controller
 				->update($dataa);
 				return redirect('/attendancecorrectionlist')->with('message','Attendance Correctioin Declined Deleted!');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 		}
 		public function proceedcorrection($id,$comment){
@@ -4194,7 +4194,7 @@ class elscontroller extends Controller
 				->update($dataa);
 				return redirect('/attendancecorrectionlist')->with('message','Attendance Correctioin Procced Successfully!');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 		}
 		public function managerdeclinecorrection($id,$comment){
@@ -4210,7 +4210,7 @@ class elscontroller extends Controller
 				->update($dataa);
 				return redirect('/attendancecorrectionlist')->with('message','Attendance Correction Declined Successfully!');
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 			} 
 		}
 		public function correctionreport(){
@@ -4243,7 +4243,7 @@ class elscontroller extends Controller
 			}
 			return view('correctionreport',['data'=>$task]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 		public function approvedmulti_correction(){
@@ -4268,10 +4268,10 @@ class elscontroller extends Controller
 					->get();
 				return view('attendancecorrectionmulti',['data'=>$task]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function updatemulticorrection(Request $request) {
@@ -4289,7 +4289,7 @@ class elscontroller extends Controller
 				}
          	return redirect('/attendancecorrectionlist')->with('message','Corrections Approved Successfully');
     	}else{
-            return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+            return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }
     }
     public function editcorrectionmodal($id){
@@ -4300,7 +4300,7 @@ class elscontroller extends Controller
 				->first();
 				return view('modal.editcorrection',['data'=>$task]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	}
 	public function submiteditcorrection(Request $request){
@@ -4342,7 +4342,7 @@ class elscontroller extends Controller
 						return redirect('/attendancecorrectionlist')->with('message','Oops! Something went wrong');;
 					}
 				}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');;
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 				} 
 		}
     	public function changepicturemodal($id){
@@ -4352,7 +4352,7 @@ class elscontroller extends Controller
 			return view('modal.changepicturemodal', ['data' => $id]);
 		
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 		
 	}
@@ -4389,7 +4389,7 @@ class elscontroller extends Controller
 				return redirect('/employee_list')->with('message','Oops! Something Went Wrong'); 
 			}
           }else{
-              return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+              return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
           } 
 	}
 }

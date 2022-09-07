@@ -29,7 +29,7 @@ class hrmcontroller extends Controller
 	
 			// session()->get("email")->except('hrmlogin');
 		// }else{
-			// return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			// return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		// }
 	// }
 	
@@ -422,26 +422,26 @@ class hrmcontroller extends Controller
 								}
 
 							}else{
-								return redirect('/arclogin')->with('message', 'Kindly Reach Web Depart For Credential');
+								return redirect('/')->with('message', 'Kindly Reach Web Depart For Credential');
 							}
 						}else{
-							return redirect('/arclogin')->with('message','Kindly reach IT Department Or Create Your Account.');
+							return redirect('/')->with('message','Kindly reach IT Department Or Create Your Account.');
 						}
 						 
 					}else{
-						return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 							
 				}else{
-					return redirect('/arclogin')->with('message','Kindly Reachout HR Department for Credential');
+					return redirect('/')->with('message','Kindly Reachout HR Department for Credential');
 				}
 	
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}	
 			
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}	
 	}
 	
@@ -1273,7 +1273,7 @@ class hrmcontroller extends Controller
 		return redirect('/probationaryformlist')->with('message','Batch Id Is Not Valid');
 	}
 	}else{
-		return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+		return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 }
 
 }
@@ -1397,7 +1397,7 @@ class hrmcontroller extends Controller
 				}
 				
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -1601,7 +1601,7 @@ class hrmcontroller extends Controller
 						
 				return view('probationaryformlist', ['data'=>$problistemp]);
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -1635,7 +1635,7 @@ class hrmcontroller extends Controller
 			
 			return view('probationary_report', ['data'=>$problistemp]);
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -1665,7 +1665,7 @@ class hrmcontroller extends Controller
 			return view('probationary_reportview',['data'=>$all]);
 				
 			}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -1710,7 +1710,7 @@ class hrmcontroller extends Controller
         
         	return view('probationaryemppdf', ['datas' => $all]);
     	}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
     }
 
@@ -1762,11 +1762,11 @@ class hrmcontroller extends Controller
 					return redirect('/probationaryformlist')->with('message','something went wrong');
 					}
 			}else{
-			return redirect('/arclogin')->with('message','something went wrong');
+			return redirect('/')->with('message','something went wrong');
 			}
 
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 
@@ -1839,7 +1839,7 @@ class hrmcontroller extends Controller
 				}
 						return view('payroll.employeetimings',['data'=>$task]);
 			}else{
-					return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 			}
 	
 	}
@@ -1854,7 +1854,7 @@ class hrmcontroller extends Controller
 			}
 					return view('modal.addemployeetimings');
 		}else{
-				return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 
 	}
@@ -1888,10 +1888,10 @@ class hrmcontroller extends Controller
 				}					
 			}
 			else{
-				return redirect('/arclogin')->with('message','You dont Have Access To Performe This Action');
+				return redirect('/')->with('message','You dont Have Access To Performe This Action');
 			}
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function editemployeetiming($id){
@@ -1924,10 +1924,10 @@ class hrmcontroller extends Controller
 				}					
 			}
 			else{
-				return redirect('/arclogin')->with('message','You dont Have Access To Performe This Action');
+				return redirect('/')->with('message','You dont Have Access To Performe This Action');
 			}
 		}else{
-			return redirect('/arclogin')->with('message','You Are Not Allowed To Visit Portal Without login');
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 }

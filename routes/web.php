@@ -5,12 +5,12 @@ Route::get('/cc', function() {
     Artisan::call('config:cache');
     return "Cache is cleared";
 });
-Route::get('/', function() {
-    return view('arc.arcwelcome');
-});
-Route::get('/arctech', function() {
-    return view('arc.arctech');
-});
+// Route::get('/', function() {
+//     return view('arc.arcwelcome');
+// });
+// Route::get('/arctech', function() {
+//     return view('arc.arctech');
+// });
 Route::get('/keypress',function(){
 	return view('keypress');
 });
@@ -47,7 +47,7 @@ Route::get('/uploadsheetdata', function () {
     return view('uploaddatasheet');
 });
 
-Route::get('/arclogin','MyController@logout');
+Route::get('/','MyController@logout');
 
 Route::get('/reservemeetingroom','ReservationController@reservemeetingroom');
 Route::any('/submitreservtion','ReservationController@submitreservtion');

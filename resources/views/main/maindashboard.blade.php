@@ -192,17 +192,17 @@ border-radius: 6px;
 <link rel="stylesheet" href="{!! asset('assets/css/bizzstyle.css') !!}">
 <link rel="stylesheet" href="{!! asset('assets/css/main.css') !!}">
 <!-- bootstrap -->
-<link rel="stylesheet" href="{!! asset('public/bizzmain/cdns/bootstrap.min.css') !!}">
-<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.css') !!}">
-<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.min.css') !!}">
-<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.css') !!}">
-<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('bizzmain/cdns/bootstrap.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.css') !!}">
+<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.css') !!}">
+<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
 <!-- jwquerry -->
-<script src="{!! asset('public/bizzmain/cdns/jquery.min.js') !!}"></script>
-<script src="{!! asset('public/bizzmain/cdns/popper.min.js') !!}"></script>
-<script src="{!! asset('public/bizzmain/cdns/bootstrap.min.js') !!}"></script>
+<script src="{!! asset('bizzmain/cdns/jquery.min.js') !!}"></script>
+<script src="{!! asset('bizzmain/cdns/popper.min.js') !!}"></script>
+<script src="{!! asset('bizzmain/cdns/bootstrap.min.js') !!}"></script>
 
-<script src="{!! asset('public/bizzmain/cdns/sweetalert.min.js') !!}"></script>
+<script src="{!! asset('bizzmain/cdns/sweetalert.min.js') !!}"></script>
 <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/jquery.emojipicker.css') !!}">
 <script type="text/javascript" src="{!! asset('assets/js/jquery.emojipicker.js') !!}"></script>
 <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/jquery.emojipicker.tw.css') !!}">

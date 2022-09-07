@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="{!! asset('public/assets/css/welcome.css') !!}" rel="stylesheet" type="text/css">
+<link href="{!! asset('assets/css/welcome.css') !!}" rel="stylesheet" type="text/css">
 <div class="container" id="bizzwelcomemodal" style="position: absolute;top: 35%;left: 15%;">
     <div class="row mb-3">
         <div class="col-lg-12">

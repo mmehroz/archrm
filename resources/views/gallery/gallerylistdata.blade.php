@@ -52,18 +52,18 @@
 						<div class="col-md-3 col-sm-6 col-12 col-lg-3 col-xl-3" style="float: left;">
 							<!-- <div class="profile-widget">
 								<div class="profile-img">
-									<a href="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" target="_blank" class="avatar">
+									<a href="{{URL::to('gallery/')}}/{{$val->gallery_image}}" target="_blank" class="avatar">
 										<?php
 										$getextension = explode("_", $val->gallery_image);
 										if ($getextension[3] == ".mp4" || $getextension[3] == ".x-m4v") {
 										?>
 										<video controls>
-  										<source src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
+  										<source src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
   										</video>
 										<?php
 										}else{
 										?>
-										<img src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" alt="">
+										<img src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" alt="">
 										<?php
 										}
 										?>
@@ -82,18 +82,18 @@
                     		</div> -->
                     		<!-- <div class="card1">
                     <div class="image ">
-                      <a href="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" target="_blank" class="">
+                      <a href="{{URL::to('gallery/')}}/{{$val->gallery_image}}" target="_blank" class="">
 										<?php
 										$getextension = explode("_", $val->gallery_image);
 										if ($getextension[3] == ".mp4" || $getextension[3] == ".x-m4v") {
 										?>
 										<video controls>
-  										<source src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
+  										<source src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
   										</video>
 										<?php
 										}else{
 										?>
-										<img src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" alt="">
+										<img src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" alt="">
 										<?php
 										}
 										?>
@@ -103,18 +103,18 @@
                 </div> -->
                 <div class="thumbnail">
                    
-                   <a href="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" target="_blank" class="">
+                   <a href="{{URL::to('gallery/')}}/{{$val->gallery_image}}" target="_blank" class="">
 										<?php
 										$getextension = explode("_", $val->gallery_image);
 										if ($getextension[3] == ".mp4" || $getextension[3] == ".x-m4v") {
 										?>
 										<video controls>
-  										<source src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
+  										<source src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" type="video/mp4">
   										</video>
 										<?php
 										}else{
 										?>
-										<img src="{{URL::to('public/gallery/')}}/{{$val->gallery_image}}" width="100%" alt="">
+										<img src="{{URL::to('gallery/')}}/{{$val->gallery_image}}" width="100%" alt="">
 										<?php
 										}
 										?>

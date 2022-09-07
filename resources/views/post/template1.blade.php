@@ -1,6 +1,6 @@
 @extends('layout.apptheme')
 @section('hr-HRM')
-<link rel="stylesheet" href="{!! asset('public/assets/css/poststyle.css') !!}" />
+<link rel="stylesheet" href="{!! asset('assets/css/poststyle.css') !!}" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 <div class="page-wrapper">
     <div class=" container-fluid" style="padding: 0px 100px;">

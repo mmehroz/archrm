@@ -78,11 +78,11 @@
 								<td>{{$val->elsemployees_name}}</td>
 								<td style="width: 20px">
 								@if($val->attendancecorrection_image)
-								<a href="{{URL::to('public/attendancecorrection/')}}/{{$val->attendancecorrection_image}}" target="_blank">
-								<img  alt=""  class="avatar" src="{{URL::to('public/attendancecorrection/')}}/{{$val->attendancecorrection_image}}"></a>
+								<a href="{{URL::to('attendancecorrection/')}}/{{$val->attendancecorrection_image}}" target="_blank">
+								<img  alt=""  class="avatar" src="{{URL::to('attendancecorrection/')}}/{{$val->attendancecorrection_image}}"></a>
 								@else
-								<a href="{{URL::to('public/attendancecorrection/')}}/no_image.jpg" target="_blank">
-								<img  alt=""  class="avatar" src="{{URL::to('public/attendancecorrection/')}}/no_image.jpg"></a>
+								<a href="{{URL::to('attendancecorrection/')}}/no_image.jpg" target="_blank">
+								<img  alt=""  class="avatar" src="{{URL::to('attendancecorrection/')}}/no_image.jpg"></a>
 								@endif
 								</td>
 								<td class="text-center">{{$val->attendancecorrection_title}}</td>

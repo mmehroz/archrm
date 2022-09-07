@@ -36,7 +36,7 @@
 			<div class="bd">
 			<h4>Heading....</h4>
 			<audio controls>
- 				<source src="{{URL::to('public/mp3/1.mp3')}}" type="audio/mp3">
+ 				<source src="{{URL::to('mp3/1.mp3')}}" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
             </div>
@@ -46,7 +46,7 @@
 			<div class="bd">
 			<h4>Heading....</h4>
 			<audio controls>
- 				<source src="{{URL::to('public/mp3/1.mp3')}}" type="audio/mp3">
+ 				<source src="{{URL::to('mp3/1.mp3')}}" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
             </div>
@@ -56,7 +56,7 @@
 			<div class="bd">
 			<h4>Heading....</h4>
 			<audio controls>
- 				<source src="{{URL::to('public/mp3/1.mp3')}}" type="audio/mp3">
+ 				<source src="{{URL::to('mp3/1.mp3')}}" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
             </div>

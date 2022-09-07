@@ -26,7 +26,7 @@
                             @if($data->announcement_image != "no_image.jpg")
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="sec">
-                                    <img src="{{URL::to('public/announcement/')}}/{{$data->announcement_image}}" alt="">
+                                    <img src="{{URL::to('announcement/')}}/{{$data->announcement_image}}" alt="">
                                 </div>
                             </div>
                             @endif
@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-xl-1 col-lg-2 col-md-1 col-1 pt-3">
                             
-                            <img src="{{URL::to('public/img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px; position: absolute;left: 0;">
+                            <img src="{{URL::to('img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px; position: absolute;left: 0;">
                         </div>
                         <div class="col-xl-11 col-lg-10 col-md-11 col-11">
                             <div class="comment1">

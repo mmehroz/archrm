@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="{!! asset('public/assets/css/login.css') !!}">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/login.css') !!}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{!! asset('public/images/favicon.ico') !!}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}" />
     <title>Arc Inventador</title>
 </head>
 <body>
     <div class="mainlogindiv">
         <video
-          src="{!! asset('public/assets/arcassets/bgvideo.mp4') !!}"
+          src="{!! asset('assets/arcassets/bgvideo.mp4') !!}"
           style="
             position: absolute;
             z-index: -1;
@@ -29,7 +29,7 @@
             <div class="text-center">
               <img
                 class="logo-img"
-                src="{!! asset('public/assets/arcassets/logo.gif') !!}"
+                src="{!! asset('assets/arcassets/logo.gif') !!}"
                 style="width:15%"
               />
             </div>
@@ -38,7 +38,7 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-4 logimgdiv">
               <img
-                src="{!! asset('public/assets/arcassets/minibot.png') !!}"
+                src="{!! asset('assets/arcassets/minibot.png') !!}"
                 class="img-fluid"
                 style="height:400px;padding:40px"
               />

@@ -28,7 +28,7 @@
 									<div class="profile-view">
 										<div class="profile-img-wrap">
 											<div class="profile-img">
-												<img alt="" src="{{URL::to('public/img/')}}/{{$data['user']->elsemployees_image}}">
+												<img alt="" src="{{URL::to('img/')}}/{{$data['user']->elsemployees_image}}">
 											</div>
 										</div>
 										<div class="profile-basic">
@@ -71,7 +71,7 @@
 															<div class="text">
 															   <div class="avatar-box">
 																  <div class="avatar avatar-xs">
-																	 <img src="{{URL::to('public/img/')}}/{{$data['user']->elsemployees_image}}" alt="">
+																	 <img src="{{URL::to('img/')}}/{{$data['user']->elsemployees_image}}" alt="">
 																  </div>
 															   </div>
 															   <a href="{{url('/employeeprofile')}}">

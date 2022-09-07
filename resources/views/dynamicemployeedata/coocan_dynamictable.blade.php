@@ -19,7 +19,7 @@
 							<div class="profile-widget">
 								<div class="profile-img">
 									<!-- <a href="{{ URL::to('/modviewmng/')}}/{{$val->jobapplicant_id}}" title="Click To Edit Application Form" target="_blank" class="avatar"> -->
-										<img class="avatar" src="{{URL::to('public/img/')}}/{{$val->jobapplicant_picture}}">
+										<img class="avatar" src="{{URL::to('img/')}}/{{$val->jobapplicant_picture}}">
 									<!-- </a> -->
 								</div>								
 								<h3 class="user-name m-t-10 mb-0 text-ellipsis" style="margin-bottom:2%!important;">{{$val->jobapplicant_name}}</h3>

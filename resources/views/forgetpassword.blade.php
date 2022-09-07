@@ -33,7 +33,7 @@
 						<div class="col-md-6">
 							<div class="account-box">
 								<div class="account-logo">
-									<!-- <a href="{{url('/')}}"><img src="{!! asset('public/assets/img/final logo remakasde.png') !!}" alt="Dreamguy's Technologies"></a> -->
+									<!-- <a href="{{url('/')}}"><img src="{!! asset('assets/img/final logo remakasde.png') !!}" alt="Dreamguy's Technologies"></a> -->
 								
 											<a href="{{url('/')}}"><img src="{!! asset('public/images/logo.png') !!}" alt="Dreamguy's Technologies" style="width: 170px;margin-bottom: px;"></a>
 								</div>

@@ -12,17 +12,17 @@
         <title>HRMS</title>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="{{URL::to('public/images/favicon.ico')}}" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{URL::to('images/favicon.ico')}}" />
 		
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/bootstrap.min.css') !!}" />
 		
 		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}" />
 
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}" />
-		<link rel="stylesheet" href="{!! asset('public/assets/css/newlogincss/style.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/newlogincss/style.css') !!}" />
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>

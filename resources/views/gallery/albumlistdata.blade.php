@@ -20,7 +20,7 @@
 							<!-- <div class="profile-widget">
 								<div class="profile-img">
 									<a href="{{url('/gallerylist')}}/{{$val->album_id}}" target="_blank" class="avatar">
-										<img src="{{URL::to('public/album/')}}/{{$val->album_image}}" alt="" title="Click To View Images">
+										<img src="{{URL::to('album/')}}/{{$val->album_image}}" alt="" title="Click To View Images">
 									</a>
 								</div>
 								@if( session()->get("role") <=	 2)
@@ -52,7 +52,7 @@
                                
 
                                 	<a href="{{url('/gallerylist')}}/{{$val->album_id}}" target="_blank" class="text-center" >
-                                		<img src="{{URL::to('public/album/')}}/{{$val->album_image}}" alt="" title="Click To View Images">
+                                		<img src="{{URL::to('album/')}}/{{$val->album_image}}" alt="" title="Click To View Images">
                             		</a>
                             	</div>
                         <br>
@@ -63,7 +63,7 @@
                     		</div> -->
                     		<!-- new -->
                     		 <div class="alb">
-                    <div class="image "> <a href="{{url('/gallerylist')}}/{{$val->album_id}}" target="_blank"> <img src="{{URL::to('public/album/')}}/{{$val->album_image}}"> </a></div>
+                    <div class="image "> <a href="{{url('/gallerylist')}}/{{$val->album_id}}" target="_blank"> <img src="{{URL::to('album/')}}/{{$val->album_image}}"> </a></div>
                     <!-- <h5 class="text-center pt-1">{{$val->album_title}}</h5> -->
                      <a href="{{url('/gallerylist')}}/{{$val->album_id}}" class="btn btn-primary" >View All Images</a>
                     <div class="text-center">

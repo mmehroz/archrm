@@ -80,4 +80,4 @@
 		});
 	}			
 </script>
-<script src="{!! asset('public/assets/js/bootstrap-datetimepicker.min.js') !!}"></script>
+<script src="{!! asset('assets/js/bootstrap-datetimepicker.min.js') !!}"></script>

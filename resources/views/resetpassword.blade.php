@@ -12,16 +12,16 @@
         <title>BWC Login - HRMS</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.ico') !!}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('assets/img/favicon.ico') !!}" />
 		
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}" />
+        <link rel="stylesheet" href="{!! asset('assets/css/bootstrap.min.css') !!}" />
 		
 		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
+        <link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}" />
 		
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}" />
+        <link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}" />
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -63,7 +63,7 @@
 						<div class="col-md-6">
 							<div class="account-box">
 							<div class="account-logo">
-								<!-- <a href="{{url('/')}}"><img src="{!! asset('public/assets/img/final logo remakasde.png') !!}" alt="Dreamguy's Technologies"></a> -->
+								<!-- <a href="{{url('/')}}"><img src="{!! asset('assets/img/final logo remakasde.png') !!}" alt="Dreamguy's Technologies"></a> -->
 							
 										<a href="{{url('/')}}"><img src="{!! asset('public/images/logo.png') !!}" alt="Dreamguy's Technologies" style="width: 170px;margin-bottom: px;"></a>
 							</div>

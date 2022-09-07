@@ -10,45 +10,45 @@
         <title>HRMS</title>
 		<script src="https://cdn.tiny.cloud/1/0x3tdic9crkvey6ukojhz2xq52p85wkzbmuke9acab2c7m85/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{URL::to('public/images/favicon.ico')}}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{URL::to('images/favicon.ico')}}" />
         <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}" />
-		<link rel="stylesheet" href="{!! asset('public/assets/css/buttons.dataTables.min.css') !!}"/>
+		<link rel="stylesheet" href="{!! asset('assets/css/bootstrap.min.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/buttons.dataTables.min.css') !!}"/>
 		
 		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}" />
 		
 		<!-- Lineawesome CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/line-awesome.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('assets/css/line-awesome.min.css') !!}">
 		
 		<!-- Chart CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/plugins/morris/morris.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/plugins/morris/morris.css') !!}" />
 
 		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/dataTables.bootstrap4.min.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/dataTables.bootstrap4.min.css') !!}" />
 
 		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/select2.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('assets/css/select2.min.css') !!}">
 		
 		<!-- SelectPicker CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/selectpicker.css') !!}">
+		<link rel="stylesheet" href="{!! asset('assets/css/selectpicker.css') !!}">
 		
 		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap-datetimepicker.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('assets/css/bootstrap-datetimepicker.min.css') !!}">
 
 		<!-- Main CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}" />
+		<link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
-		<!-- <link rel="stylesheet" href="{!! asset('public/assets/css/buttons.dataTables.min.css') !!}">
-		<link rel="stylesheet" href="{!! asset('public/assets/css/buttons/buttons.dataTables.min.css') !!}"> -->
+		<!-- <link rel="stylesheet" href="{!! asset('assets/css/buttons.dataTables.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('assets/css/buttons/buttons.dataTables.min.css') !!}"> -->
 		
 				<!-- jQuery --> 
-        <script src="{!! asset('public/assets/js/jquery-3.2.1.min.js') !!}" ></script>
+        <script src="{!! asset('assets/js/jquery-3.2.1.min.js') !!}" ></script>
 
 		<!-- Datatable JS -->
-		<script src="{!! asset('public/assets/js/jquery.dataTables.min.js') !!}"></script>		
-		<script src="{!! asset('public/assets/js/dataTables.bootstrap4.min.js') !!}"></script>
+		<script src="{!! asset('assets/js/jquery.dataTables.min.js') !!}"></script>		
+		<script src="{!! asset('assets/js/dataTables.bootstrap4.min.js') !!}"></script>
 
 <style type="text/css">
 	
@@ -77,13 +77,13 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 				<!-- Logo -->
                 <!-- <div class="header-left">
                     <a href="#" class="logo">
-						<img src="{!! asset('public/assets/img/final-logo.png') !!}" height="55" alt="">
+						<img src="{!! asset('assets/img/final-logo.png') !!}" height="55" alt="">
 					</a>
                 </div> -->
                  <div class="header-left">
                     <a href="{{URL('maindashboard')}}" class="logo">
-						<img src="{{URL::to('public/bizzmain/logo-05.svg')}}"  width="100%" height="5" alt="">
-						<img src="{{URL::to('public/bizzmain/logo-03.svg')}}" width="130px"  style="display:none" alt="">
+						<img src="{{URL::to('bizzmain/logo-05.svg')}}"  width="100%" height="5" alt="">
+						<img src="{{URL::to('bizzmain/logo-03.svg')}}" width="130px"  style="display:none" alt="">
 					</a>
 					<script>
         $(document).ready(function() {
@@ -142,8 +142,8 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 					<li class="nav-item dropdown has-arrow main-drop">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 							<span class="user-img">
-								<!-- <img src="{!! asset('public/assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
-								<img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
+								<!-- <img src="{!! asset('assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
+								<img src="{{URL::to('img/')}}/{{session()->get("image")}}" alt="">
 							<span class="status online"></span></span>
 							<span>{{session()->get("name")}}</span>
 						</a>
@@ -679,52 +679,52 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 		<!-- /Main Wrapper -->
 		
 		<!-- Bootstrap Core JS -->
-        <script src="{!! asset('public/assets/js/popper.min.js') !!}"></script>
-        <script src="{!! asset('public/assets/js/bootstrap.min.js') !!}"></script>
+        <script src="{!! asset('assets/js/popper.min.js') !!}"></script>
+        <script src="{!! asset('assets/js/bootstrap.min.js') !!}"></script>
 		
 		<!-- Slimscroll JS -->
-		<script src="{!! asset('public/assets/js/jquery.slimscroll.min.js') !!}"></script>
+		<script src="{!! asset('assets/js/jquery.slimscroll.min.js') !!}"></script>
 		
 		<!-- Select2 JS -->
-		<script src="{!! asset('public/assets/js/select2.min.js') !!}"></script>
+		<script src="{!! asset('assets/js/select2.min.js') !!}"></script>
 		
 		<!-- Chart JS -->
-		<script src="{!! asset('public/assets/plugins/morris/morris.min.js') !!}"></script>
-		<script src="{!! asset('public/assets/plugins/raphael/raphael.min.js') !!}"></script>		
-		<script src="{!! asset('public/assets/js/chart.js') !!}"></script>
+		<script src="{!! asset('assets/plugins/morris/morris.min.js') !!}"></script>
+		<script src="{!! asset('assets/plugins/raphael/raphael.min.js') !!}"></script>		
+		<script src="{!! asset('assets/js/chart.js') !!}"></script>
 
 		<!-- Datetimepicker JS -->		
-		<script src="{!! asset('public/assets/js/moment.min.js') !!}"></script>		
-		<script src="{!! asset('public/assets/js/bootstrap-datetimepicker.min.js') !!}"></script>
+		<script src="{!! asset('assets/js/moment.min.js') !!}"></script>		
+		<script src="{!! asset('assets/js/bootstrap-datetimepicker.min.js') !!}"></script>
 		
 		<!-- Custom JS -->
-		<script src="{!! asset('public/assets/js/app.js') !!}"></script>
-		<script src="{!! asset('public/assets/js/data-table-custom.js') !!}"></script>
+		<script src="{!! asset('assets/js/app.js') !!}"></script>
+		<script src="{!! asset('assets/js/data-table-custom.js') !!}"></script>
 		
-		<script src="{!! asset('public/assets/js/sweetalert.js') !!}"></script>
+		<script src="{!! asset('assets/js/sweetalert.js') !!}"></script>
 
 		
-		<!-- <script src="{!! asset('public/assets/js/dataTables.buttons.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/dataTables.buttons.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
-		<!-- <script src="{!! asset('public/assets/js/buttons.flash.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/buttons.flash.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script>
-		<!-- <script src="{!! asset('public/assets/js/jszip.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/jszip.min.js') !!}"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-		<!-- <script src="{!! asset('public/assets/js/pdfmake.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/pdfmake.min.js') !!}"></script> -->
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> -->
-		<!-- <script src="{!! asset('public/assets/js/vfs_fonts.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/vfs_fonts.js') !!}"></script> -->
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> -->
-		<!-- <script src="{!! asset('public/assets/js/buttons.html5.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/buttons.html5.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
-		<!-- <script src="{!! asset('public/assets/js/buttons.print.min.js') !!}"></script> -->
+		<!-- <script src="{!! asset('assets/js/buttons.print.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
 		
 		<!-- SelectPicker JS -->
-		<script src="{!! asset('public/assets/js/selectpicker.js') !!}"></script>
+		<script src="{!! asset('assets/js/selectpicker.js') !!}"></script>
 		
-		<!-- {!! asset('public/assets/js/chart.js') !!} -->
+		<!-- {!! asset('assets/js/chart.js') !!} -->
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script> -->
-		<!-- {!! asset('public/assets/js/chart.js') !!} -->
+		<!-- {!! asset('assets/js/chart.js') !!} -->
 		<!-- <script src="https://www.jqueryscript.net/demo/Date-Time-Picker-Bootstrap-4/build/js/bootstrap-datetimepicker.min.js"></script> -->
 <script type="text/javascript">	
 	

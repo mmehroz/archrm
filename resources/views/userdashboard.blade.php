@@ -57,9 +57,9 @@
 			<div class="col-md-12">
 				<div class="welcome-box">
 					<div class="welcome-img">
-						<!-- <img alt="" src="{!! asset('public/assets/img/profiles/avatar-00.jpg') !!}" onclick="return viewprofile({{'"'.$data['dataa']->elsemployees_empid.'"'}});"> -->
+						<!-- <img alt="" src="{!! asset('assets/img/profiles/avatar-00.jpg') !!}" onclick="return viewprofile({{'"'.$data['dataa']->elsemployees_empid.'"'}});"> -->
 						<a href="{{URL::to('/getimage') }}">
-						<img alt="" title="Click To Change Image" src="{{URL::to('public/img/')}}/{{$data['dataa']->elsemployees_image}}"></a>
+						<img alt="" title="Click To Change Image" src="{{URL::to('img/')}}/{{$data['dataa']->elsemployees_image}}"></a>
 					</div>
 					<div class="welcome-det">
 						<h3>Welcome, {{$data['dataa']->elsemployees_name}}</h3>

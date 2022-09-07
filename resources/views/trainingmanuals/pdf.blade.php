@@ -37,62 +37,62 @@
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>BWC -HR Policy Manual</h4>
-					<a href="{{URL::to('public/pdf/BWC -HR Policy Manual.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/BWC -HR Policy Manual.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>Debt Validation Program</h4>
-					<a href="{{URL::to('public/pdf/Debt Validation Program.pdf')}}"  class="text-center btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Debt Validation Program.pdf')}}"  class="text-center btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>Script New</h4>
-					<a href="{{URL::to('public/pdf/Script New.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Script New.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Why you should select Debt Validation Program</h4>
-					<a href="{{URL::to('public/pdf/Why you should select Debt Validation Program.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Why you should select Debt Validation Program.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>10 tips for better telemaketing-converted</h4>
-					<a href="{{URL::to('public/pdf/10 tips for better telemaketing-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/10 tips for better telemaketing-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Global Sales call pitch-converted</h4>
-					<a href="{{URL::to('public/pdf/Global Sales call pitch-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Global Sales call pitch-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Presentation1-converted</h4>
-					<a href="{{URL::to('public/pdf/Presentation1-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Presentation1-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Rebuttals which gona help you</h4>
-					<a href="{{URL::to('public/pdf/Rebuttals which gona help you.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Rebuttals which gona help you.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			@else
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>DME Script</h4>
-					<a href="{{URL::to('public/pdf/DME-script.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/DME-script.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>DME Competitive Bid Zip Codes</h4>
-					<a href="{{URL::to('public/pdf/WEBpg/txt.html')}}" class="btn btn-primary">To View This Click on it</a>
+					<a href="{{URL::to('pdf/WEBpg/txt.html')}}" class="btn btn-primary">To View This Click on it</a>
 				</div>
 			</div>
 			@endif
@@ -100,61 +100,61 @@
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>BWC -HR Policy Manual</h4>
-					<a href="{{URL::to('public/pdf/BWC -HR Policy Manual.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/BWC -HR Policy Manual.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>Debt Validation Program</h4>
-					<a href="{{URL::to('public/pdf/Debt Validation Program.pdf')}}"  class="text-center btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Debt Validation Program.pdf')}}"  class="text-center btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="bd">
 					<h4>Script New</h4>
-					<a href="{{URL::to('public/pdf/Script New.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Script New.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Why you should select Debt Validation Program</h4>
-					<a href="{{URL::to('public/pdf/Why you should select Debt Validation Program.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Why you should select Debt Validation Program.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>10 tips for better telemaketing-converted</h4>
-					<a href="{{URL::to('public/pdf/10 tips for better telemaketing-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/10 tips for better telemaketing-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Global Sales call pitch-converted</h4>
-					<a href="{{URL::to('public/pdf/Global Sales call pitch-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Global Sales call pitch-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Presentation1-converted</h4>
-					<a href="{{URL::to('public/pdf/Presentation1-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Presentation1-converted.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>Rebuttals which gona help you</h4>
-					<a href="{{URL::to('public/pdf/Rebuttals which gona help you.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/Rebuttals which gona help you.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>DME Script</h4>
-					<a href="{{URL::to('public/pdf/DME-script.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
+					<a href="{{URL::to('pdf/DME-script.pdf')}}" class="btn btn-primary">To View This Pdf Click on it</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-3">
 				<div class="bd">
 					<h4>DME Competitive Bid Zip Codes</h4>
-					<a href="{{URL::to('public/pdf/WEBpg/txt.html')}}" class="btn btn-primary">To View This Click on it</a>
+					<a href="{{URL::to('pdf/WEBpg/txt.html')}}" class="btn btn-primary">To View This Click on it</a>
 				</div>
 			</div>
 			@endif

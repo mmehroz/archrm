@@ -36,7 +36,7 @@
 				<div class="bd">
 				<h4>arcinventador Communications</h4>
       			<video width="400" controls>
-                   <source src="{{URL::to('video/1.mp4')}}" type="video/mp4">
+                   <source src="{{URL::to('public/video/1.mp4')}}" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
 				</div>
@@ -46,7 +46,7 @@
 				<div class="bd">
 				<h4>Heading....</h4>
       			<video width="400" controls>
-                   <source src="{{URL::to('video/train1.mp4')}}" type="video/mp4">
+                   <source src="{{URL::to('public/video/train1.mp4')}}" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
 				</div>

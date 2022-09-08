@@ -9,28 +9,28 @@
         <title>INTERVIEW EVALUTION FORM - HRMS</title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('assets/img/favicon.ico') !!}">
+        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.ico') !!}">
 		
 		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{!! asset('assets/css/bootstrap.min.css') !!}">
+        <link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}">
 		
 		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}">
+        <link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}">
 		
 		<!-- Lineawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('assets/css/line-awesome.min.css') !!}">
+        <link rel="stylesheet" href="{!! asset('public/assets/css/line-awesome.min.css') !!}">
 		
 		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="{!! asset('assets/css/dataTables.bootstrap4.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('public/assets/css/dataTables.bootstrap4.min.css') !!}">
 		
 		<!-- Select2 CSS -->
-		<link rel="stylesheet" href="{!! asset('assets/css/select2.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('public/assets/css/select2.min.css') !!}">
 		
 		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="{!! asset('assets/css/bootstrap-datetimepicker.min.css') !!}">
+		<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap-datetimepicker.min.css') !!}">
 		
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}">
+        <link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}">
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -46,7 +46,7 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="{{url('/adminDashboard')}}" class="logo">
-						<img src="{!! asset('assets/img/final-logo.png') !!}" width="120" height="60" alt="">
+						<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="120" height="60" alt="">
 					</a>
                 </div>
 				<!-- /Logo -->				

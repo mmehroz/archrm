@@ -22,12 +22,12 @@
 							<div class="profile-widget">
 								<div class="profile-img">
 									<!-- <a href="{{ URL::to('/modviewmng/')}}/{{$val->jobapplicant_id}}" title="Click To Edit Application Form" target="_blank" class="avatar"> -->
-										<img class="avatar" src="{{URL::to('img/')}}/{{$val->jobapplicant_picture}}">
+										<img class="avatar" src="{{URL::to('public/img/')}}/{{$val->jobapplicant_picture}}">
 									<!-- </a> -->
 								</div>
 								<!-- <div class="profile-img" style="float: right;margin-top: -17%;margin-right: -8%;">
 								<a href="#" class="avatar" style="width: 30px;height: 30px;">
-										<img src="{{URL::to('img/')}}/{{$val->jobapplicant_imageview}}">
+										<img src="{{URL::to('public/img/')}}/{{$val->jobapplicant_imageview}}">
 									</a>
 								</div> -->
 

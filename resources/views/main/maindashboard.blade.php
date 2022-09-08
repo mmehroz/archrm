@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Arc-Inventador</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{URL::to('images/favicon.ico')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{URL::to('public/images/favicon.ico')}}" />
      <style>
 #container {
   height: 458px;
@@ -189,24 +189,24 @@ border-radius: 6px;
 </style>
 </head>
 <!-- Css -->
-<link rel="stylesheet" href="{!! asset('assets/css/bizzstyle.css') !!}">
-<link rel="stylesheet" href="{!! asset('assets/css/main.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/assets/css/bizzstyle.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/assets/css/main.css') !!}">
 <!-- bootstrap -->
-<link rel="stylesheet" href="{!! asset('bizzmain/cdns/bootstrap.min.css') !!}">
-<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.css') !!}">
-<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.min.css') !!}">
-<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.css') !!}">
-<link rel="stylesheet" href="{!! asset('bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/bizzmain/cdns/bootstrap.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.min.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
 <!-- jwquerry -->
-<script src="{!! asset('bizzmain/cdns/jquery.min.js') !!}"></script>
-<script src="{!! asset('bizzmain/cdns/popper.min.js') !!}"></script>
-<script src="{!! asset('bizzmain/cdns/bootstrap.min.js') !!}"></script>
+<script src="{!! asset('public/bizzmain/cdns/jquery.min.js') !!}"></script>
+<script src="{!! asset('public/bizzmain/cdns/popper.min.js') !!}"></script>
+<script src="{!! asset('public/bizzmain/cdns/bootstrap.min.js') !!}"></script>
 
-<script src="{!! asset('bizzmain/cdns/sweetalert.min.js') !!}"></script>
-<link rel="stylesheet" type="text/css" href="{!! asset('assets/css/jquery.emojipicker.css') !!}">
-<script type="text/javascript" src="{!! asset('assets/js/jquery.emojipicker.js') !!}"></script>
-<link rel="stylesheet" type="text/css" href="{!! asset('assets/css/jquery.emojipicker.tw.css') !!}">
-<script type="text/javascript" src="{!! asset('assets/js/jquery.emojis.js') !!}"></script>
+<script src="{!! asset('public/bizzmain/cdns/sweetalert.min.js') !!}"></script>
+<link rel="stylesheet" type="text/css" href="{!! asset('public/assets/css/jquery.emojipicker.css') !!}">
+<script type="text/javascript" src="{!! asset('public/assets/js/jquery.emojipicker.js') !!}"></script>
+<link rel="stylesheet" type="text/css" href="{!! asset('public/assets/css/jquery.emojipicker.tw.css') !!}">
+<script type="text/javascript" src="{!! asset('public/assets/js/jquery.emojis.js') !!}"></script>
 <style>
     body {
         background-color: #ebebeb;
@@ -695,12 +695,12 @@ $emailurl = "http://80.240.16.149:5000";
             <nav class="navbar navbar-expand-lg">
                 @if($data->roleid <= 2)
                 <a href="{{URL::to('adminDashboard')}}">
-                <img src="{{URL::to('bizzmain/logo-03.svg')}}" alt="">
+                <img src="{{URL::to('public/bizzmain/logo-03.svg')}}" alt="">
                 @elseif($data->roleid == 3)
                 <a href="{{URL::to('managerDashboard')}}">
-                <img src="{{URL::to('bizzmain/logo-03.svg')}}" alt="">
+                <img src="{{URL::to('public/bizzmain/logo-03.svg')}}" alt="">
                 @else
-                <img src="{{URL::to('bizzmain/logo-03.svg')}}" alt="">
+                <img src="{{URL::to('public/bizzmain/logo-03.svg')}}" alt="">
                 @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -730,8 +730,8 @@ $emailurl = "http://80.240.16.149:5000";
                         <li class="nav-item dropdown has-arrow main-drop mt-2">
                             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                 <span class="user-img">
-            <!-- <img src="{!! asset('assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
-            <img src="{{URL::to('img/')}}/{{session()->get("image")}}" alt="">
+            <!-- <img src="{!! asset('public/assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
+            <img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
         <span class="status online"></span></span>
                                 <span>{{session()->get("name")}}</span>
                             </a>
@@ -786,9 +786,9 @@ $emailurl = "http://80.240.16.149:5000";
                         <div class="col-12 ">
                             <div class="banner ">
                                 @if($data->elsemployees_coverimage == null)
-                                <img src="{{URL::to('img/defaultcover.png')}}" alt=" ">
+                                <img src="{{URL::to('public/img/defaultcover.png')}}" alt=" ">
                                 @else
-                                <img src="{{URL::to('coverimage/')}}/{{$data->elsemployees_coverimage}}" alt=" ">
+                                <img src="{{URL::to('public/coverimage/')}}/{{$data->elsemployees_coverimage}}" alt=" ">
                                 @endif
                             </div>
                         </div>
@@ -806,9 +806,9 @@ $emailurl = "http://80.240.16.149:5000";
                                         <div class="col-6 ">
                                             <div class="profile">
                                             @if($data->elsemployees_image == null)
-                                            <img src="{{URL::to('img/no_image.jpg')}}" alt=" ">
+                                            <img src="{{URL::to('public/img/no_image.jpg')}}" alt=" ">
                                             @else
-                                            <img src="{{URL::to('img/')}}/{{$data->elsemployees_image}}" alt=" ">
+                                            <img src="{{URL::to('public/img/')}}/{{$data->elsemployees_image}}" alt=" ">
                                             @endif
                                             </div>
                                         </div>
@@ -976,8 +976,8 @@ $emailurl = "http://80.240.16.149:5000";
                                     <div class="scroll1 scroll2">
                                         <div class="row py-1">
                                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <img class="imgtog ann-logo" src="{{URL::to('bizzmain/logo-gray.svg')}}" alt="" style="width: 100px !important;">
-                                                <img class="imgtog ann-logo" src="{{URL::to('bizzmain/logo-gray.svg')}}" alt="" style="display: none; width: 100px !important">
+                                                <img class="imgtog ann-logo" src="{{URL::to('public/bizzmain/logo-gray.svg')}}" alt="" style="width: 100px !important;">
+                                                <img class="imgtog ann-logo" src="{{URL::to('public/bizzmain/logo-gray.svg')}}" alt="" style="display: none; width: 100px !important">
                                                 
                                             </div>
                                             <div class="col-6 text-right">
@@ -1002,7 +1002,7 @@ $emailurl = "http://80.240.16.149:5000";
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                 <div class="sec">
-                                                    <img src="{{URL::to('announcement/')}}/{{$data->bdannouncementimage[$indexannbd]}}" alt="">
+                                                    <img src="{{URL::to('public/announcement/')}}/{{$data->bdannouncementimage[$indexannbd]}}" alt="">
                                                 </div>
                                             </div>
                                            <!--  <div class="col-12 text-right">
@@ -1014,7 +1014,7 @@ $emailurl = "http://80.240.16.149:5000";
                                             <div class="row p-0 mt-3 d-flex justify-content-center">
                                                 <div class="BA">
                                             <div class="col-2 p-0">
-                                                <img class="rounded-circle" src="{{URL::to('img/')}}/{{session()->get("image")}}" alt="">
+                                                <img class="rounded-circle" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
                                             </div>
                                             <div class="col-8 p-0">
                                                 <div class="">
@@ -1054,7 +1054,7 @@ $emailurl = "http://80.240.16.149:5000";
                                                 <div class="row">
                                                     <div class="col-xl-1 col-lg-2 col-md-1 col-1 pt-3">
             
-                                                        <img src="{{URL::to('img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px;">
+                                                        <img src="{{URL::to('public/img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px;">
                                                     </div>
                                                     <div class="col-xl-11 col-lg-10 col-md-11 col-11">
                                                         <div class="comment1">
@@ -1153,8 +1153,8 @@ $emailurl = "http://80.240.16.149:5000";
                                     <div class="scroll1 scroll3">
                                         <div class="row py-3">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <img class="imgtog ann-logo" src="{{URL::to('bizzmain/logo-gray.svg')}}" alt="" style="width: 100px !important;">
-                                                <img class="imgtog ann-logo" src="{{URL::to('bizzmain/logo-gray.svg')}}" alt="" style="display: none; width: 100px !important;">
+                                                <img class="imgtog ann-logo" src="{{URL::to('public/bizzmain/logo-gray.svg')}}" alt="" style="width: 100px !important;">
+                                                <img class="imgtog ann-logo" src="{{URL::to('public/bizzmain/logo-gray.svg')}}" alt="" style="display: none; width: 100px !important;">
                                                 <script>
                                                     $(document).ready(function() {
                                                         $("#toggle_btn").click(function() {
@@ -1193,13 +1193,13 @@ $emailurl = "http://80.240.16.149:5000";
                                                     if (in_array($getextension, $allowedimageext)) {
                                                     ?>
                                                     @if($data->allannouncementimage[$indexannall] != "no_image.jpg")
-                                                    <img src="{{URL::to('announcement/')}}/{{$data->allannouncementimage[$indexannall]}}" alt="">
+                                                    <img src="{{URL::to('public/announcement/')}}/{{$data->allannouncementimage[$indexannall]}}" alt="">
                                                     @endif
                                                     <?php
                                                     }else{
                                                     ?>
                                                     <video width="100%" autoplay muted loop>
-                                                    <source src="{{URL::to('announcement/')}}/{{$data->allannouncementimage[$indexannall]}}" type="video/mp4" />
+                                                    <source src="{{URL::to('public/announcement/')}}/{{$data->allannouncementimage[$indexannall]}}" type="video/mp4" />
                                                     </video>
                                                     <?php
                                                     }
@@ -1215,7 +1215,7 @@ $emailurl = "http://80.240.16.149:5000";
                                             <div class="row cp p-0 mt-3 d-flex justify-content-center">
                                                 <div class="cp">
                                             <div class="col-1 p-0">
-                                                <img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('img/')}}/{{session()->get("image")}}" alt="">
+                                                <img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
                                             </div>
                                             <div class="col-10 p-0">
                                                 <div class="cp cp2">
@@ -1255,7 +1255,7 @@ $emailurl = "http://80.240.16.149:5000";
                                                 <div class="row">
                                                     <div class="col-xl-1 col-lg-2 col-md-1 col-1 pt-3">
             
-                                                        <img src="{{URL::to('img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px;">
+                                                        <img src="{{URL::to('public/img/')}}/{{$getcommentsalls->elsemployees_image}}" class="rounded-circle" alt="" style="width: 40px; height: 40px;">
                                                     </div>
                                                     <div class="col-xl-11 col-lg-10 col-md-11 col-11">
                                                         <div class="comment1">
@@ -1815,7 +1815,7 @@ $emailurl = "http://80.240.16.149:5000";
                                             <div class="carousel-item">
                                             @endif
                                             <a href="{{URL::to('gallerylist/')}}/{{$val}}" target="_blank" class="avatar">
-                                                <img src="{{URL::to('album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" >
+                                                <img src="{{URL::to('public/album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" >
                                             </a>
                                             </div>
                                         <?php

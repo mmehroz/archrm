@@ -93,7 +93,7 @@ path#XMLID_11_ ,path#XMLID_2_ {
 }
 </style>
 <body>
-<img src="{!! asset('assets/img/logo_white_header.svg') !!}"  alt="" style="padding-left: 45%; padding-top: 5%">
+<img src="{!! asset('public/assets/img/logo_white_header.svg') !!}"  alt="" style="padding-left: 45%; padding-top: 5%">
 <div id="container">
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

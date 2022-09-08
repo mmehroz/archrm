@@ -83,12 +83,12 @@
                 $allowedimageext = array('jpeg','bmp','png','jpg','gif');
                 if (in_array($getextension, $allowedimageext)) {
                 ?>
-                <img  alt=""  class="avatar" src="{{URL::to('announcement/')}}/{{$val->announcement_image}}">
+                <img  alt=""  class="avatar" src="{{URL::to('public/announcement/')}}/{{$val->announcement_image}}">
                 <?php
                 }else{
                 ?>
                 <video width="100%">
-                <source src="{{URL::to('announcement/')}}/{{$val->announcement_image}}" type="video/mp4" />
+                <source src="{{URL::to('public/announcement/')}}/{{$val->announcement_image}}" type="video/mp4" />
                 </video>
                 <?php
                 }

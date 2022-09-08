@@ -120,7 +120,7 @@
         </section>
     </div>          
 </div>
-<script src="{!! asset('assets/js/main.js') !!}"></script>
+<script src="{!! asset('public/assets/js/main.js') !!}"></script>
 <script >
 $(document).ready(function() {
     $("input[name$='istemplateortext']").click(function() {

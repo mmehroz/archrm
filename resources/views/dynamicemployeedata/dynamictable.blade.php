@@ -28,7 +28,7 @@
 								@else
 									<a  class="avatar">
 								@endif
-								<img src="{{URL::to('img/')}}/{{$val->elsemployees_image}}" alt="" title="Click To View Profile">
+								<img src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}" alt="" title="Click To View Profile">
 									</a>
 								</div>
 								@if( session()->get("role") <=	 2)

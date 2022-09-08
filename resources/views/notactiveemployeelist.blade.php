@@ -65,7 +65,7 @@
 									<td>
 										<h2 class="table-avatar">
 											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}">
-												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('img/')}}/{{$val->elsemployees_image}}">
+												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 											</a>
 											<!-- <a href="{{url('/employeeprofile')}}"> -->
 											{{$val->elsemployees_name}}

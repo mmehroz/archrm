@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Portal</title>
     <link rel="icon" href="https://arcinventadorcommunications.com/public/images/favicon.ico" type="image/gif" sizes="16x16">
-    <!-- <link rel="stylesheet" href="{!! asset('assets/css/food.css') !!}" /> -->
+    <!-- <link rel="stylesheet" href="{!! asset('public/assets/css/food.css') !!}" /> -->
     <link rel="stylesheet" href="{!! asset('public/bizzmain/cdns/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/all.min.css') !!}">
@@ -162,7 +162,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg fixed-top">
-                        <a class="navbar-brand"><img src="{{URL::to('restaurant/food-logo.png')}}" alt="" width="250px"></a>
+                        <a class="navbar-brand"><img src="{{URL::to('public/restaurant/food-logo.png')}}" alt="" width="250px"></a>
                         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -174,7 +174,7 @@
                                 <li class="nav-item dropdown has-arrow main-drop">
                                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                         <span class="user-img">
-                                <img src="{{URL::to('img/')}}/{{session()->get("image")}}" alt="">
+                                <img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
                                         <span class="status online"></span></span>
                                         <span>{{session()->get("name")}}</span>
                                     </a>
@@ -212,7 +212,7 @@
 
                 </div>
                 <div class="col-6">
-                    <img src="{{URL::to('restaurant/12345.png')}}" alt="" width="100%">
+                    <img src="{{URL::to('public/restaurant/12345.png')}}" alt="" width="100%">
                 </div>
                 @if(session('message'))
                 <div><p class="alert alert-success" >{{session('message')}}</p> </div>
@@ -247,7 +247,7 @@
                 @foreach ($data as $val)
                 <div class="col-4 pt-5" id="restaurant">
                     <span>
-                    <a onclick="productlist({{$val->restaurant_id }})"> <img src="{{URL::to('restaurant/')}}/{{$val->restaurant_picture}}" alt="" width="100%"></a>
+                    <a onclick="productlist({{$val->restaurant_id }})"> <img src="{{URL::to('public/restaurant/')}}/{{$val->restaurant_picture}}" alt="" width="100%"></a>
                     <div class="row">
                         <div class="col-6 pt-3">
                             <h5>{{$val->restaurant_name}}</h5>

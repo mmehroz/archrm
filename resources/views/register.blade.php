@@ -10,8 +10,8 @@
         <meta name="robots" content="noindex, nofollow"> 
         <title>HRMS</title>
     <!-- <link rel="stylesheet" href="style.scss"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="{!! asset('assets/img/favicon.ico') !!}" />
-    <link rel="stylesheet" href="{!! asset('assets/css/logincss/style.css') !!}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.ico') !!}" />
+    <link rel="stylesheet" href="{!! asset('public/assets/css/logincss/style.css') !!}" />
 </head>
 <style>
     video {

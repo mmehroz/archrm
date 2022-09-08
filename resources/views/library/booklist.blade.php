@@ -35,11 +35,11 @@
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book2.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book2.jpg')}}"  alt="">
 					</div>
 				<!-- <h4 class="mt-2">Heading....</h4> -->
 
-			 <a href="{{URL::to('library/one.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			 <a href="{{URL::to('public/library/one.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 				</div>
 			
 			</div>
@@ -47,82 +47,82 @@
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book6.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book6.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading....</h4> -->
-			<a href="{{URL::to('library/two.pdf')}}" target="_blank" class="text-center btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/two.pdf')}}" target="_blank" class="text-center btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 3 -->
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book8.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book8.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/three.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/three.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 4 -->
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book4.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book4.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/four.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/four.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 5 -->
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book5.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book5.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/five.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/five.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 6 -->
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book7.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book7.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/six.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/six.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 7 -->
 			<div class="col-md-3 mb-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book1.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book1.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/seven.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/seven.pdf')}}" target="_blank" class="btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 8 -->
 			<div class="col-md-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book3.jpg')}}"  alt="">
+					<img src="{{URL::to('public/library/book3.jpg')}}"  alt="">
 					</div>
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/eight.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a>
+			<a href="{{URL::to('public/library/eight.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a>
 			</div>
 			</div>
 			<!-- 9 -->
-			<!-- <div class="col-md-3">
+		<!-- 	<div class="col-md-3">
 				<div class="bd">
 					<div class="book">
-					<img src="{{URL::to('library/book9.jpg')}}"  alt="">
-					</div> -->
-			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<!-- <a href="{{URL::to('library/nine.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a> -->
-			<!-- </div> -->
+					<img src="{{URL::to('public/library/book9.jpg')}}"  alt="">
+					</div>
+			<h4 class="mt-2">Heading..</h4>
+			<a href="{{URL::to('public/library/nine.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a>
 			</div>
+			</div> -->
 		</div>			
 </div>
 <style>

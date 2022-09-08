@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{!! asset('assets/css/bizzstyle.css') !!}">
+<link rel="stylesheet" href="{!! asset('public/assets/css/bizzstyle.css') !!}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 <div id="complain" class="modal custom-modal fade" role="dialog">

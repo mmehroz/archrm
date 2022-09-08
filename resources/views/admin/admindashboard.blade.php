@@ -81,7 +81,7 @@
 												    });
 												}
 										</script>
-										<img alt="" title="Click To Change Image" src="{{URL::to('img/')}}/{{$data['empdata']->elsemployees_image}}">
+										<img alt="" title="Click To Change Image" src="{{URL::to('public/img/')}}/{{$data['empdata']->elsemployees_image}}">
 									</div>
 									<div class="welcome-det">
 										<h3 class="page-title">Welcome HR!</h3>
@@ -278,7 +278,7 @@
 								 	<td>
 										<h2 class="table-avatar">
 											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
-												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('img/')}}/{{$val->elsemployees_image}}">
+												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 											</a>
 											<!-- <a href="{{url('/employeeprofile')}}"> -->
 											{{$val->elsemployees_name}}
@@ -315,7 +315,7 @@
 														 	<td>
 																<h2 class="table-avatar">
 																	<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
-																		<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('img/')}}/{{$val->elsemployees_image}}">
+																		<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 																	</a>
 																	<!-- <a href="{{url('/employeeprofile')}}"> -->
 																	{{$val->elsemployees_name}}
@@ -351,7 +351,7 @@
 								 	<td>
 										<h2 class="table-avatar">
 											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
-												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('img/')}}/{{$val->elsemployees_image}}">
+												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 											</a>
 											<!-- <a href="{{url('/employeeprofile')}}"> -->
 											{{$val->elsemployees_name}}

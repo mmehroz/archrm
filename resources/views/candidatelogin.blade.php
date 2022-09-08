@@ -9,11 +9,11 @@
 <meta name="author" content="Register Your Self In Our Recruitment Portal For Your Dream Job | Arc-Inventador">
 <meta name="robots" content="noindex, nofollow">
 <title>HRMS</title>
-<link rel="shortcut icon" type="image/x-icon" href="{!! asset('assets/img/favicon.ico') !!}" />
+<link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.ico') !!}" />
 <!-- <link rel="stylesheet" href="style.scss"> -->
 
-<link rel="stylesheet" href="{!! asset('assets/css/logincss/style.css') !!}" />
-<link rel="stylesheet" href="{!! asset('assets/css/font-awesome.min.css') !!}" />
+<link rel="stylesheet" href="{!! asset('public/assets/css/logincss/style.css') !!}" />
+<link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
 </head>
 <style>
 video {

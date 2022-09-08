@@ -57,7 +57,7 @@ tr.shown td.details-control {
 						<tbody>
 							<tr>
 								<td class=" details-control">1
-									<img src="{!! asset('assets/img/details_open.png') !!}" alt="">
+									<img src="{!! asset('public/assets/img/details_open.png') !!}" alt="">
 								</td>
 								<td>11728</td>
 								<td>April</td>

@@ -26,10 +26,10 @@
 								<div class="profile-img">
 									@if( session()->get("role") <=	 2)
 									<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank" class="avatar">
-										<img src="{{URL::to('img/')}}/{{$val->elsemployees_image}}"  alt="" title="Click To View Profile">
+										<img src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}"  alt="" title="Click To View Profile">
 									</a>
 									@else
-										<img class="avatar" src="{{URL::to('img/')}}/{{$val->elsemployees_image}}"  alt="" title="Click To View Profile">
+										<img class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}"  alt="" title="Click To View Profile">
 									@endif
 								</div>
 								@if( session()->get("role") <=	 2)

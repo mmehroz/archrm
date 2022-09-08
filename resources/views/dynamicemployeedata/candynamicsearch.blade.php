@@ -23,7 +23,7 @@
 							<div class="profile-widget">
 								<div class="profile-img">
 									<a href="{{ URL::to('/modalemployeeview/')}}/{{$val->jobapplicant_id}}" title="Click To View Application Form" target="_blank" " class="avatar">
-										<img src="{{URL::to('img/')}}/{{$val->jobapplicant_picture}}">
+										<img src="{{URL::to('public/img/')}}/{{$val->jobapplicant_picture}}">
 									</a>
 								</div>
 								<!-- <div class="dropdown profile-action">

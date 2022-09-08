@@ -26,7 +26,7 @@
                             @if($data->announcement_image != "no_image.jpg")
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="sec">
-                                    <img src="{{URL::to('announcement/')}}/{{$data->announcement_image}}" alt="">
+                                    <img style="width: 100%;" src="{{URL::to('announcement/')}}/{{$data->announcement_image}}" alt="">
                                 </div>
                             </div>
                             @endif

@@ -52,7 +52,7 @@
                       <span style="color:white;font-weight:300;padding-right:10px;font-family:system-ui">
                         Welcome To The
                       </span>
-                      ARC-HRMS
+                      ARC-PORTAL
                     </h5>
                   </div>
                 </div>

@@ -10203,14 +10203,14 @@ margin-bottom: 5px;
 .game1 h4 {
 
 
-    color: rgb(255, 130, 8,1);
+    color: black;
     font-weight: 600;
     
 }
 .game1 .btn{
     width: 150px;
     /*height: 20px !important;*/
-    border: 1px solid #640d1d;
+    /* border: 1px solid #640d1d; */
     outline: none;
     background-color: #640d1d;
     color: white;

@@ -495,7 +495,7 @@
                 /* padding-bottom: 35px; */
                 -webkit-border-radius: 6px;
                 -moz-border-radius: 6px;
-                border: 1px solid #ccc;
+                /* border: 1px solid #ccc; */
                 position: relative;
                 line-height: 32px;
                 /* Label */
@@ -503,22 +503,23 @@
                 font-weight: 800;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                color: black;
+                color: white;
                 overflow: hidden;
                 /* margin-top: 13px; */
             }
             
             .info .aqua13 {
-                background-color: white;
-                background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from (rgba(100, 13, 29, 1)), to (rgba(56, 0, 0, 1)));
-                border-top-color: black;
+                /* background-color: white; */
+                background: linear-gradient(to right bottom, #6416ec, #33e0e0) !important;
+                /* background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from (rgba(100, 13, 29, 1)), to (rgba(56, 0, 0, 1))); */
+                /* border-top-color: black;
                 border-right-color: black;
                 border-bottom-color: black;
-                border-left-color: black;
+                border-left-color: black; */
             }
             
             .time13 .abc {
-                color: black !important;
+                color: white !important;
             }
             
             .time13 .glare13 {
@@ -533,8 +534,8 @@
             
             .info .time13:hover .abc {
                 /* -webkit-box-shadow: rgba(29, 4, 9, 0.575) 0px 2px 16px; -moz-box-shadow: rgba(56, 8, 17, 0.438) 0px 2px 16px; */
-                background: linear-gradient(to right bottom, #6416ec, #33e0e0);
-                color: white !important;
+                /* background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+                color: white !important; */
             }
             
             .info .time13:hover {
@@ -544,7 +545,7 @@
                 color: white !important;
             }
             
-            .info .time13:hover .glare13 {
+            .info .time13 .glare13 {
                 /* -webkit-box-shadow: rgba(29, 4, 9, 0.575) 0px 2px 16px; -moz-box-shadow: rgba(56, 8, 17,
        0.438) 0px 2px 16px; */
                 position: absolute;
@@ -676,7 +677,7 @@
             }
             
             .time5:hover .abc {
-                background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+                /* background: linear-gradient(to right bottom, #6416ec, #33e0e0); */
                 color: white !important;
             }
             
@@ -1048,7 +1049,7 @@
 }
 
 .sal .time18:hover .abc {
-    background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+    /* background: linear-gradient(to right bottom, #6416ec, #33e0e0); */
     color: white !important;
 }
 
@@ -1270,7 +1271,7 @@
             
             .work .time9:hover .abc {
                 /* -webkit-box-shadow: rgba(29, 4, 9, 0.575) 0px 2px 16px; -moz-box-shadow: rgba(56, 8, 17, 0.438) 0px 2px 16px; */
-                background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+                /* background: linear-gradient(to right bottom, #6416ec, #33e0e0); */
                 color: white !important;
             }
             
@@ -1618,7 +1619,7 @@
             .mess .time16:hover .abc {
                 /* -webkit-box-shadow: rgba(29, 4, 9, 0.575) 0px 2px 16px;
     -moz-box-shadow: rgba(56, 8, 17, 0.438) 0px 2px 16px; */
-                background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+                /* background: linear-gradient(to right bottom, #6416ec, #33e0e0); */
                 color: white !important;
             }
             
@@ -1962,7 +1963,7 @@
             }
             
             .slider .time18:hover .abc {
-                background: linear-gradient(to right bottom, #6416ec, #33e0e0);
+                /* background: linear-gradient(to right bottom, #6416ec, #33e0e0); */
                 color: white !important;
             }
             

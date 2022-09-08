@@ -1370,11 +1370,11 @@ $emailurl = "http://80.240.16.149:5000";
                     </div>
                     <div class="remind" style="cursor: pointer;">
                         <div class="row">
-                            <div class="col-6" style="cursor: pointer;" onclick="itticket()">
+                            <div class="col-12" style="cursor: pointer;" onclick="itticket()">
                                 <div class="time2 aqua2">
                                     <div class="glare2"></div>
                                      <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div>
                                             <a class="abc" href="# " style="text-decoration: none; color: rgba(255, 253, 253, 0.856);background-color: transparent; font-size: 12px"><span><i class="abc msgs fas fa-mail-bulk " style="background-color: transparent; font-size: 15px"></i></span> Ticket To IT</a>
                                             </div>
@@ -1382,16 +1382,6 @@ $emailurl = "http://80.240.16.149:5000";
                                             @if($checkreview != null)
                                             <div><p class="alert alert-success" style="position: absolute;top: 0px;height: 1px;background-color: transparent !important;border: none !important;">Please Submit Review</p> </div>
                                             @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="col-6" style="cursor: pointer;" onclick="commingsoon()">
-                                <div class="time2 aqua2">
-                                    <div class="glare2"></div>
-                                     <div class="row">
-                                        <div class="col-6">
-                                            <a class="abc" href="# " style="text-decoration: none; color: rgba(255, 253, 253, 0.856);background-color: transparent; font-size: 12px"><span><i class="abc msgs fas fa-mail-bulk " style="background-color: transparent; font-size: 15px"></i></span> ARC Kiosk</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1408,40 +1398,78 @@ $emailurl = "http://80.240.16.149:5000";
                                     </div>
                                 </a>
                             </div> -->
-                            <div class="col-lg-6 col-md-6 col-sm-6" target="_blank" style="cursor: pointer;" >
+                            <!-- <div class="col-lg-6 col-md-6 col-sm-6" target="_blank" style="cursor: pointer;" >
                                 <a href="{{url('/composeemail')}}" >
                                     <div class="time13 aqua13 ">
                                         <div class="glare13 "></div>
                                         <a class="abc" target="_blank" href="{{url('/composeemail')}}" style="text-decoration: none;"><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Compose</a>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6  " style="cursor: pointer;" >
-                                <a href="{{$emailurl}}" target="_blank">
+                            </div> -->
+                            <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" onclick="commingsoon()">
+                                <a href="#" >
                                 <div class="time13 aqua13 ">
                                     <div class="glare13 "></div>
-                                    <a class="abc" id="upload_link" target="_blank" href="{{$emailurl}}" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Email</a>
+                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Email</a>
                                 </div>
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                     <div class="train ">
-                        <div class="row ">
-                            <div class="col-12 ">
-                                <div class="time6 aqua5 ">
+           
+                            <!-- <div class="col-4 "> -->
+                                <!-- <div class="time6 aqua5 ">
                                     <div class="glare5 "></div>
                                     <div class="dropdown1 ">
                                         <a class="dropbtn "><span><i class="msgs fa fa-folder "></i></span> Chat <span><i class="fa fa-caret-down "></i></span></a>
                                         <div class="dropdown-content ">
                                             <a href={{$chaturl}} target="_blank" style="text-decoration: none; "><span><i class="fa fa-file-pdf" style="padding-right: 8px;"></i></span> IP</a>
-                                            <a href="https://chat.arcinventador.local" target="_blank"><span><i class="fa fa-video" style="padding-right: 8px;"></i></span> Domain</a>
+                                            <a href="https://chat.arcinventador.local" ><span><i class="fa fa-video" style="padding-right: 8px;"></i></span> Domain</a>
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" onclick="commingsoon()">
+                                <a href="#" >
+                                <div class="time13 aqua13 ">
+                                    <div class="glare13 "></div>
+                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Chat</a>
                                 </div>
+                                </a>
+                            <!-- </div> -->
+                             </div>
+              
+                            <!-- <div class="col-4 "> -->
+                                <!-- <div class="time6 aqua5 ">
+                                    <div class="glare5 "></div>
+                                    <div class="dropdown1 ">
+                                        <a class="dropbtn "><span><i class="msgs fa fa-folder "></i></span> Chat <span><i class="fa fa-caret-down "></i></span></a>
+                                        <div class="dropdown-content ">
+                                            <a href={{$chaturl}} target="_blank" style="text-decoration: none; "><span><i class="fa fa-file-pdf" style="padding-right: 8px;"></i></span> IP</a>
+                                            <a href="https://chat.arcinventador.local" ><span><i class="fa fa-video" style="padding-right: 8px;"></i></span> Domain</a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" onclick="commingsoon()">
+                                <a href="#" >
+                                <div class="time13 aqua13 ">
+                                    <div class="glare13 "></div>
+                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Chat</a>
+                                </div>
+                                </a>
+                            <!-- </div> -->
                              </div>
                         </div>
                     </div>
+                    <!-- <div class="info ">
+                        <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 " style="cursor: pointer;">
+                                <a href="{{$crmurl}}" target="_blank" >
+                                <div class="time9 aqua9 ">
+                                    <div class="glare13 "></div>
+                                    <a class="abc "  href="{{$crmurl}}" target="_blank" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-handshake mt-2"></i></span> CRM</a>
+                                </div>
+                                </a>
+                            </div>
+                                            </div>
+                                            </div> -->
                     <!-- Activity -->
                     <div class="act ">
                         <div class="time4 aqua4 ">
@@ -1474,13 +1502,13 @@ $emailurl = "http://80.240.16.149:5000";
                                     <a class="abc" href="# "><span><i class="abc msgs fa fa-shopping-basket "></i></span> Tuck Shop</a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-12" style="cursor: pointer;">
-                                <a href="{{URL::to('restaurantlist')}}" target="_blank">
+                            <div class="col-lg-6 col-md-6 col-12" style="cursor: pointer;" onclick="foodportal();">
+                                <!-- <a href="{{URL::to('restaurantlist')}}" target="_blank"> -->
                                 <div class="time5 aqua5 ">
                                     <div class="glare5 "></div>
-                                    <a class="abc" href="{{URL::to('restaurantlist')}}" target="_blank" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-drumstick-bite "></i></span> Food Portal</a>
+                                    <a class="abc" href="#}" target="_blank" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-drumstick-bite "></i></span> Food Portal</a>
                                 </div>
-                                </a>
+                                <!-- </a> -->
                             </div>
                             <div class="col-lg-6 col-md-6 col-12" style="cursor: pointer;">
                                 <a href="{{URL::to('games')}}" target="_blank">
@@ -1514,8 +1542,23 @@ $emailurl = "http://80.240.16.149:5000";
                                 </div>
                                 </a>
                             </div>
-
-                            <div class="col-lg-6 col-md-6 col-12  " style="cursor: pointer;">
+                            <div class="col-lg-6 col-md-6 col-12  " style="cursor: pointer;" onclick="commingsoon()">
+                                <!-- <a href="{{URL::to('bizzlibrary')}}" target="_blank"> -->
+                                <div class="time5 aqua5 ">
+                                    <div class="glare5 "></div>
+                                   
+                                        
+                                        <a  class="abc  " style="text-decoration: none; background-color: transparent; "><span><i style="background-color: transparent;" class="abc msgs fa fa-book-reader " ></i></span> ARC Kiosk <span><i class=" "></i></span></a>
+                                        <!-- <div id="cd" class=" dropdown-content ">
+                                            <a href="# " style="text-decoration: none; ">Link 1</a>
+                                            <a href="# ">Link 2</a>
+                                            <a href="# ">Link 3</a>
+                                        </div> -->
+                                    
+                                </div>
+                                <!-- </a> -->
+                            </div>
+                            <!-- <div class="col-lg-6 col-md-6 col-12  " style="cursor: pointer;">
                                 <a href="{{URL::to('websites')}}" target="_blank">
                                 <div class="time5 aqua5 ">
                                     <div class="glare5 "></div>
@@ -1524,7 +1567,18 @@ $emailurl = "http://80.240.16.149:5000";
                                     
                                 </div>
                                 </a>
-                            </div>
+                            </div> -->
+<!--                         
+                            <div class="col-6" style="cursor: pointer;" onclick="commingsoon()">
+                                <div class="time2 aqua2">
+                                    <div class="glare2"></div>
+                                     <div class="row">
+                                        <div class="col-6">
+                                            <a class="abc" href="# " style="text-decoration: none; color: rgba(255, 253, 253, 0.856);background-color: transparent; font-size: 12px"><span><i class="abc msgs fas fa-mail-bulk " style="background-color: transparent; font-size: 15px"></i></span> ARC Kiosk</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- salary -->
@@ -1605,7 +1659,7 @@ $emailurl = "http://80.240.16.149:5000";
                     </div>
 
                     <!-- work -->
-                    <div class="work mt-3 ">
+                    <!-- <div class="work mt-3 ">
                         <div class="time8 aqua8 ">
                             <div class="glare8 "></div>
                             <h5 class="text-left ">My Work</h5>
@@ -1648,9 +1702,9 @@ $emailurl = "http://80.240.16.149:5000";
 
                         </div>
 
-                    </div>
+                    </div> -->
                     <!-- training -->
-                    <div class="train ">
+                    <!-- <div class="train ">
                         <div class="row ">
                             <div class="col-12 ">
                                 <div class="time6 aqua5 ">
@@ -1667,6 +1721,54 @@ $emailurl = "http://80.240.16.149:5000";
 
 
                             </div>
+                        </div>
+                    </div> -->
+                    <div class="act ">
+                        <div class="time4 aqua4 ">
+                            <div class="glare4 "></div>
+                            <h5 class="text-left ">Training Manuals</h5>
+                        </div>
+
+                        <div class="row ">
+                         <div class="col-lg-6 col-md-6 col-12  " style="cursor: pointer;">
+                            <a href="{{URL::to('trainingmanualpdf')}}" target="_blank" style="text-decoration: none;">
+                                <div class="time5 aqua5 ">
+                                    <div class="glare5 "></div>
+                                   
+                                        <a class="abc  "   style="text-decoration: none; "><span><i class="abc msgs fa fa-file-pdf" ></i></span> PDF </a>
+                                    
+                                </div>
+                            </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12"  style="cursor: pointer;">
+                                <a href="{{URL::to('trainingmanualvideo')}}" target="_blank">
+                                <div class="time5 aqua5 ">
+                                    <div class="glare5 "></div>
+                                    <a class="abc" href="{{URL::to('trainingmanualvideo')}}" target="_blank" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-video "></i></span> Video</a>
+                                </div>
+                                </a>
+                            </div>
+                            </div>
+                            <div class="row ">
+                            <div class="col-lg-12 col-md-12 col-12"  style="cursor: pointer;">
+                                <div class="time5 aqua5 ">
+                                    <div class="glare5 "></div>
+                                    <a class="abc" href="{{URL::to('trainingmanualaudio')}} "><span><i class="abc msgs fa fa-volume-up "></i></span> Audio</a>
+                                </div>
+                            </div>
+                            <!-- <div class="col-lg-6 col-md-6 col-12" style="cursor: pointer;">
+                                <a href="{{URL::to('restaurantlist')}}" target="_blank">
+                                <div class="time5 aqua5 ">
+                                    <div class="glare5 "></div>
+                                    <a class="abc" href="{{URL::to('restaurantlist')}}" target="_blank" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-drumstick-bite "></i></span> Food Portal</a>
+                                </div>
+                                </a>
+                            </div> -->
+                       
+                      
+                         
+                       
+                        
                         </div>
                     </div>
                     <!-- Employee -->
@@ -1797,6 +1899,9 @@ function getcover(){
 }
 function commingsoon(){
 swal("ARC Launching", "...Coming Soon");
+}
+function foodportal(){
+swal("ARC Launching", "Coming Soon Once Nearest Restaurant Added");
 }
 function bizzcall($id){
 let newWindow = window.open("https://chat.arcinventador.local/dialpad?number="+$id, "mywindow","menubar=0,location=0,status=0,titlebar=0,toolbar=0,resizable=0,width=320,height=650");

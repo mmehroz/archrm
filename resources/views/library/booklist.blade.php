@@ -16,7 +16,7 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title text-center">Bizz Library</h3>
+					<h3 class="page-title text-center">ARC Inventador Library</h3>
 					<ul class="breadcrumb">
 						<!-- <li class="breadcrumb-item active">Add Employee</li> -->
 					</ul>
@@ -114,14 +114,14 @@
 			</div>
 			</div>
 			<!-- 9 -->
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<div class="bd">
 					<div class="book">
 					<img src="{{URL::to('library/book9.jpg')}}"  alt="">
-					</div>
+					</div> -->
 			<!-- <h4 class="mt-2">Heading..</h4> -->
-			<a href="{{URL::to('library/nine.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a>
-			</div>
+			<!-- <a href="{{URL::to('library/nine.pdf')}}" target="_blank" class=" btn btn-primary">Click To Read Book</a> -->
+			<!-- </div> -->
 			</div>
 		</div>			
 </div>

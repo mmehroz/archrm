@@ -1410,7 +1410,7 @@ $emailurl = "http://80.240.16.149:5000";
                                 <a href="#" >
                                 <div class="time13 aqua13 ">
                                     <div class="glare13 "></div>
-                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Email</a>
+                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope"></i></span> Email</a>
                                 </div>
                                 </a>
                             </div>
@@ -1451,7 +1451,7 @@ $emailurl = "http://80.240.16.149:5000";
                                 <a href="#" >
                                 <div class="time13 aqua13 ">
                                     <div class="glare13 "></div>
-                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Chat</a>
+                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-check-circle"></i></span> CRM</a>
                                 </div>
                                 </a>
                             <!-- </div> -->
@@ -1499,7 +1499,7 @@ $emailurl = "http://80.240.16.149:5000";
                             <div class="col-lg-6 col-md-6 col-12" onclick="commingsoon()" style="cursor: pointer;">
                                 <div class="time5 aqua5 ">
                                     <div class="glare5 "></div>
-                                    <a class="abc" href="# "><span><i class="abc msgs fa fa-shopping-basket "></i></span> Tuck Shop</a>
+                                    <a class="abc" href="# "><span><i class="abc msgs fa fa-file-pdf "></i></span> HR-Policy</a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12" style="cursor: pointer;" onclick="foodportal();">

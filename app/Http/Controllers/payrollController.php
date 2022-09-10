@@ -3161,7 +3161,7 @@ class payrollController extends Controller
                         
                         foreach($taskin as $payrolldata){
                             
-                            $split_time = explode(" ",$payrolldata->CheckTime);
+                            $split_time = explode(" ",$payrolldata->CHECKTIME);
                             // dd($split_time);
                             // $split_lasttime=0;
                             
@@ -3194,7 +3194,7 @@ class payrollController extends Controller
                         // dd($emp_checkin);
                         foreach($taskout as $payrolldataout){
                             
-                            $split_outtime = explode(" ",$payrolldataout->CheckTime);
+                            $split_outtime = explode(" ",$payrolldataout->CHECKTIME);
                             // $split_outlasttime=0;
                             
                             // if((isset($split_outlasttime) == NULL) && ($payrolldataout->CheckType == '0' )){

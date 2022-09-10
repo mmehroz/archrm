@@ -561,7 +561,7 @@
 												$calculateearning = $raferal+$incentive+$spiff+$other+$last+$correction;
 												$attendancededuction = $attendancededuct;
 												$payrollamount = $finaldayscount*$calculatesalary;
-												$finalpayrollamount = $payrollamount+$calculateearning-$calculatededuction-$attendancededuction-$allowanededuction-$carallowance;
+												$finalpayrollamount = $payrollamount+$calculateearning-$calculatededuction-$attendancededuction-$allowanededuction;
 												if($finalpayrollamount < 0){
 													$finalpayrollamountinword = 0;
 												}else{
@@ -569,7 +569,7 @@
 												}
 												// dd($finalpayrollamountinword);
 												$sumallearning = $empsalary+$raferal+$incentive+$spiff+$other+$last;
-												$sumalldeduct = $fund+$tax+$loan+$spiffdeliver+$advance+$attendancededuction+$allowanededuction-$carallowance;
+												$sumalldeduct = $fund+$tax+$loan+$spiffdeliver+$advance+$attendancededuction+$allowanededuction+$carallowance;
 												$bfaccumulated = $fund*2;
 												$grossafterdeduct = $grosssalary-$sumalldeduct;
 												$amount_after_decimal = round($finalpayrollamountinword - ($num = floor($finalpayrollamountinword)), 2) * 100;

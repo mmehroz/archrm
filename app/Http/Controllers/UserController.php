@@ -655,6 +655,8 @@ class UserController extends Controller
             ->whereMonth('Checkinout.CheckTime', $month)
             ->select('Checkinout.*')
             ->first();
+            }else{
+            	return redirect('/')->with('message','Please Enroll On BIO Matric Machine Before Login!');
             }
             
             // dd($userinfo);

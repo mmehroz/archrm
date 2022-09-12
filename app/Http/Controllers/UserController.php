@@ -642,8 +642,12 @@ class UserController extends Controller
 			// dd($empinfo);
 		$year = date("Y");
             $month = date("m");
+            $biouserinfo = DB::connection('sqlsrv')->table('Userinfo')
+            ->where('Userinfo.BADGENUMBER','=',$empinfo->elsemployees_batchid)
+            ->select('Userinfo.Userid')
+            ->first();
 			$taskCHECK = DB::connection('sqlsrv')->table('Checkinout')
-            ->where('Checkinout.Userid','=',$empinfo->elsemployees_batchid)
+            ->where('Checkinout.Userid','=',$biouserinfo->Userid)
             ->where('Checkinout.CheckType','!=','2')
             ->whereYear('Checkinout.CheckTime', $year)
             ->whereMonth('Checkinout.CheckTime', $month)
@@ -652,9 +656,9 @@ class UserController extends Controller
             
             // dd($userinfo);
             
-            if(isset($taskCHECK->CheckTime)){
+            if(isset($taskCHECK->CHECKTIME)){
                 
-                $checktimefirst = $taskCHECK->CheckTime ;
+                $checktimefirst = $taskCHECK->CHECKTIME ;
             
                 session()->put([
                 
@@ -684,7 +688,7 @@ class UserController extends Controller
                 ->select('elsemployeestiming.*')
                 ->get();
                 $taskin = DB::connection('sqlsrv')->table('Checkinout')
-                ->where('Checkinout.Userid','=',$userinfo)
+                ->where('Checkinout.Userid','=',$biouserinfo->Userid)
                 ->where('Checkinout.CheckType','!=','2')
                 ->where('Checkinout.CheckType','!=','1')
                 ->whereYear('Checkinout.CheckTime', $year)
@@ -693,7 +697,7 @@ class UserController extends Controller
                 ->orderBy('Checkinout.CheckTime', 'DESC')
                 ->get();
                 $taskout = DB::connection('sqlsrv')->table('Checkinout')
-                ->where('Checkinout.Userid','=',$userinfo)
+                ->where('Checkinout.Userid','=',$biouserinfo->Userid)
                 ->where('Checkinout.CheckType','!=','2')
                 ->where('Checkinout.CheckType','!=','0')
                 ->whereYear('Checkinout.CheckTime', $year)
@@ -701,11 +705,11 @@ class UserController extends Controller
                 ->select('Checkinout.*')
                 ->get();
                 foreach($taskin as $payrolldata){
-                    $split_time = explode(" ",$payrolldata->CheckTime);
+                    $split_time = explode(" ",$payrolldata->CHECKTIME);
                     $emp_checkin[$split_time[0]] = $split_time[1];
                 }   
                 foreach($taskout as $payrolldataout){
-                    $split_outtime = explode(" ",$payrolldataout->CheckTime);
+                    $split_outtime = explode(" ",$payrolldataout->CHECKTIME);
                         $emp_checkout[$split_outtime[0]] = $split_outtime[1];
                 }
                 $begin = explode(" ",$checktime);

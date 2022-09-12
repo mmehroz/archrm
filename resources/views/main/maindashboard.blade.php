@@ -1301,8 +1301,12 @@ $emailurl = "http://80.240.16.149:5000";
                                 <div class="time aqua">
                                     <div class="glare"></div>
                                         <a class="abc" href="#" style="text-decoration: none; "><span><i class=" abc fa fa-fingerprint"></i></span> <?php $year = date("Y");
+                                        $biouserinfo = DB::connection('sqlsrv')->table('Userinfo')
+                                        ->where('Userinfo.BADGENUMBER','=',$data->elsemployees_batchid)
+                                        ->select('Userinfo.Userid')
+                                        ->first();
                                         $month = date("m"); $timein = DB::connection('sqlsrv')->table('Checkinout')
-                                        ->where('Checkinout.Userid','=',$data->elsemployees_batchid)
+                                        ->where('Checkinout.Userid','=',$biouserinfo->Userid)
                                         ->where('Checkinout.CheckType','!=','2')
                                         ->where('Checkinout.CheckType','!=','1')
                                         ->whereYear('Checkinout.CheckTime', $year)
@@ -1310,8 +1314,8 @@ $emailurl = "http://80.240.16.149:5000";
                                         ->select('Checkinout.*')
                                         ->orderBy('Checkinout.CheckTime', 'DESC')
                                         ->first();
-                                        if(isset($timein->CheckTime)){
-                                        $explodetime = explode(' ', $timein->CheckTime);
+                                        if(isset($timein->CHECKTIME)){
+                                        $explodetime = explode(' ', $timein->CHECKTIME);
                                         $fingertimein = date('h:i:s A', strtotime($explodetime[1]));
                                         }else{
                                         $fingertimein = "-";

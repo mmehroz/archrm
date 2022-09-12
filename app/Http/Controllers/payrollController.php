@@ -2698,7 +2698,7 @@ class payrollController extends Controller
             // dd($batchid);
             
             $userinfo = DB::connection('sqlsrv')->table('Userinfo')
-            ->where('Userinfo.Userid','=',$batchid)
+            ->where('Userinfo.BADGENUMBER','=',$batchid)
             ->select('Userinfo.Userid')
             ->first();
             
@@ -2739,11 +2739,11 @@ class payrollController extends Controller
             ->select('Checkinout.*')
             ->first();
             
-            // dd($userinfo);
+            // dd($taskCHECK);
             
-            if(isset($taskCHECK->CheckTime)){
+            if(isset($taskCHECK->CHECKTIME)){
                 
-                $checktimefirst = $taskCHECK->CheckTime ;
+                $checktimefirst = $taskCHECK->CHECKTIME ;
             
                 session()->put([
                 
@@ -2830,7 +2830,7 @@ class payrollController extends Controller
                 // dd($taskout);
                 foreach($taskin as $payrolldata){
                 
-                    $split_time = explode(" ",$payrolldata->CheckTime);
+                    $split_time = explode(" ",$payrolldata->CHECKTIME);
                 
                     // if((isset($split_lasttime) == NULL) && ($payrolldata->CHECKTYPE == 'I' )){
                     
@@ -2857,7 +2857,7 @@ class payrollController extends Controller
                 // dd($taskout);
                 foreach($taskout as $payrolldataout){
                 
-                    $split_outtime = explode(" ",$payrolldataout->CheckTime);
+                    $split_outtime = explode(" ",$payrolldataout->CHECKTIME);
                 
                     // if((isset($split_outlasttime) == NULL) && ($payrolldataout->CHECKTYPE == 'O' )){
                         
@@ -3112,7 +3112,7 @@ class payrollController extends Controller
             // dd($emptimeinfo);
 
             $userinfo = DB::connection('sqlsrv')->table('Userinfo')
-            ->where('Userinfo.Userid','=',$name)
+            ->where('Userinfo.BADGENUMBER','=',$name)
             ->select('Userinfo.Userid')
             ->first();
 

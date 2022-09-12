@@ -647,13 +647,15 @@ class UserController extends Controller
             ->where('Userinfo.BADGENUMBER','=',$empinfo->elsemployees_batchid)
             ->select('Userinfo.Userid')
             ->first();
-			$taskCHECK = DB::connection('sqlsrv')->table('Checkinout')
+            if (isset($biouserinfo->Userid)) {
+            $taskCHECK = DB::connection('sqlsrv')->table('Checkinout')
             ->where('Checkinout.Userid','=',$biouserinfo->Userid)
             ->where('Checkinout.CheckType','!=','2')
             ->whereYear('Checkinout.CheckTime', $year)
             ->whereMonth('Checkinout.CheckTime', $month)
             ->select('Checkinout.*')
             ->first();
+            }
             
             // dd($userinfo);
             

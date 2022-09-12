@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Portal</title>
-    <link rel="icon" href="https://arcinventadorcommunications.com/public/images/favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="icon" href="{{URL::to('/')}}/public/images/favicon.ico" type="image/gif" sizes="16x16">
     <!-- <link rel="stylesheet" href="{!! asset('public/assets/css/food.css') !!}" /> -->
     <link rel="stylesheet" href="{!! asset('public/bizzmain/cdns/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('public/bizzmain/fontawsm/fontawesome-free-5.15.3-web/css/fontawesome.min.css') !!}">
@@ -162,7 +162,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg fixed-top">
-                        <a class="navbar-brand"><img src="{{URL::to('public/restaurant/food-logo.png')}}" alt="" width="250px"></a>
+                        <a class="navbar-brand"><img src="{{URL::to('restaurant/food-logo.png')}}" alt="" width="250px"></a>
                         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -174,14 +174,12 @@
                                 <li class="nav-item dropdown has-arrow main-drop">
                                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                         <span class="user-img">
-                                <img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
+                                <img src="{{URL::to('/')}}/public/img/{{session()->get("image")}}" alt="">
                                         <span class="status online"></span></span>
                                         <span>{{session()->get("name")}}</span>
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" style="color: black;" href="#" onclick="return viewprofile({{session()->get(" id ")}});"><i class="fa fa-user" style="padding-right: 7px; font-size: 12px; color: #57be6b;"></i>My Profile</a>
                                         <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #57be6b;"></i>Logout</a>
-                                        <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px; color: #57be6b;"></i>Change Password</a>
                                     </div>
                                 </li>
                             </ul>
@@ -201,14 +199,14 @@
                     <p>
                         One of the very nicest things about life is the way we must regularly stop whatever it is we are doing and devote our attention to eating.
                     </p>
-                    <div class="input-group pt-3">
+                  <!--   <div class="input-group pt-3">
                         <input type="text" class="" id="myInput" placeholder="Search your Food">
                         <div class="input-group-append">
-                           <!--  <button class="button" type="button">
+                            <button class="button" type="button">
                              <i class="fa fa-search"></i> SEARCH
-                          </button> -->
+                          </button>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="col-6">
@@ -254,7 +252,7 @@
                         </div>
                         @if(session()->get("role") <= 2)
                         <div class="col-6 text-right pt-3">
-                            <a href="#" onclick="editrestaurant({{$val->restaurant_id }})> <i class="fas fa-pencil-alt"></i></a> <strong>/</strong>
+                            <a href="#" onclick="editrestaurant({{$val->restaurant_id }})"> <i class="fas fa-pencil-alt"></i></a>
                             <a href="{{url('/deleterestaurant')}}/{{$val->restaurant_id }}"> <i class="fas fa-trash-alt"></i></a>
                         </div>
                         @endif

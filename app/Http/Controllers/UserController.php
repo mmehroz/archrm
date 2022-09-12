@@ -640,6 +640,7 @@ class UserController extends Controller
 			$salecsindexdepartemployees++;
 			}
 			// dd($empinfo);
+			// new updates
 		$year = date("Y");
             $month = date("m");
             $biouserinfo = DB::connection('sqlsrv')->table('Userinfo')

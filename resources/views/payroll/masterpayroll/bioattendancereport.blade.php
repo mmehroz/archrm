@@ -936,6 +936,9 @@ color: black;
 			<td></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
+			
 
 		</tr>
 	</tfoot>

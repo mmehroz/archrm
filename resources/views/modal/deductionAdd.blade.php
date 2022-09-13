@@ -64,7 +64,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 									
-										<label>Bizz Fund <span class="text-danger"></span></label>
+										<label>ARC Fund <span class="text-danger"></span></label>
 										<select name="bizzfund" id="bizzfund" class="form-control selectpicker" data-live-search="true" required>
 											<option value="">Select</option>
 											<option value="No">No</option>

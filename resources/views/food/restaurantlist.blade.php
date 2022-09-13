@@ -274,7 +274,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center pb-1 pt-1">
-                    © 2021 Copyright: Bizz Portal All Rights Reserved
+                    © <?php echo(date('Y'));?> Copyright: Arc Inventador All Rights Reserved
                 </div>
             </div>
         </div>

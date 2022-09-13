@@ -200,9 +200,7 @@
                         <span>{{session()->get("name")}}</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color: black;" href="#" onclick="return viewprofile({{session()->get(" id ")}});"><i class="fa fa-user" style="padding-right: 7px; font-size: 12px; color: #D0202E;"></i>My Profile</a>
                         <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #D0202E;"></i>Logout</a>
-                        <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px; color: #D0202E;"></i>Change Password</a>
                     </div>
                 </li>
             </ul>
@@ -213,7 +211,7 @@
         </div>
         @if(session('message'))
         <div><p class="alert alert-success" >{{session('message')}}</p> </div>
-      @endif
+        @endif
       @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -328,7 +326,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center pb-1 pt-1">
-                    © 2021 Copyright: <a href="http://192.168.0.7/bizzportal/maindashboard" target="_blank" style="color: white; text-decoration: none;">Bizz Portal</a> All Rights Reserved
+                    © <?php echo(date('Y'));?> Copyright: <a href="http://192.168.0.7/bizzportal/maindashboard" target="_blank" style="color: white; text-decoration: none;">Arc Inventador</a> All Rights Reserved
                 </div>
             </div>
         </div>

@@ -49,6 +49,23 @@ Route::get('/uploadsheetdata', function () {
 
 Route::get('/','MyController@logout');
 
+Route::get('/vendorlist','vendorController@vendorlist');
+Route::get('/addvendor','vendorController@addvendor');
+Route::any('/submitaddvendor','vendorController@submitaddvendor');
+Route::get('/editvendor/{id}','vendorController@editvendor');
+Route::any('/submiteditvendor','vendorController@submiteditvendor');
+Route::get('/deletevendor/{id}','vendorController@deletevendor');
+
+Route::get('/carlist','carController@carlist');
+Route::get('/addcar','carController@addcar');
+Route::any('/submitaddcar','carController@submitaddcar');
+Route::get('/editcar/{id}','carController@editcar');
+Route::any('/submiteditcar','carController@submiteditcar');
+Route::get('/deletecar/{id}','carController@deletecar');
+Route::get('/rentaddition/{id}','carController@rentaddition');
+Route::any('/submitrentaddition','carController@submitrentaddition');
+Route::any('/viewrentadditionlog/{id}','carController@viewrentadditionlog');
+
 Route::get('/reservemeetingroom','ReservationController@reservemeetingroom');
 Route::any('/submitreservtion','ReservationController@submitreservtion');
 Route::get('/reservationreport','ReservationController@reservationreport');

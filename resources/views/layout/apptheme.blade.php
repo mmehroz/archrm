@@ -453,6 +453,20 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 								</ul>
 							</li>
 							@endif
+							@if( session()->get("role") <=	 2 )
+							<li class="submenu">
+								<a href="#"><i class="fa fa-money"></i> <span> Vendor Registration </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('/vendorlist')}}">Report</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fa fa-money"></i> <span> Car Registration </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('/carlist')}}">Report</a></li>
+								</ul>
+							</li>
+							@endif
 							<li class="submenu">
 								<a href="#"><i class="fa fa-money"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">

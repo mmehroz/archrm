@@ -155,6 +155,41 @@
 												}else{
 													$last = "0";
 												}
+												if ($val->elsemployees_careligibility == "Yes") {
+													if ($val->elsemployees_assigncaroramount == "Assign") {
+														$getcarassign = DB::connection('mysql')->table('carassign')
+														->where('carassign_to','=',$val->elsemployees_batchid)
+														->where('carassign_month','<=',$getearndeductmonth)
+														->where('status_id','=',2)
+														->orderBY('carassign_id','desc')
+														->select('car_id')
+														->first();
+														if (isset($getcarassign->car_id)) {
+															$getcaramount = DB::connection('mysql')->table('car')
+															->where('car_id','=',$getcarassign->car_id)
+															->where('status_id','=',2)
+															->select('car_rent')
+															->sum('car_rent');
+															$getadditioncaramount = DB::connection('mysql')->table('caraddition')
+															->where('car_id','=',$getcarassign->car_id)
+															->where('status_id','=',2)
+															->select('caraddition_rent')
+															->sum('caraddition_rent');
+															$sumcarrentdeduct = $getcaramount+$getadditioncaramount;
+															$sumcarrent = $getcaramount+$getadditioncaramount;
+														}else{
+															$sumcarrentdeduct = 0;
+															$sumcarrent = 0;
+														}
+													}else{
+														$sumcarrentdeduct = 0;
+														$sumcarrent = $val->elsemployees_caramount;
+													}
+												}else{
+													$sumcarrentdeduct = 0;
+													$sumcarrent = 0;
+												}
+												// dd($sumcarrent);
 												$getincrementprevyear = DB::connection('mysql')->table('increment')
 										        ->where('increment.elsemployees_batchid','=',$val->elsemployees_batchid)
 										        ->where('increment.increment_year','<',$data['sendyear'])
@@ -252,17 +287,7 @@
 												}else{
 													$fund = "0";
 												}
-												$gettax = DB::connection('mysql')->table('deductions')
-												->where('deductions.EMP_BADGE_ID','=',$val->elsemployees_batchid)
-												->where('deductions.deductions_month','=',$getearndeductmonth)
-												->select('deductions.deductions_tax')
-												->first();
-												$tax;
-												if (isset($gettax->deductions_tax)) {
-													$tax  = $gettax->deductions_tax;
-												}else{
-													$tax = "0";
-												}
+											
 												$getloan = DB::connection('mysql')->table('deductions')
 												->where('deductions.EMP_BADGE_ID','=',$val->elsemployees_batchid)
 												->where('deductions.deductions_month','=',$getearndeductmonth)
@@ -317,7 +342,27 @@
 												}
 												}
 												$empsalary = $employeesalary+$increment-$decrement;
-												$grosssalary = $empsalary+$raferal+$incentive+$spiff+$other+$last+$carallowance;
+												$yearsalary = $empsalary*12;
+												$gettax = DB::connection('mysql')->table('tax')
+												->where('tax_startdate','<=',$getearndeductmonth)
+												->where('tax_enddate','>=',$getearndeductmonth)
+												->where('tax_startamount','<=',$yearsalary)
+												->where('tax_endamount','>=',$yearsalary)
+												->orderBY('tax_id','desc')
+												->select('tax_taxamount','tax_percent','tax_startamount')
+												->first();
+												$tax;
+												if (isset($gettax->tax_taxamount)) {
+													$basictax  = $gettax->tax_taxamount;
+													$getyearlydeductamount = $yearsalary-$gettax->tax_startamount;
+													// dd($getyearlydeductamount);
+													$yearlydeductamount = $getyearlydeductamount/100*$gettax->tax_percent;
+													$sumyeartax = $yearlydeductamount+$basictax;
+													$tax = $sumyeartax/12;
+												}else{
+													$tax = "0";
+												}
+												$grosssalary = $empsalary+$raferal+$incentive+$spiff+$other+$last+$sumcarrent;
 												$daydate = 1;
 												$presentdays = 0;
 												$absentdays = 0;
@@ -569,7 +614,7 @@
 												}
 												// dd($finalpayrollamountinword);
 												$sumallearning = $empsalary+$raferal+$incentive+$spiff+$other+$last;
-												$sumalldeduct = $fund+$tax+$loan+$spiffdeliver+$advance+$attendancededuction+$allowanededuction+$carallowance;
+												$sumalldeduct = $fund+$tax+$loan+$spiffdeliver+$advance+$attendancededuction+$allowanededuction+$sumcarrentdeduct;
 												$bfaccumulated = $fund*2;
 												$grossafterdeduct = $grosssalary-$sumalldeduct;
 												$amount_after_decimal = round($finalpayrollamountinword - ($num = floor($finalpayrollamountinword)), 2) * 100;
@@ -613,7 +658,7 @@
 												<td style="background-color: #e2efda;">PKR <?php echo(number_format($raferal))?></td>
 												<td style="background-color: #e2efda;">PKR <?php echo(number_format($incentive))?></td>
 												<td style="background-color: #e2efda;">PKR <?php echo(number_format($spiff))?></td>
-												<td style="background-color: #e2efda;">PKR <?php echo(number_format($carallowance))?></td>
+												<td style="background-color: #e2efda;">PKR <?php echo(number_format($sumcarrent))?></td>
 												<td style="background-color: #e2efda;">PKR <?php echo(number_format($other))?></td>
 												<td style="background-color: #e2efda;">PKR <?php echo(number_format($last))?></td>
 												<td style="background-color: #c6e0b4;">PKR <?php echo(number_format($grosssalary))?></td>
@@ -621,7 +666,7 @@
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($loan))?></td>
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($spiffdeliver))?></td>
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($advance))?></td>
-												<td style="background-color: #f8cbad">PKR <?php echo(number_format($carallowance))?></td>
+												<td style="background-color: #f8cbad">PKR <?php echo(number_format($sumcarrentdeduct))?></td>
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($allowanededuction))?></td>
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($fund))?></td>
 												<td style="background-color: #f8cbad">PKR <?php echo(number_format($fund))?></td>
@@ -782,12 +827,12 @@ color: black;
                         <td>PKR {{$spiffdeliver}}</td>
                        
                     </tr>
-                    <tr>
+                   <tr>
                         <td style="font-weight: 700;">Car Allowance</td>
-                        <td>PKR {{$carallowance}}</td>
+                        <td>PKR {{$sumcarrent}}</td>
                           <td style="font-weight: 700;">Car Rent Deduction
                         </td>
-                        <td>PKR {{$carallowance}}</td>
+                        <td>PKR {{$sumcarrentdeduct}}</td>
                        
                     </tr>
                     <tr>
@@ -891,11 +936,11 @@ color: black;
                         ___________________</span>
                 </p> -->
                 <p style="margin-top: 50px; font-weight: 700;margin-left: 50px">
-                    System generated document (Signature & Stamp is not Necessary), to Verify Contact @ (hr@arcinventador)
+                    System generated document (Signature & Stamp is not Necessary), to Verify Contact @ (hr@arcinventador.com)
                 </p>
             </div>
             <footer style="font-size: 12px; margin-top: 50px; font-weight: 700; color: black; height: 30px;">
-                <p>Email: Info@arcinventador <span
+                <p>Email: Info@arcinventador.com <span
                         style="margin-right: 50px; margin-left: 100px;">Address: 4th & 5th Floor, Ali Plaza, Bahria Town, Karachi.</span> <span style="margin-left: 100px">Num: 0336-6677766</span></p>
             </footer>
         </div>

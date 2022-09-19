@@ -294,7 +294,12 @@ class elscontroller extends Controller
 		->get();
 		
 		
-		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role,"manager" => $manager);
+		$getcar = DB::connection('mysql')->table('car')
+		->where('status_id','=',2)
+		->select('car_id','car_name')
+		->get();
+		
+		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "manager" => $manager, 'car' => $getcar);
 		
 		// dd($allData);
 		
@@ -369,6 +374,10 @@ class elscontroller extends Controller
 			$post->elsemployees_emailaddress = $request->emailaddress ;
 			$post->elsemployees_emailpassword = $request->emailpassword ;
 			$post->elsemployees_emailhost = $request->emailhost ;
+			$post->elsemployees_careligibility = $request->elsemployees_careligibility ;
+			$post->elsemployees_assigncaroramount = $request->elsemployees_assigncaroramount ;
+			$post->car_id = $request->car_id ;
+			$post->elsemployees_caramount = $request->elsemployees_caramount ;
 			$post->elsemployees_changeby = session()->get("name") ;
 			$post->elsemployees_addby = session()->get("name") ;
 			$post->created_at = date('Y-m-d H:i:s');
@@ -377,6 +386,18 @@ class elscontroller extends Controller
 			// dd($post);
 
 			$created = $post->save();
+
+			if ($request->elsemployees_careligibility == "Yes") {
+				$insert = array(
+                'carassign_month' => date('Y-m'),
+                'carassign_to' => $request->emp_batch,
+                'car_id' => $request->car_id,
+                'status_id'=> 2,
+                'created_by'=>  session()->get("batchid"),
+                'created_at'=> date('Y-m-d h:i:s'),
+                );
+            	DB::connection('mysql')->table('carassign')->insert($insert);
+			}
 
 			$insert[] = array(
                 'Name' => $request->emp_name,
@@ -1039,6 +1060,11 @@ class elscontroller extends Controller
 						->select('empstatus.*')
 						->get();
 
+						$getcar = DB::connection('mysql')->table('car')
+						->where('status_id','=',2)
+						->select('car_id','car_name')
+						->get();
+
 						$getpayroll = DB::connection('mysql')->table('payrollsalaries')
 						->where('payrollsalaries.EMP_BADGE_ID','=',$task->elsemployees_batchid)
 						->select('payrollsalaries.Salary','payrollsalaries.fund','attendance_allowance','punctuality_allowance','transport_allowance','fuel_allowance')
@@ -1061,7 +1087,7 @@ class elscontroller extends Controller
 						}
 						// dd($payroll);
 						
-						$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "empstatus" => $status,"manager" => $manager,"user" =>$task,"salary" =>$payroll);
+						$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "empstatus" => $status,"manager" => $manager,"user" =>$task,"salary" =>$payroll, 'car' => $getcar);
 				
 					// dd($allData);
 					
@@ -1070,7 +1096,7 @@ class elscontroller extends Controller
 				
 				   // dd($task);
 				}else{
-					return redirect('/')->with('message','You Are Not Allowed To Visit Portal this page with this role');
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal With This Role');
 				}
 			
 			}else{
@@ -1147,6 +1173,10 @@ class elscontroller extends Controller
 				$post->elsemployees_emailaddress = $request->emailaddress ;
 				$post->elsemployees_emailpassword = $request->emailpassword ;
 				$post->elsemployees_emailhost = $request->emailhost ;
+				$post->elsemployees_careligibility = $request->elsemployees_careligibility ;
+				$post->elsemployees_assigncaroramount = $request->elsemployees_assigncaroramount ;
+				$post->car_id = $request->car_id ;
+				$post->elsemployees_caramount = $request->elsemployees_caramount ;
 	
 				if (session()->get('role') == 1 || session()->get('role') == 2 ) {
 				$post->elsemployees_annualleaves = $request->emp_annual_leave;
@@ -1159,6 +1189,19 @@ class elscontroller extends Controller
 				$post->updated_at = date('Y-m-d H:i:s');
 				$updated = $post->save();
 
+
+				if ($request->elsemployees_careligibility == "Yes") {
+					$insert = array(
+	                'carassign_month' => date('Y-m'),
+	                'carassign_to' => $request->emp_batch,
+	                'car_id' => $request->car_id,
+	                'status_id'=> 2,
+	                'created_by'=>  session()->get("batchid"),
+	                'created_at'=> date('Y-m-d h:i:s'),
+	                );
+	            	DB::connection('mysql')->table('carassign')->insert($insert);
+				}
+				
 				$task = DB::connection('mysql')->table('payrollsalaries')
 				->select('payrollsalaries.*')
 				->where('payrollsalaries.EMP_BADGE_ID','=',$request->emp_batch)

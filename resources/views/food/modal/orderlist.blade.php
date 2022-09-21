@@ -43,11 +43,11 @@
 			margin-top: 8px;
 		}
 		.submit-section button{
-		background-color: #D0202E;
+		/* background-color: #D0202E; */
 		color: white;
 		outline: none;
-		border: 1px solid #d0202e;
-		width: 50%;
+		/* border: 1px solid #d0202e; */
+		width: 150px;
 		height: 40px;
 
 		}
@@ -60,7 +60,7 @@
 			
 		}
 		.order{
-			color: gray;
+			color: black;
 			font-weight: 700;
 		}
 		.modal-title{
@@ -72,22 +72,32 @@
 			text-align: center;
 			justify-content: center;
 			margin: 0 auto;
+			background:none !important;
 		}
 		table thead {
-			background-color: #d0202e;
+			background-color:  #5069e7 !important;
 			color: white;
-			/*font-size: 11px;*/
+			/*font-size: 11px;*/}
+
+			.table thead th{
+				font-size:14px;
+			}
 			
-		}
+		
 		table{
-			border: 1px solid #D0202E;
+			/* border: 1px solid #D0202E; */
 			white-space: nowrap;
 			/*font-size: 10px;*/
 		}
-		.close span{
+		.close {
 			position: absolute;
     		top: 0;
     		right: 0px;
+			color:red;
+		}
+
+		#restaurant{
+			margin:0 auto;
 		}
 </style>
 <div id="userorderlist" class="modal custom-modal fade" role="dialog">
@@ -95,7 +105,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 
-				<h3 class="modal-title"><span class="order">Order</span> List</h3>
+				<h5 class="modal-title"><span class="order">Order List</span> </h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -130,9 +140,11 @@
 				</tbody>
 			</table>
 			@if($proceedordercount > 0)
+			<br>
 			<div class="submit-section">
 				<button id="proceedorder" class="btn btn-primary submit-btn">Proceed</button>
 			</div>
+			<br>
 			@endif
 		</form>
 	</div>

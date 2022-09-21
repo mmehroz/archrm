@@ -15,14 +15,20 @@
     <script src="{!! asset('public/bizzmain/cdns/bootstrap.min.js') !!}"></script>
 </head>
 <style>
-    .navbar .fa-cart-arrow-down {
+     .navbar .fa-cart-arrow-down {
         font-size: 1.5rem;
         color: #ffffff;
+    }
+
+    #opstatus{
+        color:red !important;
+        font-size:12px !important;
     }
     
     nav {
         text-shadow: 0 10px 15px 0 rgb(0 0 0 / 20%), 0 10px 20px 0 rgb(0 0 0 / 19%);
-        background-color: rgb(93, 184, 111);
+        /* background-color: rgba(87, 190, 107, 0.7); */
+        background:linear-gradient(to right bottom, #6416ec, #33e0e0);
     }
     
     nav a {
@@ -42,11 +48,12 @@
     
     .footer {
         color: white;
-        background-color: #57be6b;
+        background:linear-gradient(to right bottom, #6416ec, #33e0e0);
         font-size: 1.1rem;
         font-weight: 600;
         width: 100%;
-    }
+        bottom: 0px;
+        position: fixed;}
     
     .pl {
         margin-top: 77px;
@@ -69,7 +76,9 @@
     }
     
     .pl .pr-img {
-        border-radius: 30px;
+        border-radius: 10px;
+        width: 100%;
+        height:150px;
     }
     
     .pr-p {
@@ -78,7 +87,7 @@
     
     .fa-plus,
     .fa-trash {
-        color: #57be6b;
+        color: #5069e7;
         font-size: 1rem;
     }
     
@@ -95,10 +104,11 @@
     /* check */
     
     .pro-check {
+        margin-top:10px;
         width: 100%;
         height: auto;
         border: 2px solid white;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 10px;
         box-shadow: 5px 5px 25px 5px lightgrey;
     }
@@ -106,9 +116,9 @@
     .pro-check button {
         width: 100%;
         height: 45px;
-        background-color: #57be6b;
+        background-color: #5069e7;
         color: white;
-        border: 1px solid #57be6b;
+        border: 1px solid #5069e7;
         border-radius: 4px;
         text-transform: uppercase;
         margin-top: 50px;
@@ -126,18 +136,18 @@
         font-size: 15px;
     }
     .as {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
         font-weight: 600;
-        color: #57be6b;
+        color: #5069e7;
         text-decoration: none;
     }
     
     .as:hover {
-        color: #57be6b;
+        color: #5069e7;
         text-decoration: none;
     }
     .fa-pencil-alt{
-        color: #57be6b;
+        color: #5069e7;
     }
     
     @media only screen and (max-width: 1165px) {
@@ -148,9 +158,19 @@
             font-size: 13px !important;
         }
         .fa-plus {
-            color: #57be6b;
+            color: #5069e7;
             font-size: 1rem;
         }
+    }
+
+    #restaurant{
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        width: 97% !important;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.20);
+        /* margin-left:5px;
+        margin-right: 5px; */
+        margin-bottom:10px;
     }
     
     @media only screen and (max-width: 1000px) {
@@ -170,7 +190,7 @@
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             if (scroll > 100) {
-                $(".navbar").css("background", "#57be6b");
+                $(".navbar").css("background", "#5069e7");
             } else {
                 $(".navbar").css("background", "");
             }
@@ -183,7 +203,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg fixed-top">
-                        <a class="navbar-brand" href="{{URL::to('restaurantlist')}}"><img src="{{URL::to('public/restaurant/food-logo.png')}}" alt="" width="250px"></a>
+                    <a class="navbar-brand"><img src="{{URL::to('public/bizzmain/logo-03.svg')}}" alt="" width="100px"></a>
                         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -228,7 +248,7 @@
             <div class="row">
                 <div class="col-9">
                     <div class="scroll">
-                        <div class="bg1" style="background: url('{{URL::to('public/restaurant/')}}/{{$datares->restaurant_picture}}'); background-size: cover; height: 40vh;">
+                        <div class="bg1" style="background: url('{{URL::to('public/restaurant/')}}/{{$datares->restaurant_picture}}'); margin-top:10px; border-radius: 8px; background-size: cover; height: 30vh;">
 
                         </div>
                         <div class="row">
@@ -248,7 +268,8 @@
                             </div>
                             @foreach ($data as $val)
                             <!-- Products -->
-                            <div class="col-4 pt-4">
+                            <div class="col-3 pt-3">
+                            <div id="restaurant" class="container pt-3">
                                 <img class="pr-img" src="{{URL::to('public/product/')}}/{{$val->product_picture}}" alt="" width="100%">
                                 <div class="row p-1 mt-2">
                                     <div class="col-6">
@@ -281,7 +302,7 @@
                                        ->first();
                                    ?>
                                        @if($task)
-                                       <th>Order Pending</th>
+                                       <th id="opstatus">Pending</th>
                                        @else
                                         <a type="button" id="btn-moresdsd-{{$val->product_id}}" onclick="addtocart({{$val->restaurant_id}}.{{$val->product_id}})"> <i class="fas fa-plus"></i></a>
                                         @endif
@@ -289,7 +310,7 @@
 
                                 </div>
 
-
+</div>
                             </div>
                             @endforeach
                             
@@ -325,7 +346,7 @@
     <section class="footer ">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center pb-1 pt-1">
+                <div class="col-12 text-center pb-1 pt-1" style="font-size:12px;">
                     © <?php echo(date('Y'));?> Copyright: <a href="http://192.168.0.7/bizzportal/maindashboard" target="_blank" style="color: white; text-decoration: none;">Arc Inventador</a> All Rights Reserved
                 </div>
             </div>

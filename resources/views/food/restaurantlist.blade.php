@@ -22,7 +22,8 @@
     
     nav {
         text-shadow: 0 10px 15px 0 rgb(0 0 0 / 20%), 0 10px 20px 0 rgb(0 0 0 / 19%);
-        background-color: rgba(87, 190, 107, 0.7);
+        /* background-color: rgba(87, 190, 107, 0.7); */
+        background:linear-gradient(to right bottom, #6416ec, #33e0e0);
     }
     
     nav a {
@@ -70,9 +71,9 @@
         width: 250px;
         height: 60px;
         font-size: 1.2rem;
-        background-color: #57be6b;
+        background-color: #5069e7;
         color: white;
-        border: 1px solid #57be6b;
+        border: 1px solid #5069e7;
         border-radius: 26px;
         padding-bottom: 5px;
         letter-spacing: 1px;
@@ -94,9 +95,9 @@
         font-size: 17px;
     }
     
-    .rest {
+    /* .rest {
         margin-top: 70px;
-    }
+    } */
     
     .rest .fr {
         color: #0c4aaf;
@@ -111,32 +112,62 @@
     .rest .as {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #57be6b;
+        color: #5069e7;
         text-decoration: none;
     }
     
     .rest img {
         border: 1px solid transparent;
-        border-radius: 30px;
+        border-radius: 10px;
+        height: 200px;
+        width: 100%;
         /* pointer: cursor; */
         cursor: pointer;
+
     }
     
     .rest .fa-pencil-alt,
     .fa-trash-alt {
-        color: #57be6b;
+        color: #5069e7;
     }
     
     .rest h5 {
         color: #000000;
     }
-    
+    .trash{
+color: red;
+    }
+    .pencil{
+color: green;
+    }
+
+    .addresturantbtn{
+        color: white;
+        background:linear-gradient(to right bottom, #6416ec, #33e0e0);
+        border:none;
+        border-radius: 5px;
+        font-size: 15px;
+        padding:10px
+    }
     .footer {
         color: white;
-        background-color: #57be6b;
+        background:linear-gradient(to right bottom, #6416ec, #33e0e0);
         font-size: 1.1rem;
         font-weight: 600;
         width: 100%;
+        bottom: 0px;
+        position: fixed;
+
+
+  
+    }
+    #restaurant{
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        width: 97% !important;
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.12);
+        /* margin-left:5px;
+        margin-right: 5px; */
     }
     @media only screen and (max-width: 1000px) {
         .des {
@@ -149,7 +180,7 @@
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             if (scroll > 300) {
-                $(".navbar").css("background", "#57be6b");
+                $(".navbar").css("background", "#5069e7");
             } else {
                 $(".navbar").css("background", "");
             }
@@ -158,11 +189,11 @@
 </script>
 <body>
     <section class="section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg fixed-top">
-                        <a class="navbar-brand"><img src="{{URL::to('restaurant/food-logo.png')}}" alt="" width="250px"></a>
+                        <a class="navbar-brand"><img src="{{URL::to('public/bizzmain/logo-03.svg')}}" alt="" width="100px"></a>
                         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -179,7 +210,7 @@
                                         <span>{{session()->get("name")}}</span>
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #57be6b;"></i>Logout</a>
+                                        <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #5069e7;"></i>Logout</a>
                                     </div>
                                 </li>
                             </ul>
@@ -193,25 +224,8 @@
     <!-- banner -->
     <section class="banner">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h1>Online food ordering<br><span class="sub-h"> portal system</span></h1>
-                    <p>
-                        One of the very nicest things about life is the way we must regularly stop whatever it is we are doing and devote our attention to eating.
-                    </p>
-                  <!--   <div class="input-group pt-3">
-                        <input type="text" class="" id="myInput" placeholder="Search your Food">
-                        <div class="input-group-append">
-                            <button class="button" type="button">
-                             <i class="fa fa-search"></i> SEARCH
-                          </button>
-                        </div>
-                    </div> -->
-
-                </div>
-                <div class="col-6">
-                    <img src="{{URL::to('public/restaurant/12345.png')}}" alt="" width="100%">
-                </div>
+            <div class="row" style="align-items: baseline;">
+      
                 @if(session('message'))
                 <div><p class="alert alert-success" >{{session('message')}}</p> </div>
               @endif
@@ -224,36 +238,40 @@
                 </ul>
               </div>
               @endif
+            
             </div>
         </div>
     </section>
     <!-- Restaurant -->
     <section class="rest">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <h5 class="fr">Food Receipe</h5>
-                    <h1>with delicious food</h1>
+                    <h1>Keep Calm & Order Your Food</h1>
+                    <p>Oops we can't order outside from Bahria</p>
                 </div>
-                <div class="col-6 pt-5 text-right">
+                <div class="col-6 pt-3 text-right">
                     @if(session()->get("role") <= 2)
                     <a  onclick="addrestaurant()" class="as">
-                        <i class="fas fa-plus-circle"></i> Add Restaurant
+                        <button class="addresturantbtn">Add Restaurant</button>
                     </a>
                     @endif
                 </div>
                 @foreach ($data as $val)
-                <div class="col-4 pt-5" id="restaurant">
-                    <span>
-                    <a onclick="productlist({{$val->restaurant_id }})"> <img src="{{URL::to('public/restaurant/')}}/{{$val->restaurant_picture}}" alt="" width="100%"></a>
+                <div class="col-3  " >
+                <div id="restaurant" class="container pt-3">
+        
+                    <a onclick="productlist({{$val->restaurant_id }})">
+                     <img src="{{URL::to('public/restaurant/')}}/{{$val->restaurant_picture}}" alt="" width="100%">
+                    </a>
                     <div class="row">
                         <div class="col-6 pt-3">
                             <h5>{{$val->restaurant_name}}</h5>
                         </div>
                         @if(session()->get("role") <= 2)
                         <div class="col-6 text-right pt-3">
-                            <a href="#" onclick="editrestaurant({{$val->restaurant_id }})"> <i class="fas fa-pencil-alt"></i></a>
-                            <a href="{{url('/deleterestaurant')}}/{{$val->restaurant_id }}"> <i class="fas fa-trash-alt"></i></a>
+                            <a href="#" onclick="editrestaurant({{$val->restaurant_id }})"> <i class="fas pencil fa-pencil-alt"></i></a>
+                            <a href="{{url('/deleterestaurant')}}/{{$val->restaurant_id }}"> <i class="fas trash fa-trash-alt"></i></a>
                         </div>
                         @endif
                         <div class="col-12">
@@ -262,7 +280,7 @@
                             </p>
                         </div>
                     </div>
-                    </span>
+                </div>
                 </div>
                 @endforeach
                 
@@ -273,7 +291,7 @@
     <section class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center pb-1 pt-1">
+                <div class="col-12 text-center pb-1 pt-1" style="font-size:12px;">
                     © <?php echo(date('Y'));?> Copyright: Arc Inventador All Rights Reserved
                 </div>
             </div>

@@ -1430,11 +1430,11 @@ $emailurl = "http://80.240.16.149:5000";
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" onclick="commingsoon()">
-                                <a href="#" >
+                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" href={{$chaturl}}>
+                                <a href={{$chaturl}} target="_blank">
                                 <div class="time13 aqua13 ">
                                     <div class="glare13 "></div>
-                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Chat</a>
+                                    <a class="abc" id="upload_link" target="_blank" href="{{$chaturl}}" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-envelope-open-text "></i></span> Chat</a>
                                 </div>
                                 </a>
                             <!-- </div> -->
@@ -1451,11 +1451,11 @@ $emailurl = "http://80.240.16.149:5000";
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" onclick="commingsoon()">
-                                <a href="#" >
+                                <div class="col-lg-4 col-md-4 col-sm-4  " style="cursor: pointer;" href={{$crmurl}} >
+                                <a href="{{$crmurl}}" target="_blank" >
                                 <div class="time13 aqua13 ">
                                     <div class="glare13 "></div>
-                                    <a class="abc" id="upload_link" target="_blank" href="#" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-check-circle"></i></span> CRM</a>
+                                    <a class="abc" id="upload_link" target="_blank" href="{{$crmurl}}" style="text-decoration: none; color: rgba(255, 253, 253, 0.856); "><span><i class="abc msgs fa fa-check-circle"></i></span> CRM</a>
                                 </div>
                                 </a>
                             <!-- </div> -->

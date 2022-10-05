@@ -641,7 +641,7 @@ class UserController extends Controller
 			}
 			// dd($empinfo);
 			// new updates
-		$year = date("Y");
+			$year = date("Y");
             $month = date("m");
             $biouserinfo = DB::connection('sqlsrv')->table('Userinfo')
             ->where('Userinfo.BADGENUMBER','=',$empinfo->elsemployees_batchid)
@@ -694,8 +694,8 @@ class UserController extends Controller
                 ->get();
                 $taskin = DB::connection('sqlsrv')->table('Checkinout')
                 ->where('Checkinout.Userid','=',$biouserinfo->Userid)
-                ->where('Checkinout.CheckType','!=','2')
-                ->where('Checkinout.CheckType','!=','1')
+                ->where('Checkinout.CheckType','=','I')
+                // ->where('Checkinout.CheckType','!=','1')
                 ->whereYear('Checkinout.CheckTime', $year)
                 ->whereMonth('Checkinout.CheckTime', $month)
                 ->select('Checkinout.*')
@@ -703,8 +703,8 @@ class UserController extends Controller
                 ->get();
                 $taskout = DB::connection('sqlsrv')->table('Checkinout')
                 ->where('Checkinout.Userid','=',$biouserinfo->Userid)
-                ->where('Checkinout.CheckType','!=','2')
-                ->where('Checkinout.CheckType','!=','0')
+                ->where('Checkinout.CheckType','=','O')
+                // ->where('Checkinout.CheckType','!=','0')
                 ->whereYear('Checkinout.CheckTime', $year)
                 ->whereMonth('Checkinout.CheckTime', $month)
                 ->select('Checkinout.*')

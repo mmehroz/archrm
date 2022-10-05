@@ -2809,8 +2809,8 @@ class payrollController extends Controller
           
                 $taskin = DB::connection('sqlsrv')->table('Checkinout')
                 ->where('Checkinout.Userid','=',$userinfo)
-                ->where('Checkinout.CheckType','!=','2')
-                ->where('Checkinout.CheckType','!=','1')
+                ->where('Checkinout.CheckType','=','I')
+                // ->where('Checkinout.CheckType','!=','1')
                 ->whereYear('Checkinout.CheckTime', $year)
                 ->whereMonth('Checkinout.CheckTime', $month)
                 ->select('Checkinout.*')
@@ -2820,8 +2820,8 @@ class payrollController extends Controller
                 
                 $taskout = DB::connection('sqlsrv')->table('Checkinout')
                 ->where('Checkinout.Userid','=',$userinfo)
-                ->where('Checkinout.CheckType','!=','2')
-                ->where('Checkinout.CheckType','!=','0')
+                // ->where('Checkinout.CheckType','!=','2')
+                ->where('Checkinout.CheckType','=','O')
                 ->whereYear('Checkinout.CheckTime', $year)
                 ->whereMonth('Checkinout.CheckTime', $month)
                 ->select('Checkinout.*')
@@ -3137,8 +3137,8 @@ class payrollController extends Controller
 
                     $taskin = DB::connection('sqlsrv')->table('Checkinout')
                     ->where('Checkinout.Userid','=',$userinfo)
-                    ->where('Checkinout.CheckType','!=','2')
-                    ->where('Checkinout.CheckType','!=','1')
+                    ->where('Checkinout.CheckType','=','I')
+                    // ->where('Checkinout.CheckType','!=','1')
                     ->whereYear('Checkinout.CheckTime', $year)
                     ->whereMonth('Checkinout.CheckTime', $month)
                     ->select('Checkinout.*')
@@ -3148,8 +3148,8 @@ class payrollController extends Controller
                     
                     $taskout = DB::connection('sqlsrv')->table('Checkinout')
                     ->where('Checkinout.Userid','=',$userinfo)
-                    ->where('Checkinout.CheckType','!=','2')
-                    ->where('Checkinout.CheckType','!=','0')
+                    ->where('Checkinout.CheckType','=','O')
+                    // ->where('Checkinout.CheckType','!=','0')
                     ->whereYear('Checkinout.CheckTime', $year)
                     ->whereMonth('Checkinout.CheckTime', $month)
                     ->select('Checkinout.*')

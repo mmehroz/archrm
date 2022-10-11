@@ -43,9 +43,13 @@
 											<tr>
 											<?php  $explodechktime = explode(' ', $data[$index]->CheckTime);
 											   $explodetime = explode('.', $explodechktime[1]);
+											    $userinfo = DB::connection('sqlsrv')->table('USERINFO')
+									            ->where('USERINFO.USERID','=',40)
+									            ->select('USERINFO.BADGENUMBER')
+									            ->first();
 											   $getname = DB::connection('mysql')->table('elsemployees')
-								                ->where('elsemployees.elsemployees_status','=',2)
-								                ->where('elsemployees.elsemployees_batchid','=',$data[$index]->Userid)
+								                ->where('elsemployees_status','=',2)
+								                ->where('elsemployees_batchid','=',$userinfo->BADGENUMBER)
 								                ->select('elsemployees_name')
 								                ->first();
 								                if (isset($getname)) {

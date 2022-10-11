@@ -5146,8 +5146,8 @@ class payrollController extends Controller
         public function monthlylistattendance(Request $request){
             if(session()->get("email") && session()->get("role") <= 2){
             $taskin = DB::connection('sqlsrv')->table('Checkinout')
-            ->where('Checkinout.CheckType','!=','2')
-            ->where('Checkinout.CheckType','!=','1')
+            ->where('Checkinout.CheckType','=','I')
+            // ->where('Checkinout.CheckType','!=','1')
             ->whereYear('Checkinout.CheckTime', $request->attendanceyear)
             ->whereMonth('Checkinout.CheckTime', $request->attendancemonth)
             ->select('Checkinout.CheckTime','Checkinout.Userid')

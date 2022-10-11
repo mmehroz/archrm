@@ -472,9 +472,11 @@
 							                                $halfdaytime = date('h:i:sa',strtotime('+1 hour +26 minutes',strtotime($arrivaltime)));
 							                            }
 												if($attendancestatus->attendance_mark >= $arrivaltime && $attendancestatus->attendance_mark <= $halfdaytime){
-													$latedays++;
+													// $latedays++;
+													$presentdays++;
 												}elseif($attendancestatus->attendance_mark >= $halfdaytime){
-													$halfdays++;
+													// $halfdays++;
+													$presentdays++;
 												}
 												else{
 													$presentdays++;

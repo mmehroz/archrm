@@ -9,14 +9,14 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col-sm-10">
-					<h3 class="page-title">Expense Report</h3>
+					<h3 class="page-title">Recuring Expense Report</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active">Expense</li>
 					</ul>
 				</div>
-				<div class="col-sm-2"><?php $ym = $yearandmonth;?>
-					<a href="#" class="btn add-btn" onclick="addexpense({{'"'.$yearandmonth.'"'}})" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i> Add Expense</a>
+				<div class="col-sm-2">
+					<a href="#" class="btn add-btn" onclick="addrecuringexpense()" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i> Add Expense</a>
 				</div>
 			</div>
 		</div>
@@ -24,12 +24,6 @@
       		<div><p class="alert alert-success" >{{session('message')}}</p> </div>
     	@endif
 		<div class="panel-body">
-			<div class="row">
-	            <div class="col-lg-12">
-	            	<h4 style="text-align: center;">Opening Balance  {{$openingbalance}}</h4>
-					<!-- <label class="form-cotrol" >Opening Balance<:- {{$openingbalance}}</label> -->
-				</div>
-			</div>
 	        <div class="row">
 	            <div class="col-lg-12">
 	            	<div class="table-responsive">
@@ -39,7 +33,6 @@
 	                				<th style="width: 10%!important;">Action</th>
 	                				<th>Title</th>
 									<th>Amount</th>
-									<th>Type</th>
 									<th>Comment</th>
 								</tr>
 							</thead>
@@ -50,13 +43,12 @@
 					                  	<div class="dropdown dropdown-action">
 					                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
 					                    <div class="dropdown-menu dropdown-menu-right">
-					                      <a class="dropdown-item" href="#" onclick="editexpense({{$val->expense_id}})"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+					                      <a class="dropdown-item" href="#" onclick="editrecuringexpense({{$val->expense_id}})"><i class="fa fa-pencil m-r-5"></i> Edit</a>
 					                    </div>
 					                  	</div>
 				                	</td>
 				                	<td>{{$val->expense_title}}</td>
 									<td>PKR {{$val->expense_amount}}</td>
-									<td>{{$val->expensetype_name}}</td>
 									<td>{{$val->expense_comment}}</td>
 								</tr>
 								@endforeach
@@ -70,14 +62,14 @@
 </div>
 <div id ='modals'></div>
 <script type="text/javascript">
-function addexpense($id){
-	$.get('{{ URL::to("/addexpense")}}/'+$id,function(data){
+function addrecuringexpense(){
+	$.get('{{ URL::to("/addrecuringexpense")}}',function(data){
 	$('#modals').empty().append(data);
 	$('#addexpense').modal('show');
 	});
 }
-function editexpense($id){
-	$.get('{{ URL::to("/editexpense")}}/'+$id,function(data){
+function editrecuringexpense($id){
+	$.get('{{ URL::to("/editrecuringexpense")}}/'+$id,function(data){
 	$('#modals').empty().append(data);
 	$('#editexpense').modal('show');
 	});

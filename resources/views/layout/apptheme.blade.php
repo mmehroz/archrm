@@ -470,7 +470,8 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 							<li class="submenu">
 								<a href="#"><i class="fa fa-money"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="{{url('/selectexpensemonth')}}">Report</a></li>
+									<li><a href="{{url('/selectexpensemonth')}}">Monthly</a></li>
+									<li><a href="{{url('/recuringexpenselist')}}">Recurring</a></li>
 								</ul>
 							</li>
 							

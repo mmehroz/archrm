@@ -486,3 +486,10 @@ Route::any('addexpense/{id}','ExpenseController@addexpense');
 Route::any('submitexpense','ExpenseController@submitexpense');
 Route::any('editexpense/{id}','ExpenseController@editexpense');
 Route::any('submiteditexpense','ExpenseController@submiteditexpense');
+
+Route::any('recuringexpenselist','ExpenseController@recuringexpenselist');
+Route::any('addrecuringexpense','ExpenseController@addrecuringexpense');
+Route::any('submitrecuringexpense','ExpenseController@submitrecuringexpense');
+Route::any('editrecuringexpense/{id}','ExpenseController@editrecuringexpense');
+Route::any('submiteditrecuringexpense','ExpenseController@submiteditrecuringexpense');
+Route::any('submitopeningbalance','ExpenseController@submitopeningbalance');

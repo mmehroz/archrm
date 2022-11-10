@@ -40,7 +40,9 @@
 						<thead>
 							<tr class="bg-teal-400" style="white-space : nowrap;">
 							   	<th>Action</th>
-							   	<th>Name</th>
+                				<th>Vendor Name</th>
+							   	<th>Product Name</th>
+                				<th>Type</th>
                 				<th>Total Qty</th>
                 				<th>Use Qty</th>
                 				<th>Remaining Qty</th>
@@ -60,7 +62,9 @@
 				                    </div>
 				                  </div>
 				                </td>
+								<td>{{$val->vendor_name}}</td>
 								<td>{{$val->itinventory_name}}</td>
+								<td>{{$val->itinventory_type}}</td>
 								<td>{{$val->itinventory_qty}}</td>
 								<td>{{$val->itinventory_qtyuse}}</td>
 								<td>{{$val->itinventory_qtyremaining}}</td>

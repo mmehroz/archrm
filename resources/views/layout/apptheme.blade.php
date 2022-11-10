@@ -580,7 +580,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 							<li class="submenu">
 								<a href="#"><i class="la la-file-text"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{{url('/itticketrequest')}}">Inventory List</a></li>
+									<li><a href="{{url('/itinventorylist')}}">Inventory List</a></li>
 								</ul>
 							</li>
 							@endif
@@ -599,7 +599,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 							<li class="submenu">
 								<a href="#"><i class="la la-file-text"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{{url('/itticketrequest')}}">Inventory List</a></li>
+									<li><a href="{{url('/itinventorylist')}}">Inventory List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">

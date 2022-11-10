@@ -42,17 +42,52 @@
 			<form action="{{ URL::to('/submiteditinventory')}}" id="submitinventory" method="POST"  enctype="multipart/form-data">
 			{{ csrf_field() }} 
 			<input type="hidden" name="itinventory_id" value="{{$data->itinventory_id}}">
-			  	 <div class="form-group">
-			  	 	<label><span class="text-danger"></span>Enter Product Name</label>
-					<input type="text" name="itinventory_name" value="{{$data->itinventory_name}}" required  class="form-control">
+			<div class="row">
+				<div class="col-md-6">
+			    	<div class="form-group">
+						<label><span class="text-danger"></span>Select Vendor</label>
+						<select class="form-control" name="vendor_id"  required>
+	            			@foreach($vendor as $vendors)
+		            		<option @if($data->vendor_id == $vendors->vendor_id) {{"selected"}} @endif value={{$vendors->vendor_id}}>{{$vendors->vendor_name}}</option>
+		        			@endforeach 
+	            		</select>
+					</div>
 				</div>
-			    <div class="form-group">
-					<label><span class="text-danger"></span>Enter Quantity</label>
-					<input type="number" class="form-control" id="itinventory_qty" name="itinventory_qty" value="{{$data->itinventory_qty}}" required>
+				<div class="col-md-6">
+			    	<div class="form-group">
+						<label><span class="text-danger"></span>Select Inventory Type</label>
+						<select class="form-control" name="itinventory_type"  required>
+	            			<option @if($data->itinventory_type == "New") {{"selected"}} @endif value="New">New</option>
+	            			<option @if($data->itinventory_type == "Use") {{"selected"}} @endif value="Use">Use</option>
+		       			</select>
+					</div>
 				</div>
-				<div class="submit-section">
-					<button id="btnsubmit" class="btn btn-primary submit-btn">Submit</button>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				  	 <div class="form-group">
+				  	 	<label><span class="text-danger"></span>Enter Product Name</label>
+						<input type="text" name="itinventory_name" value="{{$data->itinventory_name}}" required  class="form-control">
+					</div>
 				</div>
+				<div class="col-md-6">
+				    <div class="form-group">
+						<label><span class="text-danger"></span>Enter Quantity</label>
+						<input type="number" class="form-control" id="itinventory_qty" name="itinventory_qty" value="{{$data->itinventory_qty}}" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				    <div class="form-group">
+						<label><span class="text-danger"></span>Enter Description</label>
+						<textarea class="form-control" id="itinventory_description" name="itinventory_description" required rows="4">{{$data->itinventory_description}}</textarea>
+					</div>
+				</div>
+			</div>
+			<div class="submit-section">
+				<button id="btnsubmit" class="btn btn-primary submit-btn">Submit</button>
+			</div>
 			</form>
 			</div>
 		</div>

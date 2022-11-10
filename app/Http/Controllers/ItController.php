@@ -191,9 +191,10 @@ class ItController extends Controller
 	public function itinventorylist(){
 		if(session()->get("email")){
 			$task = DB::connection('mysql')->table('itinventory')
+			->join('vendor','vendor.vendor_id', '=', 'itinventory.vendor_id')
 			->join('elsemployees','elsemployees.elsemployees_batchid', '=','itinventory.created_by')
 			->where('itinventory.status_id','=',2)
-			->select('itinventory.itinventory_id','itinventory.itinventory_name','itinventory.itinventory_qty','itinventory.itinventory_qtyuse','itinventory.itinventory_qtyremaining','itinventory.created_at','elsemployees.elsemployees_name')
+			->select('itinventory.*','elsemployees.elsemployees_name','vendor.vendor_name')
 			->get();
 			return view('it.itinventorylist', ['data' => $task]);
 		}else{
@@ -202,7 +203,12 @@ class ItController extends Controller
 	}
 	public function addtoinventory(){
 		if(session()->get("email")){
-			return view('it.modal.addtoinventory');
+			$task = DB::connection('mysql')->table('vendor')
+			->where('vendortype_id','=',2)
+			->where('status_id','=',2)
+			->select('*')
+			->get();
+			return view('it.modal.addtoinventory', ['data' => $task]);
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
@@ -210,14 +216,20 @@ class ItController extends Controller
 	public function submitaddtoinventory(Request $request){
 		if(session()->get("email")){
 			$this->validate($request, [
-        		'itinventory_name'	=>'required',
-        		'itinventory_qty'	=>'required',
+        		'itinventory_name'			=>'required',
+        		'itinventory_qty'			=>'required',
+        		'itinventory_type'			=>'required',
+        		'itinventory_description'	=>'required',
+        		'vendor_id'					=>'required',
         	]);
 			$insert = array(
                 'itinventory_name' 			=> $request->itinventory_name,
                 'itinventory_qty' 			=> $request->itinventory_qty,
-                'itinventory_qtyuse' 		=> 0,
-                'itinventory_qtyremaining' 	=> $request->itinventory_qty,
+                'itinventory_type' 			=> $request->itinventory_type,
+                'itinventory_description' 	=> $request->itinventory_description,
+                'vendor_id' 				=> $request->vendor_id,
+                'itinventory_qtyuse' 		=> $request->itinventory_type == "Use" ? $request->itinventory_qty : 0,
+                'itinventory_qtyremaining' 	=> $request->itinventory_type == "Use" ? 0 : $request->itinventory_qty,
                 'status_id' 				=> 2,
                 'created_by' 				=> session()->get('batchid'),
                 'created_at' 				=> date('Y-m-d h:i;s'),
@@ -237,9 +249,14 @@ class ItController extends Controller
 			$task = DB::connection('mysql')->table('itinventory')
 			->where('itinventory_id','=',$id)
 			->where('status_id','=',2)
-			->select('itinventory_id','itinventory_name','itinventory_qty')
+			->select('*')
 			->first();
-			return view('it.modal.editinventory', ['data' => $task]);
+			$vendor = DB::connection('mysql')->table('vendor')
+			->where('vendortype_id','=',2)
+			->where('status_id','=',2)
+			->select('*')
+			->get();
+			return view('it.modal.editinventory', ['data' => $task, 'vendor' => $vendor]);
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
@@ -247,15 +264,23 @@ class ItController extends Controller
 	public function submiteditinventory(Request $request){
 		if(session()->get("email")){
 			$this->validate($request, [
-	    		'itinventory_id'	=>'required',
-	    		'itinventory_name'	=>'required',
-	    		'itinventory_qty'	=>'required',
+	    		'itinventory_id'			=>'required',
+	    		'itinventory_name'			=>'required',
+	    		'itinventory_qty'			=>'required',
+	    		'itinventory_type'			=>'required',
+        		'itinventory_description'	=>'required',
+        		'vendor_id'					=>'required',
 	    	]);
 			$dataa = array(
-			'itinventory_name' 		=> $request->itinventory_name,
-			'itinventory_qty' 		=> $request->itinventory_qty,
-			'updated_by' 			=> session()->get('batchid'),
-	        'updated_at' 			=> date('Y-m-d h:i;s'),
+			'itinventory_name' 			=> $request->itinventory_name,
+			'itinventory_qty' 			=> $request->itinventory_qty,
+			'itinventory_type' 			=> $request->itinventory_type,
+            'itinventory_description' 	=> $request->itinventory_description,
+            'vendor_id' 				=> $request->vendor_id,
+            'itinventory_qtyuse' 		=> $request->itinventory_type == "Use" ? $request->itinventory_qty : 0,
+            'itinventory_qtyremaining' 	=> $request->itinventory_type == "Use" ? 0 : $request->itinventory_qty,
+			'updated_by' 				=> session()->get('batchid'),
+	        'updated_at' 				=> date('Y-m-d h:i;s'),
 			);
 			$updated = DB::connection('mysql')->table('itinventory')
 			->where('itinventory_id', $request->itinventory_id)

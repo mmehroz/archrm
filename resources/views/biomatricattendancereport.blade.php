@@ -44,7 +44,7 @@
 											<?php  $explodechktime = explode(' ', $data[$index]->CheckTime);
 											   $explodetime = explode('.', $explodechktime[1]);
 											    $userinfo = DB::connection('sqlsrv')->table('USERINFO')
-									            ->where('USERINFO.USERID','=',40)
+									            ->where('USERINFO.USERID','=',$data[$index]->Userid)
 									            ->select('USERINFO.BADGENUMBER')
 									            ->first();
 											   $getname = DB::connection('mysql')->table('elsemployees')
@@ -61,7 +61,7 @@
 											<td>{{$explodechktime[0]}}</td>
 											<td>{{$data->month}}</td>
 											<td>{{$explodetime[0]}}</td>
-											<td>{{$data[$index]->Userid}}</td>
+											<td>{{$userinfo->BADGENUMBER}}</td>
 											<td>{{$empname}}</td>
 											</tr>
 											<?php $index++;?>

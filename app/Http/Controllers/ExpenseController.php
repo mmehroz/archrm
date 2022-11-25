@@ -47,6 +47,8 @@ class ExpenseController extends Controller
 		if(session()->get("email")){
 			$task = DB::connection('mysql')->table('expense')
 			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
+			->where('expense.expense_ismonthly','=',0)
+			->where('expense.expensetype_id','!=',5)
 			->where('expense.status_id','=',2)
 			->select('expense.*','expensetype_name')
 			->get();

@@ -118,6 +118,7 @@ class ExpenseController extends Controller
 				'expense_amount' 		=> $request->expense_amount,
 				'expensetype_id' 		=> $request->expensetype_id,
 				'expense_comment' 		=> $request->expense_comment,
+				'expense_yearandmonth' 	=> $request->expenseyear.'-'.$request->expensemonth,
 				'expense_isrecuring' 	=> 1,
 				'expense_ismonthly' 	=> 0,
 				'status_id' 			=> 2,

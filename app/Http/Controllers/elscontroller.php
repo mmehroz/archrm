@@ -3387,8 +3387,11 @@ class elscontroller extends Controller
 
 			public function addannouncementmodal(){
 			if(session()->get("email")){
-				
-				if(session()->get("role") <= 2){
+				$checkannouncement = DB::connection('mysql')->table('elsemployees')
+	          	->where('elsemployees_batchid','=', session()->get('batchid')) 
+	          	->select('isannouncementaccess')
+	          	->sum('isannouncementaccess');
+          		if(session()->get("role") <= 2 || $checkannouncement > 0){
 					$depart = DB::connection('mysql')->table('hrm_Department')
 					->select('hrm_Department.*')
 					->get();
@@ -3404,7 +3407,11 @@ class elscontroller extends Controller
 
 			public function addannouncement(Request $request){
 				if(session()->get("email")){
-				if(session()->get("role") <= 2){
+				$checkannouncement = DB::connection('mysql')->table('elsemployees')
+	          	->where('elsemployees_batchid','=', session()->get('batchid')) 
+	          	->select('isannouncementaccess')
+	          	->sum('isannouncementaccess');
+          		if(session()->get("role") <= 2 || $checkannouncement > 0){
 					$this->validate($request, [
                 	  	'image'=>'mimes:jpeg,bmp,png,jpg,gif,mp4,wmv,avi,mkv,mpg,mpeg,webm,|max:20120',
                 	    'announcementfor'=>'required',

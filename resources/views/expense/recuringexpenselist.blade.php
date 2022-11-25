@@ -9,7 +9,7 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col-sm-10">
-					<h3 class="page-title">Recuring Expense Report</h3>
+					<h3 class="page-title">Expense Report</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active">Expense</li>
@@ -31,8 +31,10 @@
 							<thead style="color: white; background-color: #640d1d">	
 								<tr>
 	                				<th style="width: 10%!important;">Action</th>
-	                				<th>Title</th>
+	                				<th>Type</th>
+									<th>Title</th>
 									<th>Amount</th>
+									<th>Month</th>
 									<th>Comment</th>
 								</tr>
 							</thead>
@@ -47,8 +49,10 @@
 					                    </div>
 					                  	</div>
 				                	</td>
-				                	<td>{{$val->expense_title}}</td>
+				                	<td>{{$val->expensetype_name}}</td>
+									<td>{{$val->expense_title}}</td>
 									<td>PKR {{$val->expense_amount}}</td>
+									<td>{{$val->expense_yearandmonth}}</td>
 									<td>{{$val->expense_comment}}</td>
 								</tr>
 								@endforeach

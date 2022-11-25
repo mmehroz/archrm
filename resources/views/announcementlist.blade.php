@@ -26,7 +26,13 @@
             <li class="breadcrumb-item active">Announcement</li>
           </ul>
         </div>
-        @if(session()->get("role") <= 2)
+         <?php
+           $checkannouncement = DB::connection('mysql')->table('elsemployees')
+          ->where('elsemployees_batchid','=', session()->get('batchid')) 
+          ->select('isannouncementaccess')
+          ->sum('isannouncementaccess');
+          ?>
+        @if(session()->get("role") <= 2 || $checkannouncement > 0)
         <div class="col-auto float-right ml-auto">
           <a href="#" class="btn add-btn" onclick="addannouncement()" data-toggle="modal" data-target="#add_announcement"><i class="fa fa-plus"></i> Add Announcement</a>
         </div>

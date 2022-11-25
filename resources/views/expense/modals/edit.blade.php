@@ -37,7 +37,7 @@
 			<div class="modal-body">
 			<form action="{{ URL::to('/submiteditexpense')}}" id="submitexpense" method="POST"  enctype="multipart/form-data">
 			{{ csrf_field() }}
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<input type="hidden" name="expense_id" value="{{$data->expense_id}}">
 						<div class="row">
 							<div class="col-lg-12">
@@ -50,7 +50,7 @@
 		                        </select>
 	                    	</div>
 	                    </div>
-	             	</div> 
+	             	</div>  -->
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">

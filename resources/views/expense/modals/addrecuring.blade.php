@@ -52,7 +52,18 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label>Select Expense Type<span class="text-danger"></span></label>
+								<select name="expensetype_id" class="form-control" class="form-control selectpicker" data-live-search="true" required>
+									<option selected="" value="">Select Expense Type</option>
+									@foreach($data as $val)
+									<option value="{{$val->expensetype_id}}">{{$val->expensetype_name}}</option>
+									@endforeach 
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-6">
 							<div class="form-group">
 								<label>Comment<span class="text-danger"></span></label>
 								<textarea name="expense_comment" class="form-control" type="text" rows="2"></textarea>

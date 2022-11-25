@@ -766,6 +766,15 @@ $emailurl = "http://80.240.16.149:5000";
                             <?php }?>
                                 <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px;"></i>Logout</a>
                                 <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Change Password</a>
+                                <?php
+                                 $checkannouncement = DB::connection('mysql')->table('elsemployees')
+                                ->where('elsemployees_batchid','=', session()->get('batchid')) 
+                                ->select('isannouncementaccess')
+                                ->sum('isannouncementaccess');
+                                ?>
+                                @if($checkannouncement > 0)
+                                <a class="dropdown-item" style="color: black;" href="{{url('/announcementlist')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Add Announcement</a>
+                                @endif
                                 <!-- <a class="dropdown-item" href="{{url('/getimage')}}">Select Image</a> -->
                             </div>
                         </li>

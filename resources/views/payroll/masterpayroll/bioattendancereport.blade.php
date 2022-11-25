@@ -141,9 +141,13 @@
 												if (isset($getother->otheramount)) {
 													$other  = $getother->otheramount+$getsalary->attendance_allowance+$getsalary->punctuality_allowance+$getsalary->fuel_allowance;
 												}else{
-													$other = "0"+$getsalary->attendance_allowance+$getsalary->punctuality_allowance+$getsalary->fuel_allowance;
+													$other = "0";
 												}
-												$carallowance = $getsalary->transport_allowance;
+												if (isset($getsalary->transport_allowance)) {
+													$carallowance = $getsalary->transport_allowance;
+												}else{
+													$carallowance = 0;
+												}
 												$getlast = DB::connection('mysql')->table('adjustments')
 												->where('adjustments.EMP_BADGE_ID','=',$val->elsemployees_batchid)
 												->where('adjustments.AdjMonth','=',$getearndeductmonth)
@@ -358,7 +362,11 @@
 													// dd($getyearlydeductamount);
 													$yearlydeductamount = $getyearlydeductamount/100*$gettax->tax_percent;
 													$sumyeartax = $yearlydeductamount+$basictax;
-													$tax = $sumyeartax/12;
+													if ($val->elsemployees_batchid == 68) {
+														$tax = 99000;
+													}else{
+														$tax = $sumyeartax/12;
+													}
 												}else{
 													$tax = "0";
 												}

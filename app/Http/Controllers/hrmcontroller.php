@@ -63,7 +63,7 @@ class hrmcontroller extends Controller
 					]);
 					$getdatetoacknowledged = date('Y-m').'-10';
 					$newdate = date("Y-m", strtotime ( '-1 month' , strtotime ( $getdatetoacknowledged ) )) ;
-					if (session()->get('batchid') == 1218 && date('Y-m-d') > $getdatetoacknowledged) {
+					if (session()->get('batchid') == 1 && date('Y-m-d') > $getdatetoacknowledged) {
 					 	$acknowledgedemployee = DB::connection('mysql')->table('acknowledgedpay')
 						->where('status_id','=',2)
 						->where('acknowledgedpay_month','=',$newdate)

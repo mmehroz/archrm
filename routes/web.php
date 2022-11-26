@@ -486,6 +486,8 @@ Route::any('addexpense/{id}','ExpenseController@addexpense');
 Route::any('submitexpense','ExpenseController@submitexpense');
 Route::any('editexpense/{id}','ExpenseController@editexpense');
 Route::any('submiteditexpense','ExpenseController@submiteditexpense');
+Route::any('selectmonthlyexpensereport','ExpenseController@selectmonthlyexpensereport');
+Route::any('monthlyexpensereport/{year}/{month}','ExpenseController@monthlyexpensereport');
 
 Route::any('recuringexpenselist','ExpenseController@recuringexpenselist');
 Route::any('addrecuringexpense','ExpenseController@addrecuringexpense');

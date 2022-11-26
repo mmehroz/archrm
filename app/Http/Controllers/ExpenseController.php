@@ -227,4 +227,50 @@ class ExpenseController extends Controller
 				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
 		} 
 	}
+	public function selectmonthlyexpensereport(){
+		if(session()->get("email")){
+			return view('expense.selectmonthlyexpensereport');
+		}else{
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
+		}
+	}
+	public function monthlyexpensereport($year, $month){
+		if(session()->get("email")){
+			$yearandmonth = $year.'-'.$month;
+			$task = DB::connection('mysql')->table('expense')
+			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
+			->where('expense.expense_ismonthly','=',0)
+			->whereNotIn('expense.expensetype_id',[2,4,5])
+			->where('expense.expense_yearandmonth','=',$yearandmonth)
+			->where('expense.status_id','=',2)
+			->select('expense.*','expensetype_name')
+			->get();
+			$fixed = DB::connection('mysql')->table('expense')
+			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
+			->where('expense.expense_ismonthly','=',0)
+			->whereIn('expense.expensetype_id',[2,4])
+			->where('expense.status_id','=',2)
+			->select('expense.*','expensetype_name')
+			->get();
+			$sumbasic = DB::connection('mysql')->table('expense')
+			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
+			->where('expense.expense_ismonthly','=',0)
+			->whereNotIn('expense.expensetype_id',[2,4,5])
+			->where('expense.expense_yearandmonth','=',$yearandmonth)
+			->where('expense.status_id','=',2)
+			->select('expense_id')
+			->sum('expense_amount');
+			$sumfixed = DB::connection('mysql')->table('expense')
+			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
+			->where('expense.expense_ismonthly','=',0)
+			->whereIn('expense.expensetype_id',[2,4])
+			->where('expense.status_id','=',2)
+			->select('expense.*','expensetype_name')
+			->sum('expense_amount');
+			$totalsum = $sumbasic + $sumfixed;
+			return view('expense.monthlyexpensereport',['data' => $task, 'fixed' => $fixed, 'totalsum' => $totalsum]);
+		}else{
+			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
+		}
+	}
 }

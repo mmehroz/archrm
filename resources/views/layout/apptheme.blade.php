@@ -471,7 +471,8 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 								<a href="#"><i class="fa fa-money"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selectexpensemonth')}}">Petty Cash Report</a></li>
-									<li><a href="{{url('/recuringexpenselist')}}">Expense Report</a></li>
+									<li><a href="{{url('/recuringexpenselist')}}">Expense List</a></li>
+									<li><a href="{{url('/selectmonthlyexpensereport')}}">Monthly Expense Report</a></li>
 								</ul>
 							</li>
 							

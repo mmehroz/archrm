@@ -132,7 +132,7 @@
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Annual Leave</label>
-									<input type="text" name="emp_annual_leave" title="Please Enter Store Name" placeholder="Please Enter Employee Annual Leave" class="form-control required_colom"  required="required" id="name" value="{{ $data["user"]->elsemployees_annualleaves }}">
+									<input type="text" name="emp_annual_leave" title="Please Enter Store Name" placeholder="Please Enter Employee Annual Leave" class="form-control required_colom"  required="required" id="name" value="{{ $data["user"]->elsemployees_casualleaves }}">
 								</div>
 							</div>
 							<div class="col-md-8">

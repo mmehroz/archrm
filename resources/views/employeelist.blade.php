@@ -135,7 +135,7 @@
 
 									@if( session()->get("role") <=	 2)
 									<td style="display: none;">{{$val->elsemployees_sickleaves}}</td>
-									<td style="display: none;">{{$val->elsemployees_annualleaves}}</td>
+									<td style="display: none;">{{$val->elsemployees_casualleaves}}</td>
 									@endif
 
 									@if ($val->elsemployees_status == 2)

@@ -74,7 +74,7 @@
 									<div class="form-group">
 									<label class="col-form-label">Remaining Annual:</label>
 									<div class="col-lg-14">
-										<input type="text" name="annual" class="form-control"  id="annual" value="{{--$req->elsemployees_annualleaves--}}"  readonly>
+										<input type="text" name="annual" class="form-control"  id="annual" value="{{--$req->elsemployees_casualleaves--}}"  readonly>
 									</div>
 									</div>
 								</div>
@@ -187,7 +187,7 @@
  					$('#empid').val(data['elsemployees_empid']);
  					$('#name').val(data['elsemployees_name']);
  					$('#sick').val(data['elsemployees_sickleaves']);
- 					$('#annual').val(data['elsemployees_annualleaves']);
+ 					$('#annual').val(data['elsemployees_casualleaves']);
  					$('#dojoin').val(data['elsemployees_dofjoining']);
  				}
  				

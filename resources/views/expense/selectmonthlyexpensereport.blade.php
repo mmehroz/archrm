@@ -9,7 +9,7 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3 class="page-title">Petty Cash Report</h3>
+					<h3 class="page-title">Monthly Expense Report</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active">Expense</li>
@@ -17,19 +17,19 @@
 				</div>
 			</div>
 		</div>
-		<div>   <p class="alert alert-info" >Select Month For Petty Cash Report</p> </div>
+		<div>   <p class="alert alert-info" >Select Month For Expense Report</p> </div>
 		<div class="text-right form-inline">
 
 		</div>
 		<div class="panel-body">
 	        <div class="row">
 	            <div class="col-lg-12">
-					<form action="{{ URL::to('/submitselectexpense')}}"  method="post">
+					<form action="{{ URL::to('/monthlyexpensereport')}}"  method="post">
 						{{csrf_field()}}
 						<div class="row">
 				        	<div class="col-md-5">
 				        		<label for="attyear">Select Year</label>
-				        		<select id="expenseyear" name="expenseyear"   class="form-control" required >
+				        		<select id="expenseyear" name="expenseyear" class="form-control" required >
 									<option value="" disabled="">Select Year</option>
 									<option value="2021">2021</option>
 									<option selected value="2022">2022</option>
@@ -62,7 +62,7 @@
 				                </select>
 					    	</div>
 							<div class="col-md-2"><br><br>
-				        		<button type="button" onclick="submitselectexpense()" style="margin-left: 45%;" class="btn btn-primary position-right">Proceed<i class="icon-arrow-right14 position-right"></i></button>
+				        		<button type="button" onclick="monthlyexpensereport()" style="margin-left: 45%;" class="btn btn-primary position-right">Proceed<i class="icon-arrow-right14 position-right"></i></button>
 							</div>
 						</div>
 					</form>
@@ -73,7 +73,7 @@
 </div>
 <!-- Page Wrapper -->
 <script>
-	function submitselectexpense(){
+	function monthlyexpensereport(){
 		var year = document.getElementById("expenseyear");
 		var yearvalue = year.options[year.selectedIndex].value;
 		var month = document.getElementById("expensemonth");
@@ -85,7 +85,7 @@
 		}else if(monthvalue == ""){
 			alert("Please Select Month");
 		}else{
-		window.location.replace('{{ URL::to("/submitselectexpense")}}/'+yearvalue+'/'+monthvalue);
+		window.location.replace('{{ URL::to("/monthlyexpensereport")}}/'+yearvalue+'/'+monthvalue);
 		}
 	}
 </script>

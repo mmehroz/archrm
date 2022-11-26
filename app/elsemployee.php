@@ -24,7 +24,7 @@ class elsemployee extends Model
 		'elsemployees_desgid',
 		'elsemployees_reportingto',
 		'elsemployees_status',
-		'elsemployees_annualleaves',
+		'elsemployees_casualleaves',
 		'elsemployees_sickleaves',
 		'elsemployees_changeby',
 		'elsemployees_addby',

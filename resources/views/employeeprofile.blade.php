@@ -56,7 +56,7 @@
 														</li>
 														<li>
 															<div class="title">Annual Leaves</div>
-															<div class="text">{{ $data["user"]->elsemployees_annualleaves }}</div>
+															<div class="text">{{ $data["user"]->elsemployees_casualleaves }}</div>
 														</li>
 														<li>
 															<div class="title">Sick Leaves</div>

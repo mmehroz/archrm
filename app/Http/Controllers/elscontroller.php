@@ -67,7 +67,7 @@ class elscontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 												'elsemployees_leaveyear' => date('Y'),
-												'elsemployees_annualleaves' => 12,
+												'elsemployees_casualleaves' => 12,
 												'elsemployees_sickleaves' => 0
 																	);
 
@@ -362,7 +362,7 @@ class elscontroller extends Controller
 			$post->elsemployees_reportingto = $request->emp_report ;
 			$post->elsemployees_roleid = $request->emp_role ;
 			$post->elsemployees_status = $request->emp_status ;
-			$post->elsemployees_annualleaves = $request->emp_annual_leave ;
+			$post->elsemployees_casualleaves = $request->emp_annual_leave ;
 			$post->elsemployees_sickleaves = $request->emp_sick_leave ;
 			$post->elsemployees_leaveyear =  date('Y');
 			$post->elsemployees_dofpayroll =  $request->payrolldate;
@@ -1179,7 +1179,7 @@ class elscontroller extends Controller
 				$post->elsemployees_caramount = $request->elsemployees_caramount ;
 	
 				if (session()->get('role') == 1 || session()->get('role') == 2 ) {
-				$post->elsemployees_annualleaves = $request->emp_annual_leave;
+				$post->elsemployees_casualleaves = $request->emp_annual_leave;
 				$post->elsemployees_sickleaves = $request->emp_sick_leave;	
 				// $post->elsemployees_leaveyear =  $leave_year;
 				}else{
@@ -1854,27 +1854,27 @@ class elscontroller extends Controller
 						 
 						if($task->elsleaverequests_status != "Done" ){
 							
-							if ($task->elsemployees_annualleaves >= $task->elsleaverequests_totalleavedays || $task->elsemployees_sickleaves >= $task->elsleaverequests_totalleavedays){
+							if ($task->elsemployees_casualleaves >= $task->elsleaverequests_totalleavedays || $task->elsemployees_sickleaves >= $task->elsleaverequests_totalleavedays){
 		 						$leavetable = elsemployee::on('mysql')->findOrFail($task->elsemployees_empid);
 
 								if($task->elsleaverequests_leavetypeid == 1 ){
 
-									if($task->elsemployees_annualleaves >= $task->elsleaverequests_totalleavedays){
+									if($task->elsemployees_casualleaves >= $task->elsleaverequests_totalleavedays){
 									
-										$annual = $leavetable->elsemployees_annualleaves;
+										$annual = $leavetable->elsemployees_casualleaves;
 										
 										
 										$leavededuction = $annual - $task->elsleaverequests_totalleavedays;
 										
-										$leavetable->elsemployees_annualleaves = $leavededuction;
+										$leavetable->elsemployees_casualleaves = $leavededuction;
 										
 										
 										$updated = $leavetable->save();
 									}else{
 										if($task->elsleaverequests_totalleavedays == 1){
-											return redirect('/approvedmulti_request')->with("message","You can't Approve this requst, $task->elsemployees_name has requested for $task->elsleaverequests_totalleavedays-day Annual leave but his Reamining Leave Is $task->elsemployees_annualleaves");
+											return redirect('/approvedmulti_request')->with("message","You can't Approve this requst, $task->elsemployees_name has requested for $task->elsleaverequests_totalleavedays-day Annual leave but his Reamining Leave Is $task->elsemployees_casualleaves");
 										}else{
-										return redirect('/approvedmulti_request')->with("message","You can't Approve this requst, $task->elsemployees_name has requested for $task->elsleaverequests_totalleavedays-days Annual leaves but his Reamining Leaves Is $task->elsemployees_annualleaves");
+										return redirect('/approvedmulti_request')->with("message","You can't Approve this requst, $task->elsemployees_name has requested for $task->elsleaverequests_totalleavedays-days Annual leaves but his Reamining Leaves Is $task->elsemployees_casualleaves");
 
 										}
 									}
@@ -2157,12 +2157,12 @@ class elscontroller extends Controller
 		->select('elsleaverequests.*','elsemployees.*')
 		->first();
 		if($task->elsleaverequests_status != "Done" ){
-		if ($task->elsemployees_annualleaves >= $task->elsleaverequests_totalleavedays || $task->elsemployees_sickleaves >= $task->elsleaverequests_totalleavedays){
+		if ($task->elsemployees_casualleaves >= $task->elsleaverequests_totalleavedays || $task->elsemployees_sickleaves >= $task->elsleaverequests_totalleavedays){
 			$leavetable = elsemployee::on('mysql')->findOrFail($task->elsemployees_empid);
 		if($task->elsleaverequests_leavetypeid == 1 ){
-			$annual = $leavetable->elsemployees_annualleaves;
+			$annual = $leavetable->elsemployees_casualleaves;
 			$leavededuction = $annual - $task->elsleaverequests_totalleavedays;
-			$leavetable->elsemployees_annualleaves = $leavededuction;
+			$leavetable->elsemployees_casualleaves = $leavededuction;
 			$updated = $leavetable->save();
 		}else if($task->elsleaverequests_leavetypeid == 2){
 			$sick = $leavetable->elsemployees_sickleaves;

@@ -207,7 +207,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -220,7 +220,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -271,7 +271,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -284,7 +284,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -334,7 +334,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -347,7 +347,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){
@@ -390,7 +390,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 												'elsemployees_leaveyear' => date('Y'),
-												'elsemployees_annualleaves' => 12,
+												'elsemployees_casualleaves' => 12,
 												'elsemployees_sickleaves' => 0
 																	);
 
@@ -404,7 +404,7 @@ class hrmcontroller extends Controller
 									if($addannualleave->elsemployees_leaveyear != $ydate){
 										$dataa = array(
 											'elsemployees_leaveyear' => date('Y'),
-											'elsemployees_annualleaves' => 12,
+											'elsemployees_casualleaves' => 12,
 											'elsemployees_sickleaves' => 0
 										);
 										//if(session()->get("email") == 'arqum_siddiqui@mobilelinkusa.com'){

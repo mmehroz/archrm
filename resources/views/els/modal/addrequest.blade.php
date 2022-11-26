@@ -55,7 +55,7 @@
 								</div>
 						    </div>
 							<div class="row">
-								<div class="col-sm-6">
+								<div class="col-sm-4">
 									<div class="form-group">
 										<label class="col-form-label">Remaining Sick:</label>
 											<div class="col-lg-14">
@@ -63,11 +63,19 @@
 											</div>
 									</div>
 								 </div>
-								<div class="col-sm-6">
+								<div class="col-sm-4">
+									<div class="form-group">
+									<label class="col-form-label">Remaining Casual:</label>
+									<div class="col-lg-14">
+										<input type="text" name="annual" class="form-control"  id="annual" value="{{$req->elsemployees_casualleaves}}"  readonly>
+									</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
 									<div class="form-group">
 									<label class="col-form-label">Remaining Annual:</label>
 									<div class="col-lg-14">
-										<input type="text" name="annual" class="form-control"  id="annual" value="{{$req->elsemployees_annualleaves}}"  readonly>
+										<input type="text" name="annualnew" class="form-control"  id="annualnew" value="{{$req->elsemployees_annualleaves}}"  readonly>
 									</div>
 									</div>
 								</div>
@@ -105,17 +113,21 @@
 							<div class="row">
 								<div class="col-md-6 leaveStyle form-horizontal">
 									<p class="text-bold">Leave Type:</p>
-										 	@if($exp[0] <  $date)
-										 		<label class="btn btn-warning" style="width :260px; margin-left:-10px;">
-													<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" >&nbsp;Correction Request
-												</label>
-											@else
+											 	@if($exp[0] <  $date)
+											 		<label class="btn btn-warning" style="width :260px; margin-left:-10px;">
+														<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" >&nbsp;Correction Request
+													</label>
+												@else
 								    			<label class="btn btn-primary" style="width :260px; margin-left:-10px;" >
 													<input type="radio" id="mar_annualType" value="1" checked="checked" class="mar_LType" name="leaveType" >&nbsp;Annual Leave
 												</label>
 												 <br />
 												<label class="btn bg-success" style="width :260px; margin-left:-10px;">
 													<input type="radio" id="mar_sickType"   value="2" class="mar_LType" name="leaveType" >&nbsp;Sick Leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												</label>
+												<br />
+												<label class="btn bg-success" style="width :260px; margin-left:-10px;">
+													<input type="radio" id="mar_sickType"   value="4" class="mar_LType" name="leaveType" >&nbsp;Cauual Leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												</label>
 												<br />
 												@if($exp[1] <= 1)

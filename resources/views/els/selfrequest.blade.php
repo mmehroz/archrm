@@ -85,7 +85,7 @@
 									->select('elsemployees.*')
 									->first();
 
-									$leaveremaining = $remainingleaves->elsemployees_annualleaves;
+									$leaveremaining = $remainingleaves->elsemployees_casualleaves;
 									$leavetype = "Annual";
 								}else{
 									$remainingleaves = DB::connection('mysql')->table('elsemployees')

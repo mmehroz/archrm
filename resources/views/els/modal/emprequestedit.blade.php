@@ -59,7 +59,7 @@
 									<div class="form-group">
 										<label class="col-form-label">Remaining Annual:</label>
 										<div class="col-lg-14">
-											<input type="text" name="annual" class="form-control"  id="annual" value="{{$data->elsemployees_annualleaves}}"  readonly>
+											<input type="text" name="annual" class="form-control"  id="annual" value="{{$data->elsemployees_casualleaves}}"  readonly>
 										</div>
 									</div>
 								</div>

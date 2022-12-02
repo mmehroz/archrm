@@ -61,7 +61,7 @@ class hrmcontroller extends Controller
 					// 'storeid' => $task->store_uid,
 
 					]);
-					$getdatetoacknowledged = date('Y-m').'-2';
+					$getdatetoacknowledged = date('Y-m').'-02';
 					$newdate = date("Y-m", strtotime ( '-1 month' , strtotime ( $getdatetoacknowledged ) )) ;
 					if (session()->get('batchid') == 1 && date('Y-m-d') > $getdatetoacknowledged) {
 					 	$acknowledgedemployee = DB::connection('mysql')->table('acknowledgedpay')

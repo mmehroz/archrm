@@ -362,7 +362,7 @@
 													// dd($getyearlydeductamount);
 													$yearlydeductamount = $getyearlydeductamount/100*$gettax->tax_percent;
 													$sumyeartax = $yearlydeductamount+$basictax;
-													if ($val->elsemployees_batchid == 68) {
+													if ($val->elsemployees_batchid == 2) {
 														$tax = 99000;
 													}else{
 														$tax = $sumyeartax/12;
